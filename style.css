@@ -1,0 +1,125 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    }
+
+h1 { 
+    color: #1F242A;
+    font-size: 75px;
+    font-family: Arial 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-weight: 1;
+    letter-spacing: .1em;
+    }
+
+body {
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+
+header {
+color: #fff;
+text-align: center;
+padding:0;
+}
+
+
+footer {
+background-color: #333;
+color: #fff;
+padding: 20px;
+text-align: center;
+}
+
+#vertical-image-container {
+    align-items: center;
+}
+
+#homepage-background {
+    background-image: url("Images/Website\ -\ Computer\ Science\ -\ Top.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    height: 40vw;
+}
+    
+#homepage-background h1 {
+    color: #ffffff;
+    font-size: 5vw;
+    font-family: Arial 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: .2em;
+    font-weight: 1;
+    letter-spacing: .1em;
+}
+    
+#homepage-background h6 {
+    font-size: 1.5vw;
+}
+
+#cs-background-1 {
+    background-image: url("Images/Website\ -\ Computer\ Science\ -\ Page\ 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    height: 40vw;
+    }
+
+#cs-background-2 {
+    background-image: url("Images/Website\ -\ Computer\ Science\ -\ Page\ 2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    height: 40vw;
+    }
+
+#cs-background-3 {
+    background-image: url("Images/Website\ -\ Computer\ Science\ -\ Page\ 3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    height: 40vw;
+    }
+
+#cs-background-4 {
+    background-image: url("Images/Website\ -\ Computer\ Science\ -\ Page\ 4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    height: 40vw;
+    }
+
+/* STYLE NAV BAR */
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    padding: 1em;
+}
+li {
+    display: inline;
+}
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 2vw;
+    padding: 1em;
+}
+li a:hover {
+    background-color: rgb(15, 11, 80);
+}
+
+nav {
+    text-align: center;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
