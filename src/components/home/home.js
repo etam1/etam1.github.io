@@ -5,12 +5,14 @@ import contact from "/Users/ethantam/Desktop/etweb/src/assets/Contact.png";
 import LinkedInLogo from "/Users/ethantam/Desktop/etweb/src/assets/LinkedInLogo.png";
 import GithubLogo from "/Users/ethantam/Desktop/etweb/src/assets/GithubLogo.png";
 import MailLogo from "/Users/ethantam/Desktop/etweb/src/assets/MailLogo.png";
+import MePic from "/Users/ethantam/Desktop/etweb/src/assets/MePicture.png";
 
 function home() {
   return (
     <div className="home">
         <div className="welcomeDescription">
         <img className="welcome" src={welcome} alt="chopper"></img>
+        <img className="mePic" src={MePic} alt="chopper"></img>
         </div>
       
         <div className="csDescription">

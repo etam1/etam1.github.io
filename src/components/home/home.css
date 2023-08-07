@@ -12,9 +12,16 @@
 }
 
 .welcome {
-    padding-top: 1em;
-    height: 40vw;
-    width: 50vw; 
+    padding-top: 10vw;
+    padding-left: 7vw;
+    height: 30vw;
+    width: 40vw; 
+}
+
+.mePic {
+    padding-top: 20.5vw;
+    height: 13vw;
+    width: 8.5vw; 
 }
 
 .csDescription {
