@@ -1,0 +1,21 @@
+.art {
+    width: 100vw;
+    height: 178vw;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-image: url("/Users/ethantam/Desktop/etweb/src/assets/artBackground.png");
+}
+
+.artHeaderDescription {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.artHeader {
+    padding-top: 22vw;
+    padding-left: 41vw;
+    padding-bottom: 26vw;
+    height: 11vw;
+    width: 16vw; 
+}

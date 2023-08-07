@@ -1,0 +1,70 @@
+.artExperience {
+    border: 50vw;
+    padding-bottom: 7vw;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.art-Project-Description {
+    padding-left: 5vw;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.art-Project-Small-Description {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.art-Project-Name {
+    width: 40vw;
+    font-size: 4.5vw;
+    font-family: 'Delicious Handrawn', cursive;
+    letter-spacing: .1vw;
+    color: rgb(139, 139, 139);
+}
+
+.art-Project-Title {
+    width: 20vw;
+    padding-top: .8vw;
+    font-size: 2vw;
+    font-family: 'Delicious Handrawn', cursive;
+    font-weight: lighter;
+    color: rgb(164, 164, 164);
+}
+
+.art-Project-Time {
+    padding-top: 1vw;
+    width: 20vw;
+    font-size: 2vw;
+    font-family: 'Delicious Handrawn', cursive;
+    font-style: italic;
+    color: rgb(164, 164, 164);
+}
+
+.art-Project-Text {
+    padding-top: 1vw;
+    font-size: 1.7vw;
+    width: 40vw;
+    font-family: 'Delicious Handrawn', cursive;
+    color: rgb(176, 176, 176);
+}
+
+.artPic {
+    padding-left: 15vw;
+    padding-top: 1vw;
+    width: 30vw;
+    height: 23vw;
+    justify-content: center;
+    padding-top: 2vw;
+}
+
+.MoveVideo {
+    padding-left: 15vw;
+    padding-right: 3vw;
+    padding-top: 3vw;
+}
+
+iframe {
+    width: 30vw;
+    height: 20vw;
+}

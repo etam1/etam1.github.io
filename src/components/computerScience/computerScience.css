@@ -1,0 +1,21 @@
+.computerScience {
+    width: 100vw;
+    height: 170vw;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-image: url("/Users/ethantam/Desktop/etweb/src/assets/ComputerScienceBackground.png");
+}
+
+.csHeaderDescription {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.csHeader {
+    padding-top: 14vw;
+    padding-bottom: 4vw;
+    padding-left: 24vw;
+    height: 40vw;
+    width: 53vw; 
+}
