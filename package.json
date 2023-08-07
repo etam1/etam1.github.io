@@ -1,5 +1,6 @@
 {
-  "name": "https://etam1.github.io/etweb.github.io",
+  "homepage": "https://etam1.github.io/etweb.github.io",
+  "name": "etweb",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
