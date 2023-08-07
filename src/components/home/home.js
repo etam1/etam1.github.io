@@ -22,7 +22,7 @@ function home() {
         </div>
 
         <p className="artDescriptionText">
-        Since childhood, art has both fascinated me with its diverse mediums and acted as a source of comfort. Most of my inspirations are drawn from J and the animated films and shows I grew up with. Today, I’m interested in exploring the intersections between Art and Computer Science. You can check out some of my art projects here!
+        Since childhood, art has both fascinated me with its diverse mediums and acted as a source of comfort. Most of my inspirations are drawn from the animated films and shows I grew up with. Today, I’m interested in exploring the intersections between Art and Computer Science. You can check out some of my art projects here!
         </p>
 
         <div className="interestDescription">
