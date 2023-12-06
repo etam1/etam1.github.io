@@ -16,7 +16,7 @@ function home() {
         </div>
       
         <div className="csDescription">
-          <h1>I am a UC Berkeley student pursuing a BA in Computer Science. Since seeing how computer graphics shaped animation, I was inspired to explore other branches of computer science at a young age. In search of the perfect career fit, I’ve begun exploring machine learning, artificial intelligence, quantum computing, computer security, and many more of the interdisciplinary applications of CS. Check out my projects!</h1>
+          <h1>I am a UC Berkeley student pursuing a BA in Computer Science. Since seeing how computer graphics shaped animation, I was inspired to explore other branches of computer science at a young age. My interests include machine learning, AI, computer security, computer graphics, and many more of the interdisciplinary applications of CS. Check out my projects!</h1>
         </div>
 
         <div className="artDescription">

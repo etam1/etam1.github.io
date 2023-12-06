@@ -55,6 +55,7 @@
     width: 30vw;
     height: 23vw;
     justify-content: center;
+    align-items: flex-end;
     padding-top: 2vw;
 }
 
