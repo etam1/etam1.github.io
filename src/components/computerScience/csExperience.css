@@ -49,6 +49,14 @@
     color: white;
 }
 
+.cs-Project-Link {
+    padding-top: 1vw;
+    font-size: 1.7vw;
+    width: 40vw;
+    font-family: 'Delicious Handrawn', cursive;
+    color: white;
+}
+
 .csPic {
     padding-left: 10vw;
     padding-top: 1vw;

@@ -21,6 +21,10 @@ function csExperience(props) {
                 {props.text}
             </div>
 
+            <div className="cs-Project-Link">
+            <a href={props.link}>Click here to see my project in detail!</a>
+            </div>
+
         </div>
 
       </div>
