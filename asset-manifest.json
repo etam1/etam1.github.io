@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b33268cb.css",
-    "main.js": "/static/js/main.481237a4.js",
+    "main.css": "/static/css/main.398dd623.css",
+    "main.js": "/static/js/main.54e2fa16.js",
     "static/js/787.34a7745e.chunk.js": "/static/js/787.34a7745e.chunk.js",
     "static/media/JonesJamPicture.png": "/static/media/JonesJamPicture.5dbe65ffacbdb3ce5a7a.png",
     "static/media/ComputerScienceBackground.png": "/static/media/ComputerScienceBackground.8969a28898792b4c8e7d.png",
@@ -18,8 +18,10 @@
     "static/media/GithubLogo.png": "/static/media/GithubLogo.d0ad578077a1e73fe8c7.png",
     "static/media/MailLogo.png": "/static/media/MailLogo.7b9c35da2018a5118d40.png",
     "static/media/LinkedInLogo.png": "/static/media/LinkedInLogo.e509652f71ce83abf5ae.png",
+    "static/media/TEAPOT.png": "/static/media/TEAPOT.53b118ababd5692e9391.png",
     "static/media/Welcome.png": "/static/media/Welcome.438cfe11b85142ed6b24.png",
     "static/media/Typing_Project.png": "/static/media/Typing_Project.f03487d22e388f5c0fd3.png",
+    "static/media/mascotimage.jpeg": "/static/media/mascotimage.a7d09e5139a6f1959733.jpeg",
     "static/media/gitlet_Project_Image.jpeg": "/static/media/gitlet_Project_Image.b1696bec374210ab5a8f.jpeg",
     "static/media/website-Logo.png": "/static/media/website-Logo.0368a464c414a7c3fc24.png",
     "static/media/PersonalWebsitePic.png": "/static/media/PersonalWebsitePic.2a803de0c5344238234c.png",
@@ -32,12 +34,12 @@
     "static/media/Chess_Endgame_Project.png": "/static/media/Chess_Endgame_Project.d8d155155fd6491083f9.png",
     "static/media/Machine_Learning_Data_Compression_Project.jpeg": "/static/media/Machine_Learning_Data_Compression_Project.a15d33486174ff11a2a8.jpeg",
     "index.html": "/index.html",
-    "main.b33268cb.css.map": "/static/css/main.b33268cb.css.map",
-    "main.481237a4.js.map": "/static/js/main.481237a4.js.map",
+    "main.398dd623.css.map": "/static/css/main.398dd623.css.map",
+    "main.54e2fa16.js.map": "/static/js/main.54e2fa16.js.map",
     "787.34a7745e.chunk.js.map": "/static/js/787.34a7745e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b33268cb.css",
-    "static/js/main.481237a4.js"
+    "static/css/main.398dd623.css",
+    "static/js/main.54e2fa16.js"
   ]
 }
