@@ -1,6 +1,6 @@
 import './csExperience.css';
 
-function csExperience(props) {
+function csExperienceWithLink(props) {
   return (
     <div className="csExperience">
       <div className="cs-Project-Description">
@@ -21,9 +21,9 @@ function csExperience(props) {
                 {props.text}
             </div>
 
-            {/* <div className="cs-Project-Link">
-            <a href={props.link}>Click here to see my project in detail (if avaliable)!</a>
-            </div> */}
+            <div className="cs-Project-Link">
+            <a href={props.link}>Click here to see my project in detail!</a>
+            </div>
 
         </div>
 
@@ -34,4 +34,4 @@ function csExperience(props) {
   );
 }
 
-export default csExperience;
+export default csExperienceWithLink;

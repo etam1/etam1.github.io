@@ -1,6 +1,7 @@
 import './computerScience.css';
 import csHeader from "/Users/ethantam/Desktop/etweb/src/assets/CsHeader.png";
 import CsExperience from '/Users/ethantam/Desktop/etweb/src/components/computerScience/csExperience.js'
+import CsExperienceWithLink from '/Users/ethantam/Desktop/etweb/src/components/computerScience/csExperienceWithLink.js'
 import JonesJamPic from "/Users/ethantam/Desktop/etweb/src/assets/JonesJamPicture.png"
 import BYOWPic from "/Users/ethantam/Desktop/etweb/src/assets/BYOWPic.png"
 import PersonalWebsitePic from "/Users/ethantam/Desktop/etweb/src/assets/PersonalWebsitePic.png";
@@ -15,13 +16,14 @@ import Mesh_Pic from "/Users/ethantam/Desktop/etweb/src/assets/TEAPOT.png";
 import Rasterizer_Pic from "/Users/ethantam/Desktop/etweb/src/assets/mascotimage.jpeg";
 
 
+
 function computerScience() {
   return (
     <div className="computerScience">
       <div className="csHeaderDescription">
         <img className="csHeader" src={csHeader} alt="chopper"></img>
-        <CsExperience name="Mesh Editor" time="2024" image={Mesh_Pic} text="Created a .dae file viewer that explores various techniques in manipulating a mesh such as flipping and splitting edges, Loop subdivision, surface smoothing, and modeling Bezier curves and surfaces. Also created a custom, rainbow-themed toon-shader visualizer, implemented using the OpenGL library. Project written in C++." link = "https://cal-cs184-student.github.io/hw-webpages-sp24-etam1/hw2/index.html"/>
-        <CsExperience name="SVG Rasterizer" time="2024" image={Rasterizer_Pic} text="I implemented a program that rasterizes SVG files using various sampling techniques from supersampling, pixel sampling, and mipmapping in order to render SVG classes and textures. Project written in C++." link ="https://cal-cs184-student.github.io/hw-webpages-sp24-oligonagon/hw1/index.html"/>
+        <CsExperienceWithLink name="Mesh Editor" time="2024" image={Mesh_Pic} text="Created a .dae file viewer that explores various techniques in manipulating a mesh such as flipping and splitting edges, Loop subdivision, surface smoothing, and modeling Bezier curves and surfaces. Also created a custom, rainbow-themed toon-shader visualizer, implemented using the OpenGL library. Project written in C++." link = "https://cal-cs184-student.github.io/hw-webpages-sp24-etam1/hw2/index.html"/>
+        <CsExperienceWithLink name="SVG Rasterizer" time="2024" image={Rasterizer_Pic} text="I implemented a program that rasterizes SVG files using various sampling techniques from supersampling, pixel sampling, and mipmapping in order to render SVG classes and textures. Project written in C++." link ="https://cal-cs184-student.github.io/hw-webpages-sp24-oligonagon/hw1/index.html"/>
         <CsExperience name="Personal Website" time="2023" image={PersonalWebsitePic} text="My personal website serves as a dynamic showcase of my passions, accomplishments, and creativity. It functions as a professional portfolio, showcasing my skills and contributions to various fields. I self-taught myself HTML, CSS, JavaScript, and React to build my personal website, where I also designed every image and visual feature."/>
         <CsExperience name="Machine Learning Database Compression" time="2023" image={MLDCPic} text="With a team of 7, we created a game database compression by using PyTorch to combine a model and an exceptions table. We trained neural networks to categorize game positions into value-remoteness categories, ensuring vital game data preservation. One model employed regression techniques and delta calculations for exceptions, while another assessed primitive values and remoteness, using a temporary exceptions table. Trained initially on a small tic-tac-toe dataset, our third model trained on the larger Dao game dataset, has shown promising results in advancing compression techniques."/>
         <CsExperience name="Chess Endgame Solver" time="2023" image={Chess_Endgame_Pic} text="In a team of 3, we generated an original 6-man chess endgame database using C, addressing significant deficiencies present in online chess endgame databases. This was achieved by conceptualizing and implementing an algorithm that facilitated swift traversal of the database, significantly enhancing storage and retrieval processes. Presently, our focus lies in enhancing project interactivity through animation refinement, while concurrently optimizing the algorithm via parallelization techniques. Additionally, we are expanding the project scope to encompass 7-man endgames by addressing edge cases, debugging intricacies, and strategically reducing our solver's storage requirements by a substantial tenfold."/>
