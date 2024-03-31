@@ -30,7 +30,8 @@ function artExperience(props) {
 
         <div className="MoveVideo">
           <iframe title="videoTitle" width="450" height="300"
-            src="https://www.youtube.com/embed/deqK3hyqebQ">
+            src={props.video}>
+            {/* src="https://www.youtube.com/embed/deqK3hyqebQ"> */}
           </iframe>
         </div>
 

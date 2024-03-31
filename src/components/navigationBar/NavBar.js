@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
-import { useRef } from 'react';
-import { useState } from "react";
+// import { useEffect } from 'react';
+// import { useRef } from 'react';
+// import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import './NavBar.css';
 import logo from "/Users/ethantam/Desktop/etweb/src/assets/website-Logo.png";
