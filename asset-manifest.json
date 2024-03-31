@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.398dd623.css",
-    "main.js": "/static/js/main.c23f0446.js",
+    "main.css": "/static/css/main.80b803d7.css",
+    "main.js": "/static/js/main.909ac81a.js",
     "static/js/787.34a7745e.chunk.js": "/static/js/787.34a7745e.chunk.js",
     "static/media/JonesJamPicture.png": "/static/media/JonesJamPicture.5dbe65ffacbdb3ce5a7a.png",
     "static/media/ComputerScienceBackground.png": "/static/media/ComputerScienceBackground.8969a28898792b4c8e7d.png",
@@ -10,8 +10,8 @@
     "static/media/MePicture.png": "/static/media/MePicture.3e1e13b8f0cd8fb7b2db.png",
     "static/media/BYOWPic.png": "/static/media/BYOWPic.146343c5ae70377958fa.png",
     "static/media/AntBeeProject.png": "/static/media/AntBeeProject.20ca482ed788a1084792.png",
-    "static/media/artBackground.png": "/static/media/artBackground.31d6587934dd9a74f56e.png",
     "static/media/Homepage Background.png": "/static/media/Homepage Background.03e5e5ea43e347700d5e.png",
+    "static/media/artB.png": "/static/media/artB.c5d74aae78c935c28d6d.png",
     "static/media/StaminaAndHeart.png": "/static/media/StaminaAndHeart.3060146385519036e2e6.png",
     "static/media/CPU_Project.png": "/static/media/CPU_Project.bdc76d553eda6bb961f3.png",
     "static/media/CsHeader.png": "/static/media/CsHeader.6fee2b42484354d8d17a.png",
@@ -34,12 +34,12 @@
     "static/media/Chess_Endgame_Project.png": "/static/media/Chess_Endgame_Project.d8d155155fd6491083f9.png",
     "static/media/Machine_Learning_Data_Compression_Project.jpeg": "/static/media/Machine_Learning_Data_Compression_Project.a15d33486174ff11a2a8.jpeg",
     "index.html": "/index.html",
-    "main.398dd623.css.map": "/static/css/main.398dd623.css.map",
-    "main.c23f0446.js.map": "/static/js/main.c23f0446.js.map",
+    "main.80b803d7.css.map": "/static/css/main.80b803d7.css.map",
+    "main.909ac81a.js.map": "/static/js/main.909ac81a.js.map",
     "787.34a7745e.chunk.js.map": "/static/js/787.34a7745e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.398dd623.css",
-    "static/js/main.c23f0446.js"
+    "static/css/main.80b803d7.css",
+    "static/js/main.909ac81a.js"
   ]
 }
