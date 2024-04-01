@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.80b803d7.css",
-    "main.js": "/static/js/main.909ac81a.js",
+    "main.css": "/static/css/main.20dd4d4d.css",
+    "main.js": "/static/js/main.a186df0a.js",
     "static/js/787.34a7745e.chunk.js": "/static/js/787.34a7745e.chunk.js",
     "static/media/JonesJamPicture.png": "/static/media/JonesJamPicture.5dbe65ffacbdb3ce5a7a.png",
     "static/media/ComputerScienceBackground.png": "/static/media/ComputerScienceBackground.8969a28898792b4c8e7d.png",
@@ -20,6 +20,7 @@
     "static/media/LinkedInLogo.png": "/static/media/LinkedInLogo.e509652f71ce83abf5ae.png",
     "static/media/TEAPOT.png": "/static/media/TEAPOT.53b118ababd5692e9391.png",
     "static/media/Welcome.png": "/static/media/Welcome.438cfe11b85142ed6b24.png",
+    "static/media/ASVC.jpeg": "/static/media/ASVC.b4452614d4f96e6bab20.jpeg",
     "static/media/Typing_Project.png": "/static/media/Typing_Project.f03487d22e388f5c0fd3.png",
     "static/media/mascotimage.jpeg": "/static/media/mascotimage.a7d09e5139a6f1959733.jpeg",
     "static/media/gitlet_Project_Image.jpeg": "/static/media/gitlet_Project_Image.b1696bec374210ab5a8f.jpeg",
@@ -34,12 +35,12 @@
     "static/media/Chess_Endgame_Project.png": "/static/media/Chess_Endgame_Project.d8d155155fd6491083f9.png",
     "static/media/Machine_Learning_Data_Compression_Project.jpeg": "/static/media/Machine_Learning_Data_Compression_Project.a15d33486174ff11a2a8.jpeg",
     "index.html": "/index.html",
-    "main.80b803d7.css.map": "/static/css/main.80b803d7.css.map",
-    "main.909ac81a.js.map": "/static/js/main.909ac81a.js.map",
+    "main.20dd4d4d.css.map": "/static/css/main.20dd4d4d.css.map",
+    "main.a186df0a.js.map": "/static/js/main.a186df0a.js.map",
     "787.34a7745e.chunk.js.map": "/static/js/787.34a7745e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.80b803d7.css",
-    "static/js/main.909ac81a.js"
+    "static/css/main.20dd4d4d.css",
+    "static/js/main.a186df0a.js"
   ]
 }
