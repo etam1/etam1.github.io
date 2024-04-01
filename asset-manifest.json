@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.20dd4d4d.css",
-    "main.js": "/static/js/main.a186df0a.js",
+    "main.js": "/static/js/main.bd9ecccc.js",
     "static/js/787.34a7745e.chunk.js": "/static/js/787.34a7745e.chunk.js",
     "static/media/JonesJamPicture.png": "/static/media/JonesJamPicture.5dbe65ffacbdb3ce5a7a.png",
     "static/media/ComputerScienceBackground.png": "/static/media/ComputerScienceBackground.8969a28898792b4c8e7d.png",
@@ -36,11 +36,11 @@
     "static/media/Machine_Learning_Data_Compression_Project.jpeg": "/static/media/Machine_Learning_Data_Compression_Project.a15d33486174ff11a2a8.jpeg",
     "index.html": "/index.html",
     "main.20dd4d4d.css.map": "/static/css/main.20dd4d4d.css.map",
-    "main.a186df0a.js.map": "/static/js/main.a186df0a.js.map",
+    "main.bd9ecccc.js.map": "/static/js/main.bd9ecccc.js.map",
     "787.34a7745e.chunk.js.map": "/static/js/787.34a7745e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.20dd4d4d.css",
-    "static/js/main.a186df0a.js"
+    "static/js/main.bd9ecccc.js"
   ]
 }
