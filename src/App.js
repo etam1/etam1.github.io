@@ -19,6 +19,7 @@ function App() {
             <Route path = "/artPortfolio" element={<Art/>}/>
           </Routes>
       </div>
+      {/* <Home /> */}
     </Router>
   );
 }
