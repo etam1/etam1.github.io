@@ -20,6 +20,9 @@ function App() {
           </Routes>
       </div>
       {/* <Home /> */}
+      useEffect(() => {
+        window.history.scrollRestoration = 'manual'
+      }, []);
     </Router>
   );
 }

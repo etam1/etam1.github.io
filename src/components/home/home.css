@@ -72,7 +72,6 @@ html, body {
 
 .topDivision {
     position: relative;
-    background-image: url("/Users/ethantam/Desktop/etweb/src/assets/LEAF_BACKGROUND.png");
     display: flex;
     padding-top: 3vw;
 }
@@ -129,7 +128,7 @@ html, body {
     position: absolute;
     top: 226.6vw;  /* Adjust based on your layout */
     left: 2.5vw; /* Position FallBack on the left */
-    height: 56vw;
+    height: 55.5vw;
     width: 97vw;
     opacity: 0; /* Ensure it starts hidden */
     z-index: 3; /* Ensure it overlaps on top of everything */

@@ -1,4 +1,3 @@
-// Home.js
 import React, { useState, useEffect } from 'react';
 import './home.css';
 import welcome from "/Users/ethantam/Desktop/etweb/src/assets/Welcome.png";
@@ -25,6 +24,8 @@ function Home() {
   const [woodBackVisible, setWoodBackVisible] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page on load
+
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 100); // Delay to trigger the fade-in effect
@@ -63,7 +64,7 @@ function Home() {
       }
 
       if (woodBack) {
-        const woodBackTop = greekBack.getBoundingClientRect().top;
+        const woodBackTop = woodBack.getBoundingClientRect().top;
         if (woodBackTop < windowHeight) {
           setWoodBackVisible(true);
         }
@@ -142,7 +143,7 @@ function Home() {
       </div>
 
       <p className="lastLine">
-      <img className="heartAndStamina" src={heartAndStamina} alt="chopper" />
+        <img className="heartAndStamina" src={heartAndStamina} alt="chopper" />
         coded with &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; by ethan tam
       </p>
     </div>
