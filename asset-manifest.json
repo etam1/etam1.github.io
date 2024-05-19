@@ -1,18 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.20dd4d4d.css",
-    "main.js": "/static/js/main.bd9ecccc.js",
+    "main.css": "/static/css/main.670fb33a.css",
+    "main.js": "/static/js/main.0aa68bcb.js",
     "static/js/787.34a7745e.chunk.js": "/static/js/787.34a7745e.chunk.js",
     "static/media/JonesJamPicture.png": "/static/media/JonesJamPicture.5dbe65ffacbdb3ce5a7a.png",
     "static/media/ComputerScienceBackground.png": "/static/media/ComputerScienceBackground.8969a28898792b4c8e7d.png",
     "static/media/Etsy.png": "/static/media/Etsy.934c602579ec2a8db7e6.png",
+    "static/media/GREEK_BACKGROUND.png": "/static/media/GREEK_BACKGROUND.88cf45dd5116c9747e3a.png",
+    "static/media/LEAF_BACKGROUND.png": "/static/media/LEAF_BACKGROUND.8fbfebaf825f9c134d41.png",
+    "static/media/WOOD_BACKGROUND.png": "/static/media/WOOD_BACKGROUND.2aa6f07458571e71151c.png",
     "static/media/IITBridgePic.png": "/static/media/IITBridgePic.b715327067c2f306fa5c.png",
-    "static/media/MePicture.png": "/static/media/MePicture.3e1e13b8f0cd8fb7b2db.png",
     "static/media/BYOWPic.png": "/static/media/BYOWPic.146343c5ae70377958fa.png",
+    "static/media/FALL_BACKGROUND.png": "/static/media/FALL_BACKGROUND.d99b5b07bda8ff71bc65.png",
     "static/media/AntBeeProject.png": "/static/media/AntBeeProject.20ca482ed788a1084792.png",
-    "static/media/Homepage Background.png": "/static/media/Homepage Background.03e5e5ea43e347700d5e.png",
     "static/media/artB.png": "/static/media/artB.c5d74aae78c935c28d6d.png",
     "static/media/StaminaAndHeart.png": "/static/media/StaminaAndHeart.3060146385519036e2e6.png",
+    "static/media/ColorBackground.png": "/static/media/ColorBackground.ef3d9c47a9590a9cad4f.png",
     "static/media/CPU_Project.png": "/static/media/CPU_Project.bdc76d553eda6bb961f3.png",
     "static/media/CsHeader.png": "/static/media/CsHeader.6fee2b42484354d8d17a.png",
     "static/media/GithubLogo.png": "/static/media/GithubLogo.d0ad578077a1e73fe8c7.png",
@@ -22,6 +25,7 @@
     "static/media/Welcome.png": "/static/media/Welcome.438cfe11b85142ed6b24.png",
     "static/media/ASVC.jpeg": "/static/media/ASVC.b4452614d4f96e6bab20.jpeg",
     "static/media/Typing_Project.png": "/static/media/Typing_Project.f03487d22e388f5c0fd3.png",
+    "static/media/BRIDGE.png": "/static/media/BRIDGE.a795000200fd87d3fe71.png",
     "static/media/mascotimage.jpeg": "/static/media/mascotimage.a7d09e5139a6f1959733.jpeg",
     "static/media/gitlet_Project_Image.jpeg": "/static/media/gitlet_Project_Image.b1696bec374210ab5a8f.jpeg",
     "static/media/website-Logo.png": "/static/media/website-Logo.0368a464c414a7c3fc24.png",
@@ -35,12 +39,12 @@
     "static/media/Chess_Endgame_Project.png": "/static/media/Chess_Endgame_Project.d8d155155fd6491083f9.png",
     "static/media/Machine_Learning_Data_Compression_Project.jpeg": "/static/media/Machine_Learning_Data_Compression_Project.a15d33486174ff11a2a8.jpeg",
     "index.html": "/index.html",
-    "main.20dd4d4d.css.map": "/static/css/main.20dd4d4d.css.map",
-    "main.bd9ecccc.js.map": "/static/js/main.bd9ecccc.js.map",
+    "main.670fb33a.css.map": "/static/css/main.670fb33a.css.map",
+    "main.0aa68bcb.js.map": "/static/js/main.0aa68bcb.js.map",
     "787.34a7745e.chunk.js.map": "/static/js/787.34a7745e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.20dd4d4d.css",
-    "static/js/main.bd9ecccc.js"
+    "static/css/main.670fb33a.css",
+    "static/js/main.0aa68bcb.js"
   ]
 }
