@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.dedf2405.css",
-    "main.js": "/static/js/main.15c5c0b4.js",
+    "main.css": "/static/css/main.942cdbe2.css",
+    "main.js": "/static/js/main.d8a6b866.js",
     "static/js/787.34a7745e.chunk.js": "/static/js/787.34a7745e.chunk.js",
     "static/media/JonesJamPicture.png": "/static/media/JonesJamPicture.5dbe65ffacbdb3ce5a7a.png",
     "static/media/ComputerScienceBackground.png": "/static/media/ComputerScienceBackground.8969a28898792b4c8e7d.png",
@@ -47,12 +47,12 @@
     "static/media/Chess_Endgame_Project.png": "/static/media/Chess_Endgame_Project.d8d155155fd6491083f9.png",
     "static/media/Machine_Learning_Data_Compression_Project.jpeg": "/static/media/Machine_Learning_Data_Compression_Project.a15d33486174ff11a2a8.jpeg",
     "index.html": "/index.html",
-    "main.dedf2405.css.map": "/static/css/main.dedf2405.css.map",
-    "main.15c5c0b4.js.map": "/static/js/main.15c5c0b4.js.map",
+    "main.942cdbe2.css.map": "/static/css/main.942cdbe2.css.map",
+    "main.d8a6b866.js.map": "/static/js/main.d8a6b866.js.map",
     "787.34a7745e.chunk.js.map": "/static/js/787.34a7745e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dedf2405.css",
-    "static/js/main.15c5c0b4.js"
+    "static/css/main.942cdbe2.css",
+    "static/js/main.d8a6b866.js"
   ]
 }
