@@ -3,10 +3,10 @@ import './home.css';
 import welcome from "/Users/ethantam/Desktop/etweb/src/assets/Welcome.png";
 import art from "/Users/ethantam/Desktop/etweb/src/assets/Art.png";
 import cs from "/Users/ethantam/Desktop/etweb/src/assets/Computer Science.png";
-import contact from "/Users/ethantam/Desktop/etweb/src/assets/Contact.png";
-import LinkedInLogo from "/Users/ethantam/Desktop/etweb/src/assets/LinkedInLogo.png";
-import GithubLogo from "/Users/ethantam/Desktop/etweb/src/assets/GithubLogo.png";
-import MailLogo from "/Users/ethantam/Desktop/etweb/src/assets/MailLogo.png";
+// import contact from "/Users/ethantam/Desktop/etweb/src/assets/Contact.png";
+// import LinkedInLogo from "/Users/ethantam/Desktop/etweb/src/assets/LinkedInLogo.png";
+// import GithubLogo from "/Users/ethantam/Desktop/etweb/src/assets/GithubLogo.png";
+// import MailLogo from "/Users/ethantam/Desktop/etweb/src/assets/MailLogo.png";
 import LeafBack from "/Users/ethantam/Desktop/etweb/src/assets/LEAF_BACKGROUND.png";
 import FallBack from "/Users/ethantam/Desktop/etweb/src/assets/FALL_BACKGROUND.png";
 import Bridge from "/Users/ethantam/Desktop/etweb/src/assets/BRIDGE.png";
@@ -133,18 +133,18 @@ function Home() {
         </h1>
       </div>
 
-      <div className="contactDescription">
+      {/* <div className="contactDescription">
         <img className="contact" src={contact} alt="chopper" />
         <ul className="contact-links">
           <li><a href="mailto:ethantam9@gmail.com"><img className="contactLogo" src={MailLogo} alt="Email" /></a></li>
           <li><a href="https://github.com/etam1"><img className="contactLogo" src={GithubLogo} alt="GitHub" /></a></li>
           <li><a href="https://www.linkedin.com/in/ethan-tam-0420791a6/"><img className="contactLogo" src={LinkedInLogo} alt="LinkedIn" /></a></li>
         </ul>
-      </div>
+      </div> */}
 
       <p className="lastLine">
         <img className="heartAndStamina" src={heartAndStamina} alt="chopper" />
-        coded with &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; by ethan tam
+        coded with &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; by ethan tam
       </p>
     </div>
   );

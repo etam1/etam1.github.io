@@ -10,10 +10,13 @@ html, body {
 
 .home {
     width: 100vw;
-    height: 322.5vw;
+    height: 305vw; 
+    overflow: hidden; 
     background-repeat: no-repeat;
     background-size: 100vw;
     background-image: url(/Users/ethantam/Desktop/etweb/src/assets/ColorBackground.png);
+    position: relative;
+    padding-top: 3vw;
 }
 
 .fade-in {
@@ -163,12 +166,13 @@ html, body {
     position: absolute;
     top: 80vw; /* Adjust based on your layout */
     left: 32vw; /* Adjust based on your layout */
-    font-size: 2.5vw;
+    font-size: 2.8vw;
+    word-spacing: 0.5vw;
     width: 40vw;
-    letter-spacing: .1vw;
-    font-family: 'Delicious Handrawn', cursive;
+    letter-spacing: -.1vw;
+    font-family: 'Neucha', cursive;
     font-weight: lighter;
-    color: rgb(108, 108, 108);
+    color: #7a7a7a;
     text-align: center;
 }
 
@@ -182,12 +186,13 @@ html, body {
     position: absolute;
     top: 147vw; /* Adjust based on your layout */
     left: 49vw; /* Adjust based on your layout */
-    font-size: 2.5vw;
+    font-size: 2.8vw;
     width: 40vw;
-    letter-spacing: .1vw;
-    font-family: 'Delicious Handrawn', cursive;
+    letter-spacing: -.1vw;
+    word-spacing: 0.5vw;
+    font-family: 'Neucha', cursive;
     font-weight: lighter;
-    color: rgb(108, 108, 108);
+    color: #7a7a7a;
     text-align: center;
 }
 
@@ -220,12 +225,13 @@ html, body {
     position: absolute;
     top: 220vw; /* Adjust based on your layout */
     left: 20vw; /* Adjust based on your layout */
-    font-size: 2.5vw;
+    font-size: 2.8vw;
     width: 40vw;
-    letter-spacing: .1vw;
-    font-family: 'Delicious Handrawn', cursive;
+    letter-spacing:-0.1vw;
+    word-spacing: 0.5vw;
+    font-family: 'Neucha', cursive;
     font-weight: lighter;
-    color: rgb(108, 108, 108);
+    color: #7a7a7a;
     text-align: center;
 }
 
@@ -261,12 +267,13 @@ html, body {
 
 .lastLine {
     position: absolute;
-    top: 311vw; /* Adjust based on your layout */
+    top: 290vw; /* Adjust based on your layout */
     left: 38vw; /* Adjust based on your layout */
-    font-family: 'Delicious Handrawn', cursive;
-    letter-spacing: .1vw;
+    font-family: 'Neucha', cursive;
+    word-spacing: 0.5vw;
+    letter-spacing: -.1vw;
     font-weight: lighter;
-    color: rgb(108, 108, 108);
+    color: #7a7a7a;
     text-align: center;
     font-size: 2vw;
     padding-bottom: 3vw;

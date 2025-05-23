@@ -3,7 +3,8 @@
     height: 615vw;
     background-repeat: no-repeat;
     background-size: 100vw;
-    background-image: url("/Users/ethantam/Desktop/etweb/src/assets/ComputerScienceBackground.png");
+    /* background-image: url("/Users/ethantam/Desktop/etweb/src/assets/ComputerScienceBackground.png"); */
+    background-image: url(/Users/ethantam/Desktop/etweb/src/assets/ColorBackground.png);
 }
 
 .csHeaderDescription {

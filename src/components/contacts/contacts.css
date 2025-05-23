@@ -1,0 +1,150 @@
+
+.contacts {
+    width: 100vw;
+    height: 100vh; /* Adjust to match the viewport height */
+    background-repeat: no-repeat;
+    overflow: hidden; 
+    background-size: cover; /* Ensure the background covers the container */
+    background-image: url(/Users/ethantam/Desktop/etweb/src/assets/ColorBackground.png);
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack title and islands vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: flex-start; /* Align content to the top */
+    position: relative; /* Allow children to use relative/absolute positioning */
+}
+
+.title {
+    width: 60vw; /* Adjust size of the title */
+    height: auto; /* Maintain aspect ratio */
+    margin-top:1.5vw;
+    margin-right: 17vw;
+    z-index: 1; /* Ensure the title stays behind the islands */
+    opacity: 0; /* Start invisible */
+    animation: fade-in 5s ease forwards; 
+}
+
+.islands {
+    display: flex; /* Flexbox for arranging islands horizontally */
+    justify-content: space-between; /* Space islands apart */
+    position: relative; /* Position the islands relative to the title */
+    margin-top: -28vw;
+    z-index: 2;
+}
+
+.leftSideIsland, .centerIsland, .rightIsland {
+    margin-top:15vw;
+    opacity: 0; /* Start invisible */
+    transform: translateY(100%); /* Start from bottom of the screen */
+}
+
+
+.centerIsland {
+    margin-top:15vw;
+    width: 35vw;
+    margin-top: 37vw;
+    margin-left: 2vw;
+    height: 70vw;
+    animation: fade-in-slide 3s ease forwards;
+}
+
+.leftSideIsland {
+    width: 12vw;
+    margin-top: 60vw;
+    margin-left: 2vw;
+    height: 60vw;
+    animation: fade-in-slide 4s ease forwards;
+}
+
+
+.contactDescription {
+    margin-top: -11vw;
+    margin-left: 3vw;
+    text-align: center;
+    z-index: 3; /* Ensure contact section is above everything */
+    position: relative; /* Enable absolute positioning for logos */
+    z-index: 3; /* Ensure contact section is above everything */
+    animation: fade-in-slide 3s ease forwards;
+}
+
+
+
+/* Individual logo styles */
+.mailLogo, .githubLogo, .linkedinLogo {
+    position: absolute; /* Allow precise positioning */
+    width: 5vw;
+    height: auto;
+    backdrop-filter: blur(5px); /* Blurred background effect */
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+    border-radius: 50%; /* Circular border */
+    animation: fade-in-slide-logo 3s ease forwards; 
+
+}
+
+.mailLogo {
+    top: -327.5vw; 
+    left: -1vw; 
+}
+
+.githubLogo {
+    top: -332vw; 
+    left: 4vw; 
+}
+
+.linkedinLogo {
+    top: -327.5vw; 
+    left: 9vw; 
+}
+
+/* Hover effect for glowing logos */
+.mailLogo:hover, .githubLogo:hover, .linkedinLogo:hover {
+    transform: scale(1.2); /* Enlarge slightly on hover */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.8); /* Glow effect */
+}
+
+
+/* Keyframes for fade-in effect */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for fade-in and slide-up effect */
+@keyframes fade-in-slide {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-slide-logo {
+    0% {
+        opacity: 0;
+        transform: translateY(1400%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.background-title {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20vw;
+    font-family: 'Neucha', cursive;
+    color: rgba(122, 122, 122, 0.1); /* subtle gray and transparent */
+    z-index: 0; /* Make sure it's behind everything */
+    pointer-events: none; /* Ensure it doesn't block clicks */
+    user-select: none;
+    white-space: nowrap;
+}

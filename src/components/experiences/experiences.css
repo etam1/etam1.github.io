@@ -1,0 +1,108 @@
+.experiences {
+    width: 100vw;
+    height: 700vh;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(/Users/ethantam/Desktop/etweb/src/assets/Experience_Background.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding-top: 20vh;
+}
+
+.beanstock-img {
+    position: absolute;
+    left: 10vw;
+    top: 100vh;
+    width: 25vw;
+    max-width: 500px;
+    animation: slideUp 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes slideUp {
+    from {
+        top: 100vh;
+        opacity: 0;
+    }
+    to {
+        top: 15vw;
+        opacity: 1;
+    }
+}
+
+.experience-card {
+    width: 80vw;
+    max-width: 1100px;
+    margin: 4rem 0;
+    color: black;
+    font-family: sans-serif;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 4vw;
+    flex-wrap: wrap;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 70vw;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    min-width: 50vw;
+}
+
+.company {
+    font-size: 6vw;
+    font-weight: bold;
+    margin: 0;
+}
+
+.role {
+    font-size: 2vw;
+    margin: 0.5rem 0;
+}
+
+.date {
+    font-size: 1vw;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1vw;
+    line-height: 1.6;
+    text-align: left;
+    max-width: 100%;
+}
+
+.scroll-button {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-button:hover {
+    background-color: #555;
+}
