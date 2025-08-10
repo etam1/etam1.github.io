@@ -1,108 +1,196 @@
 .experiences {
-    width: 100vw;
-    height: 700vh;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    background-size: cover;
-    background-image: url(/Users/ethantam/Desktop/etweb/src/assets/Experience_Background.png);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    padding-top: 20vh;
+  width: 100vw;
+  height: 330vw;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
+  background-image: url(/Users/ethantam/Desktop/etweb/src/assets/Experience_Background.png);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding-top:11.5vw;
 }
 
 .beanstock-img {
-    position: absolute;
-    left: 10vw;
-    top: 100vh;
-    width: 25vw;
-    max-width: 500px;
-    animation: slideUp 1s ease-out forwards;
-    animation-delay: 0.5s;
+  position: absolute;
+  left: 10vw;
+  top: 100vw;
+  width: 23vw;
+  animation: slideUp 1s ease-out forwards;
+  animation-delay: 0.5s;
+  z-index: 2;
 }
 
 @keyframes slideUp {
-    from {
-        top: 100vh;
-        opacity: 0;
-    }
-    to {
-        top: 15vw;
-        opacity: 1;
-    }
+  from {
+    top: 100vw;
+    opacity: 0;
+  }
+  to {
+    top: 15vw;
+    opacity: 1;
+  }
 }
+
+.background-title {
+  position: absolute;
+  top: 5%;
+  left: 55%;
+  transform: translateX(-50%);
+  font-size: 11vw;
+  font-family: 'Neucha';
+  color: rgba(82, 82, 82, 0.859);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.experience-box {
+  width: 60vw;
+  max-width: 58vw;
+  min-height: 21.6vw;
+  margin: 3.4vw 0 2vw 28vw; /* ← added 5vw left margin */
+  background-color: rgba(242, 255, 242, 0.85);
+  border-radius: 2vw;
+  padding: 2vw;
+  box-shadow: 0 0.4vw 1.5vw rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+}
+
 
 .experience-card {
-    width: 80vw;
-    max-width: 1100px;
-    margin: 4rem 0;
-    color: black;
-    font-family: sans-serif;
+  width: 100vw;
+  color: black;
+  font-family: 'Neucha';
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to top */
 }
 
-.experience-header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    gap: 4vw;
-    flex-wrap: wrap;
-}
-
-.left {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    min-width: 70vw;
-}
-
-.right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
-    min-width: 50vw;
+.experience-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
 }
 
 .company {
-    font-size: 6vw;
-    font-weight: bold;
-    margin: 0;
+  font-size: 3.5vw;
+  max-width: 51vw;
+  font-weight: bold;
+  margin: 0;
 }
 
 .role {
-    font-size: 2vw;
-    margin: 0.5rem 0;
+  font-size: 1.8vw;
+  margin: 0.5rem 0;
 }
 
 .date {
-    font-size: 1vw;
-    font-weight: normal;
-    margin-bottom: 1rem;
+  font-size: 1vw;
+  font-weight: normal;
+  white-space: nowrap;
 }
 
 .description {
-    font-size: 1vw;
-    line-height: 1.6;
-    text-align: left;
-    max-width: 100%;
+  font-size: 1.3vw;
+  line-height: 1.6;
+  text-align: left;
+  max-width: 100%;
 }
 
-.scroll-button {
-    margin-top: 2rem;
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    border: none;
-    background-color: #333;
-    color: white;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+.dot-sidebar {
+  position: fixed;
+  top: 50%;
+  left: 5vw;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  z-index: 1000;
 }
 
-.scroll-button:hover {
-    background-color: #555;
+
+
+
+.dot:hover {
+  background-color: #579471;
+}
+
+.dot {
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  background-color: #7eb695;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.leaf-icon {
+  position: absolute;
+  top: -0.3vw;  
+  left: -0.4vw;  
+  width: 1.6vw;
+  height: 1.6vw;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.clouds-img {
+  position: absolute;
+  top: -13vw; /* Adjust vertically as needed */
+  left: 0;
+  width: 100vw;
+  pointer-events: none;
+  z-index: 3;
+  filter: brightness(1.3);
+}
+
+.experience-down-button {
+  position: absolute;
+  top: 49vw; /* slightly below background-title */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4vw;
+  height: auto;
+  cursor: pointer;
+  z-index: 1001;
+  transition: transform 0.2s ease;
+opacity: .6;
+}
+
+.experience-down-button:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+@keyframes floatUpDown {
+  0%   { transform: translateX(-50%) translateY(0); }
+  50%  { transform: translateX(-50%) translateY(-0.8vw); }
+  100% { transform: translateX(-50%) translateY(0); }
+}
+
+.experience-down-button {
+  position: absolute;
+  top: 49vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4vw;
+  height: auto;
+  cursor: pointer;
+  z-index: 1001;
+  opacity: 0.6;
+  animation: floatUpDown 2s ease-in-out infinite;
+  transition: transform 0.2s ease;
+}
+
+.experience-down-button:hover {
+  animation: none;
+  transform: translateX(-50%) scale(1.1);
 }

@@ -30,7 +30,6 @@ li a {
     text-decoration: none;
     font-family: 'Neucha', cursive;
     font-size: 1.8vw;
-    /* backdrop-filter: blur(5px); */
     border-radius: 50px;
     border: solid;
     border-color: transparent;
@@ -40,7 +39,7 @@ li a {
     padding-top: 0.5vw;
     padding-right: 0.5vw;
     z-index: 9999999;
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 ex {
@@ -84,16 +83,46 @@ ex {
 }
 
 .NavBackground {
-  background-color: rgba(255, 255, 239, 0.5); /* white with 50% opacity */
+  background-color: rgba(255, 255, 239, 0.5);
   border-radius: 10vw;
   margin: 1.5vw auto;
   width: fit-content;
-  max-width: 68vw;
+  max-width: 65vw;
   max-height: 6.2vw;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(30px); /* optional: glassy blur */
-  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Base styling for nav links */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #7a7a7a;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.3vw;
+  width: 0;
+  height: 4px; /* Thicker underline */
+  background-color: #7a7a7a;
+  transition: width 0.3s ease;
+}
+
+/* On hover, expand underline */
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active (clicked) link stays underlined */
+.nav-link.active::after {
+  width: 100%;
 }

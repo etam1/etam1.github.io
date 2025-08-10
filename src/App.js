@@ -10,19 +10,19 @@ import LoadingScreen from './components/loadingScreen/LoadingScreen';
 import Experiences from './components/experiences/experiences';
 
 function App() {
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   window.history.scrollRestoration = 'manual';
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual';
 
-  //   const timeout = setTimeout(() => {
-  //     setLoading(false);
-  //   }, 2000); // simulate 2s load time
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // simulate 2s load time
 
-  //   return () => clearTimeout(timeout);
-  // }, []);
+    return () => clearTimeout(timeout);
+  }, []);
 
-  // if (loading) return <LoadingScreen />;
+  if (loading) return <LoadingScreen />;
 
   return (
     <Router>

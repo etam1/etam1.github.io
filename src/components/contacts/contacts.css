@@ -4,6 +4,7 @@
     height: 100vh; /* Adjust to match the viewport height */
     background-repeat: no-repeat;
     overflow: hidden; 
+    padding-left: 10vw;
     background-size: cover; /* Ensure the background covers the container */
     background-image: url(/Users/ethantam/Desktop/etweb/src/assets/ColorBackground.png);
     display: flex; /* Use flexbox for layout */
@@ -42,7 +43,7 @@
     margin-top:15vw;
     width: 35vw;
     margin-top: 37vw;
-    margin-left: 2vw;
+    margin-left: 5vw;
     height: 70vw;
     animation: fade-in-slide 3s ease forwards;
 }
@@ -135,16 +136,16 @@
     }
 }
 
-.background-title {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 20vw;
-    font-family: 'Neucha', cursive;
-    color: rgba(122, 122, 122, 0.1); /* subtle gray and transparent */
-    z-index: 0; /* Make sure it's behind everything */
-    pointer-events: none; /* Ensure it doesn't block clicks */
-    user-select: none;
-    white-space: nowrap;
+.background-contact-title {
+  position: absolute;
+  bottom: 45rem;
+  left: 50rem;
+  transform: translateX(-50%);
+  font-size: 11vw;
+  font-family: 'Neucha';
+  color: rgba(82, 82, 82, 0.809); /* Light transparent gray */
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  z-index: 0;
 }

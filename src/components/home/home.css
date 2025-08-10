@@ -119,7 +119,7 @@ html, body {
 
 .GreekBack {
     position: absolute;
-    top: 94.5vw;  /* Adjust based on your layout */
+    top: 96.5vw;  /* Adjust based on your layout */
     left: 0; /* Position FallBack on the left */
     height: 228vw;
     width: 100vw;
@@ -129,7 +129,7 @@ html, body {
 
 .woodBack {
     position: absolute;
-    top: 226.6vw;  /* Adjust based on your layout */
+    top: 228.6vw;  /* Adjust based on your layout */
     left: 2.5vw; /* Position FallBack on the left */
     height: 55.5vw;
     width: 97vw;
@@ -267,7 +267,7 @@ html, body {
 
 .lastLine {
     position: absolute;
-    top: 290vw; /* Adjust based on your layout */
+    top: 295vw; /* Adjust based on your layout */
     left: 38vw; /* Adjust based on your layout */
     font-family: 'Neucha', cursive;
     word-spacing: 0.5vw;
@@ -287,7 +287,7 @@ html, body {
 .heartAndStamina{
     position: absolute;
     bottom: 2vw;
-    left: 9.5vw;
+    left: 8.8vw;
     width: 5vw;
     height: 5vw;
 }

@@ -10,7 +10,8 @@ function Contacts() {
   return (
     <div className="contacts">
       {/* <img src={title} alt="Title" className="title" /> */}
-      <div className="background-title">CONTACTS</div>
+      <div className="background-contact-title">CONTACTS</div>
+
       <div className="islands">
         <img src={leftIsland} alt="Island" className="leftSideIsland" />
         <img src={rightIsland} alt="Island" className="centerIsland" />
