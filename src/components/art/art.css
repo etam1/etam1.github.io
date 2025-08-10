@@ -1,22 +1,41 @@
 .art {
     width: 100vw;
-    height: 410vw;
+    height: 468rem;
     background-repeat: no-repeat;
-    background-size: 100vw;
+    background-size: 240rem;
     /* background-image: url("/Users/ethantam/Desktop/etweb/src/assets/Art_Background_Expanded.jpg"); */
     background-image: url(/Users/ethantam/Desktop/etweb/src/assets/ColorBackground.png);
 }
 
 .artHeaderDescription {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  padding-top: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.artHeader {
-    padding-top: 12vw;
-    padding-left: 41vw;
-    padding-bottom: 8vw;
-    height: 11vw;
-    width: 16vw; 
+.artHeaderWrap {
+  display: flex;
+  justify-content: center; 
+  align-items: center;      
+  padding-top: 25rem;         
+  padding-bottom: 30rem;     
+
+  .artHeader {
+    font-size: 11vw;
+    font-family: 'Neucha';
+    color: rgba(82, 82, 82, 0.859);
+    text-align: center;
+   }
+
+   .clouds-img {
+        position: absolute;
+        top: -13vw; /* Adjust vertically as needed */
+        left: 0;
+        width: 100vw;
+        pointer-events: none;
+        z-index: 3;
+        filter: brightness(1.3);
+    }
 }

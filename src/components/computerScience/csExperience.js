@@ -8,11 +8,7 @@ function csExperience(props) {
             <div className="cs-Project-Name">
               {props.name}
             </div>
-
-            <div className="cs-Project-Title">
-              {props.title}
-            </div>
-
+            
             <div className="cs-Project-Time">
               {props.time}
             </div>

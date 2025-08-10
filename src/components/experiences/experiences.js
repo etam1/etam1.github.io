@@ -4,7 +4,6 @@ import leafIcon from "/Users/ethantam/Desktop/etweb/src/assets/leaf.png";
 import clouds from "/Users/ethantam/Desktop/etweb/src/assets/Experiences_Clouds.png";
 import downButton from "/Users/ethantam/Desktop/etweb/src/assets/Experience_ArrowDown.png";
 import React, { useEffect, useRef, useState } from 'react';
-
 import clickSound from '/Users/ethantam/Desktop/etweb/src/assets/Experiences_Sounds.mp3';
 
 const clickAudio = new Audio(clickSound);
@@ -138,7 +137,7 @@ function Experiences() {
         className="experience-down-button"
         alt="Scroll Down"
         onClick={() => {
-            playClick(); // 🔊 play the sound
+            playClick();
             const element = cardRefs.current[0]?.current;
             if (element) {
             const rect = element.getBoundingClientRect();

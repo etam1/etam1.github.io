@@ -6,7 +6,6 @@
 }
 
 .art-Project-Description {
-    padding-left: 5vw;
     display: flex;
     justify-content: flex-start;
 }
@@ -18,40 +17,30 @@
 .art-Project-Name {
     width: 40vw;
     font-size: 4.5vw;
-    font-family: 'Delicious Handrawn', cursive;
+    font-family: 'Neucha';
     letter-spacing: .1vw;
-    color: rgb(139, 139, 139);
-}
-
-.art-Project-Title {
-    width: 20vw;
-    padding-top: .8vw;
-    font-size: 2vw;
-    font-family: 'Delicious Handrawn', cursive;
-    font-weight: lighter;
-    color: rgb(164, 164, 164);
+    color: rgba(82, 82, 82, 0.859);
 }
 
 .art-Project-Time {
     padding-top: 1vw;
     width: 20vw;
     font-size: 2vw;
-    font-family: 'Delicious Handrawn', cursive;
+    font-family: 'Neucha';
     font-style: italic;
-    color: rgb(164, 164, 164);
+    color: rgba(82, 82, 82, 0.859);
 }
 
 .art-Project-Text {
     padding-top: 1vw;
     font-size: 1.7vw;
     width: 40vw;
-    font-family: 'Delicious Handrawn', cursive;
-    color: rgb(176, 176, 176);
+    font-family: 'Neucha';
+    color: rgba(82, 82, 82, 0.859);
 }
 
 .artPic {
     padding-left: 15vw;
-    padding-top: 1vw;
     width: 30vw;
     height: 23vw;
     justify-content: center;
@@ -61,8 +50,7 @@
 
 .MoveVideo {
     padding-left: 15vw;
-    padding-right: 3vw;
-    padding-top: 3vw;
+    padding-top: 1vw;
 }
 
 iframe {

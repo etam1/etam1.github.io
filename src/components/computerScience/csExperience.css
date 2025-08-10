@@ -6,7 +6,6 @@
 }
 
 .cs-Project-Description {
-    padding-left: 10vw;
     display: flex;
     justify-content: flex-start;
 }
@@ -18,43 +17,34 @@
 .cs-Project-Name {
     width: 40vw;
     font-size: 3vw;
-    font-family: 'Delicious Handrawn', cursive;
+    font-family: 'Neucha';
     letter-spacing: .1vw;
-    color: rgb(238, 233, 255);
-}
-
-.cs-Project-Title {
-    width: 20vw;
-    padding-top: .8vw;
-    font-size: 2vw;
-    font-family: 'Delicious Handrawn', cursive;
-    font-weight: lighter;
-    color: white;
+    color: rgba(82, 82, 82, 0.859);
 }
 
 .cs-Project-Time {
     padding-top: 1vw;
     width: 20vw;
     font-size: 2vw;
-    font-family: 'Delicious Handrawn', cursive;
+    font-family: 'Neucha';
     font-style: italic;
-    color: white;
+    color: rgba(82, 82, 82, 0.859);
 }
 
 .cs-Project-Text {
     padding-top: 1vw;
     font-size: 1.7vw;
     width: 40vw;
-    font-family: 'Delicious Handrawn', cursive;
-    color: white;
+    font-family: 'Neucha';
+    color: rgba(82, 82, 82, 0.859);
 }
 
 .cs-Project-Link {
     padding-top: 1vw;
     font-size: 1.7vw;
     width: 40vw;
-    font-family: 'Delicious Handrawn', cursive;
-    color: white;
+    font-family: 'Neucha';
+    color: rgba(82, 82, 82, 0.859);
 }
 
 .csPic {
