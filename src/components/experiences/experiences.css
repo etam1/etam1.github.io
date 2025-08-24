@@ -4,13 +4,13 @@
   background-repeat: no-repeat;
   overflow: hidden;
   background-size: cover;
-  background-image: url(/Users/ethantam/Desktop/etweb/src/assets/Experience_Background.png);
+  background-image: url(../../assets/Experience_Background.png);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  padding-top:30rem;
+  padding-top:30vw;
 }
 
 .beanstock-img {

@@ -1,13 +1,13 @@
 import './art.css';
-import ArtExperience from '/Users/ethantam/Desktop/etweb/src/components/art/artExperience.js';
-import ArtExperienceVideo from '/Users/ethantam/Desktop/etweb/src/components/art/artExperienceVideo.js';
-import EtsyPic from "/Users/ethantam/Desktop/etweb/src/assets/Etsy.png";
-import Kodama from "/Users/ethantam/Desktop/etweb/src/assets/ProjectionMapping.png";
-import Bubbles from "/Users/ethantam/Desktop/etweb/src/assets/Bubbles1.png";
-import Star from "/Users/ethantam/Desktop/etweb/src/assets/Star.png";
-import clouds from "/Users/ethantam/Desktop/etweb/src/assets/Experiences_Clouds.png";
-import downButton from "/Users/ethantam/Desktop/etweb/src/assets/Experience_ArrowDown.png";
-import clickSound from '/Users/ethantam/Desktop/etweb/src/assets/Experiences_Sounds.mp3';
+import ArtExperience from './artExperience.js';
+import ArtExperienceVideo from './artExperienceVideo.js';
+import EtsyPic from "../../assets/Etsy.png";
+import Kodama from "../../assets/ProjectionMapping.png";
+import Bubbles from "../../assets/Bubbles1.png";
+import Star from "../../assets/Star.png";
+import clouds from "../../assets/Experiences_Clouds.png";
+import downButton from "../../assets/Experience_ArrowDown.png";
+import clickSound from '../../assets/Experiences_Sounds.mp3';
 
 
 function art() {

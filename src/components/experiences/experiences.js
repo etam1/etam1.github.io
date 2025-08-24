@@ -1,10 +1,10 @@
 import './experiences.css';
-import beanStock from "/Users/ethantam/Desktop/etweb/src/assets/Experience_Beanstock.png";
-import leafIcon from "/Users/ethantam/Desktop/etweb/src/assets/leaf.png";
-import clouds from "/Users/ethantam/Desktop/etweb/src/assets/Experiences_Clouds.png";
-import downButton from "/Users/ethantam/Desktop/etweb/src/assets/Experience_ArrowDown.png";
+import beanStock from "../../assets/Experience_Beanstock.png";
+import leafIcon from "../../assets/leaf.png";
+import clouds from "../../assets/Experiences_Clouds.png";
+import downButton from "../../assets/Experience_ArrowDown.png";
 import React, { useEffect, useRef, useState } from 'react';
-import clickSound from '/Users/ethantam/Desktop/etweb/src/assets/Experiences_Sounds.mp3';
+import clickSound from '../../assets/Experiences_Sounds.mp3';
 
 const clickAudio = new Audio(clickSound);
 const playClick = () => {
@@ -60,7 +60,7 @@ const experienceData = [
     company: "Cinematic Arts and Production Studios",
     role: "Filmmaker",
     date: "Feb 2025 - May 2025",
-    description: "Directed the animated short film 'Look on the Bright Side' as part of the Spring 2025 showcase."
+    description: "Contributed to the live action short film 'Look on the Bright Side' as part of the editing and art production team for the Spring 2025 showcase."
   },
   {
     company: "UCBUGG (UC Berkeley Undergraduate Graphics Group)",
@@ -116,7 +116,7 @@ function Experiences() {
       setActiveIndex(closestIndex);
 
       // Show/hide sidebar based on scroll position
-      if (window.scrollY > window.innerHeight * 0.1) {
+      if (window.scrollY > window.innerHeight * 0.3) {
         setShowSidebar(true);
       } else {
         setShowSidebar(false);
@@ -187,7 +187,7 @@ function Experiences() {
         </div>
       )}
 
-      <div style={{ height: '76vh' }} />
+      <div style={{ height: '30vw' }} />
 
       {experienceData.map((item, index) => (
         <div className="experience-box" key={index}>
@@ -199,7 +199,6 @@ function Experiences() {
         </div>
       ))}
 
-      <div style={{ height: '10vh' }} />
     </div>
   );
 }

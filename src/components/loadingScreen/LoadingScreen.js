@@ -1,6 +1,6 @@
 import React from 'react';
 import './LoadingScreen.css';
-import loadingGif from '/Users/ethantam/Desktop/etweb/src/assets/loading.gif';
+import loadingGif from '../../assets/loading.gif';
 
 export default function LoadingScreen() {
   return (

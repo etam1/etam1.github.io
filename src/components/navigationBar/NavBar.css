@@ -112,7 +112,7 @@ ex {
   left: 0;
   bottom: -0.3vw;
   width: 0;
-  height: 4px; /* Thicker underline */
+  height: .2vh;
   background-color: #7a7a7a;
   transition: width 0.3s ease;
 }

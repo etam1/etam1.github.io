@@ -3,7 +3,7 @@
 // import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import './NavBar.css';
-import logo from "/Users/ethantam/Desktop/etweb/src/assets/website-Logo.png";
+import logo from "../../assets/website-Logo.png";
 
 function NavBar() {
 	return (

@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-size: 240rem;
     /* background-image: url("/Users/ethantam/Desktop/etweb/src/assets/Art_Background_Expanded.jpg"); */
-    background-image: url(/Users/ethantam/Desktop/etweb/src/assets/ColorBackground.png);
+    background-image: url(../../assets/ColorBackground.png);
 }
 
 .artHeaderDescription {

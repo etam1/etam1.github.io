@@ -6,7 +6,7 @@
     overflow: hidden; 
     padding-left: 10vw;
     background-size: cover; /* Ensure the background covers the container */
-    background-image: url(/Users/ethantam/Desktop/etweb/src/assets/ColorBackground.png);
+    background-image: url(../../assets/ColorBackground.png);
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack title and islands vertically */
     align-items: center; /* Center content horizontally */
@@ -138,8 +138,8 @@
 
 .background-contact-title {
   position: absolute;
-  bottom: 45rem;
-  left: 50rem;
+  padding-top: 13vw;
+  left: 40%;
   transform: translateX(-50%);
   font-size: 11vw;
   font-family: 'Neucha';

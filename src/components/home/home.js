@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import './home.css';
-import welcome from "/Users/ethantam/Desktop/etweb/src/assets/Welcome.png";
-import art from "/Users/ethantam/Desktop/etweb/src/assets/Art.png";
-import cs from "/Users/ethantam/Desktop/etweb/src/assets/Computer Science.png";
-// import contact from "/Users/ethantam/Desktop/etweb/src/assets/Contact.png";
-// import LinkedInLogo from "/Users/ethantam/Desktop/etweb/src/assets/LinkedInLogo.png";
-// import GithubLogo from "/Users/ethantam/Desktop/etweb/src/assets/GithubLogo.png";
-// import MailLogo from "/Users/ethantam/Desktop/etweb/src/assets/MailLogo.png";
-import LeafBack from "/Users/ethantam/Desktop/etweb/src/assets/LEAF_BACKGROUND.png";
-import FallBack from "/Users/ethantam/Desktop/etweb/src/assets/FALL_BACKGROUND.png";
-import Bridge from "/Users/ethantam/Desktop/etweb/src/assets/BRIDGE.png";
-import GreekBack from "/Users/ethantam/Desktop/etweb/src/assets/GREEK_BACKGROUND.png";
-import WoodBack from "/Users/ethantam/Desktop/etweb/src/assets/WOOD_BACKGROUND.png";
-import wood from "/Users/ethantam/Desktop/etweb/src/assets/Interest.png";
-import heartAndStamina from "/Users/ethantam/Desktop/etweb/src/assets/StaminaAndHeart.png";
+import welcome from "../../assets/Welcome.png";
+import art from "../../assets/Art.png";
+import cs from "../../assets/Computer Science.png";
+// import contact from "../../assets/Contact.png";
+// import LinkedInLogo from "../../assets/LinkedInLogo.png";
+// import GithubLogo from "../../assets/GithubLogo.png";
+// import MailLogo from "../../assets/MailLogo.png";
+import LeafBack from "../../assets/LEAF_BACKGROUND.png";
+import FallBack from "../../assets/FALL_BACKGROUND.png";
+import Bridge from "../../assets/BRIDGE.png";
+import GreekBack from "../../assets/GREEK_BACKGROUND.png";
+import WoodBack from "../../assets/WOOD_BACKGROUND.png";
+import wood from "../../assets/Interest.png";
+import heartAndStamina from "../../assets/StaminaAndHeart.png";
 
 function Home() {
   const [isVisible, setIsVisible] = useState(false);

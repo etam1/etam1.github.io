@@ -1,10 +1,10 @@
 import './contacts.css';
-import rightIsland from "/Users/ethantam/Desktop/etweb/src/assets/Contacts.png";
-import leftIsland from "/Users/ethantam/Desktop/etweb/src/assets/Contacts2.png";
-import title from "/Users/ethantam/Desktop/etweb/src/assets/ContactsTitle.png";
-import LinkedInLogo from "/Users/ethantam/Desktop/etweb/src/assets/LinkedInLogo.png";
-import GithubLogo from "/Users/ethantam/Desktop/etweb/src/assets/GithubLogo.png";
-import MailLogo from "/Users/ethantam/Desktop/etweb/src/assets/MailLogo.png";
+import rightIsland from "../../assets/Contacts.png";
+import leftIsland from "../../assets/Contacts2.png";
+// import title from "../../assets/ContactsTitle.png";
+import LinkedInLogo from "../../assets/LinkedInLogo.png";
+import GithubLogo from "../../assets/GithubLogo.png";
+import MailLogo from "../../assets/MailLogo.png";
 
 function Contacts() {
   return (
