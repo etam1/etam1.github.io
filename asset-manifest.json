@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d354bee9.css",
-    "main.js": "/static/js/main.7fa6b9eb.js",
+    "main.css": "/static/css/main.481187f4.css",
+    "main.js": "/static/js/main.55d02eed.js",
     "static/js/787.34a7745e.chunk.js": "/static/js/787.34a7745e.chunk.js",
     "static/media/Etsy.png": "/static/media/Etsy.934c602579ec2a8db7e6.png",
     "static/media/Experiences_Clouds.png": "/static/media/Experiences_Clouds.848c6e25c23ed5d46174.png",
@@ -27,7 +27,6 @@
     "static/media/WOOD_BACKGROUND.png": "/static/media/WOOD_BACKGROUND.7d928bab1106d4d4023a.png",
     "static/media/FALL_BACKGROUND.png": "/static/media/FALL_BACKGROUND.f5ea24046d3083134e48.png",
     "static/media/Star.png": "/static/media/Star.38da9c97906513b06916.png",
-    "static/media/ContactsTitle.png": "/static/media/ContactsTitle.b90b458a34588ba0e9c3.png",
     "static/media/Typing_Project.png": "/static/media/Typing_Project.f03487d22e388f5c0fd3.png",
     "static/media/ClothPic.png": "/static/media/ClothPic.d4d24736e7d43ffd8847.png",
     "static/media/Contacts2.png": "/static/media/Contacts2.131b7d3a4dba5497c323.png",
@@ -47,12 +46,12 @@
     "static/media/Chess_Endgame_Project.png": "/static/media/Chess_Endgame_Project.d8d155155fd6491083f9.png",
     "static/media/Machine_Learning_Data_Compression_Project.jpeg": "/static/media/Machine_Learning_Data_Compression_Project.a15d33486174ff11a2a8.jpeg",
     "index.html": "/index.html",
-    "main.d354bee9.css.map": "/static/css/main.d354bee9.css.map",
-    "main.7fa6b9eb.js.map": "/static/js/main.7fa6b9eb.js.map",
+    "main.481187f4.css.map": "/static/css/main.481187f4.css.map",
+    "main.55d02eed.js.map": "/static/js/main.55d02eed.js.map",
     "787.34a7745e.chunk.js.map": "/static/js/787.34a7745e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d354bee9.css",
-    "static/js/main.7fa6b9eb.js"
+    "static/css/main.481187f4.css",
+    "static/js/main.55d02eed.js"
   ]
 }
