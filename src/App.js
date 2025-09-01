@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from './components/navigationBar/NavBar';
 import Home from './components/home/home';
 import ComputerScience from './components/computerScience/computerScience';

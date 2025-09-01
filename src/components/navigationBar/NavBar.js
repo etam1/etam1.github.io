@@ -1,11 +1,25 @@
-// import { useEffect } from 'react';
-// import { useRef } from 'react';
-// import { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import './NavBar.css';
 import logo from "../../assets/website-Logo.png";
+import musicLogo from "../../assets/Music.png";
+import noMusicLogo from "../../assets/NoMusic.png";
 
 function NavBar() {
+	const [isMusicPlaying, setIsMusicPlaying] = useState(true);
+
+	const toggleMusic = () => {
+		const audio = window.__entryAudio__;
+		if (audio) {
+			if (isMusicPlaying) {
+				audio.pause();
+			} else {
+				audio.play();
+			}
+			setIsMusicPlaying(!isMusicPlaying);
+		}
+	};
+
 	return (
 		<nav className="Nav">
 			<div className="NavBackground">
@@ -38,7 +52,17 @@ function NavBar() {
 					<ex><li><a href="mailto:ethantam9@gmail.com">resume</a></li></ex>
 					<ex><li><a href="mailto:ethantam9@gmail.com">cv</a></li></ex>
 					*/}
+				
 				</ul>
+			</div>
+			<div className="music-toggle-btn-container">
+				<button onClick={toggleMusic} className="music-toggle-btn">
+					<img 
+						src={isMusicPlaying ? musicLogo : noMusicLogo} 
+						alt={isMusicPlaying ? "Mute music" : "Play music"} 
+						className="music-icon"
+					/>
+				</button>
 			</div>
 		</nav>
 	);

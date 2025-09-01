@@ -1,14 +1,14 @@
 .art {
     width: 100vw;
-    height: 468rem;
+    height: 340vw;
     background-repeat: no-repeat;
-    background-size: 240rem;
+    background-size: 240vw;
     /* background-image: url("/Users/ethantam/Desktop/etweb/src/assets/Art_Background_Expanded.jpg"); */
     background-image: url(../../assets/ColorBackground.png);
 }
 
 .artHeaderDescription {
-  padding-top: 25rem;
+  padding-top: 25vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,8 +19,8 @@
   display: flex;
   justify-content: center; 
   align-items: center;      
-  padding-top: 25rem;         
-  padding-bottom: 30rem;     
+  padding-top: 20vw;         
+  padding-bottom: 30vw;     
 
   .artHeader {
     font-size: 11vw;

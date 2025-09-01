@@ -1,8 +1,8 @@
 .computerScience {
   width: 100vw;
-  height: 820rem;
+  height: 590vw;
   background-repeat: no-repeat;
-  background-size: 240rem;
+  background-size: 240vw;
   background-image: url(../../assets/ColorBackground.png);
 }
 
@@ -11,8 +11,8 @@
   display: flex;
   justify-content: center; 
   align-items: center;      
-  padding-top: 25rem;         
-  padding-bottom: 20rem;  
+  padding-top: 20vw;         
+  padding-bottom: 20vw;  
 
     .csHeader {
     font-size: 11vw;
@@ -35,7 +35,7 @@
 
 
 .csHeaderDescription {
-  padding-top: 25rem;
+  padding-top: 16vw;
   display: flex;
   justify-content: center;
   align-items: center;

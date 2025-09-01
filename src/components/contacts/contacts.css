@@ -70,7 +70,7 @@
 
 
 /* Individual logo styles */
-.mailLogo, .githubLogo, .linkedinLogo {
+.mailLogo, .githubLogo, .linkedinLogo, .googleScholarsLogo {
     position: absolute; /* Allow precise positioning */
     width: 5vw;
     height: auto;
@@ -82,18 +82,23 @@
 }
 
 .mailLogo {
-    top: -327.5vw; 
-    left: -1vw; 
+    top: -327vw; 
+    left: 3.2vw; 
 }
 
 .githubLogo {
-    top: -332vw; 
-    left: 4vw; 
+    top: -331.5vw; 
+    left: -1vw; 
 }
 
 .linkedinLogo {
     top: -327.5vw; 
-    left: 9vw; 
+    left: 11vw; 
+}
+
+.googleScholarsLogo {
+    top: -332vw;
+    left: 6.7vw; 
 }
 
 /* Hover effect for glowing logos */
@@ -141,7 +146,7 @@
   padding-top: 13vw;
   left: 40%;
   transform: translateX(-50%);
-  font-size: 11vw;
+  font-size: 10vw;
   font-family: 'Neucha';
   color: rgba(82, 82, 82, 0.809); /* Light transparent gray */
   pointer-events: none;
