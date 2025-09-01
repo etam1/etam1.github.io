@@ -19,14 +19,7 @@ import Smoke_Pic from "../../assets/SmokePic.png";
 import MS1_Pic from "../../assets/MayaScript1.png";
 import MS2_Pic from "../../assets/MayaScript2.png";
 import downButton from "../../assets/Experience_ArrowDown.png";
-import clickSound from '../../assets/Experiences_Sounds.mp3';
 function computerScience() {
-
-  const clickAudio = new Audio(clickSound);
-  const playClick = () => {
-    clickAudio.currentTime = 0;
-    clickAudio.play();
-  };
 
   return (
     <div className="computerScience">
@@ -38,7 +31,6 @@ function computerScience() {
           className="experience-down-button"
           alt="Scroll Down"
           onClick={() => {
-              playClick();
               window.scrollBy({
                 top: window.innerHeight * 0.8,
                 left: 0,

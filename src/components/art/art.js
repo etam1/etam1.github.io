@@ -7,16 +7,9 @@ import Bubbles from "../../assets/Bubbles1.png";
 import Star from "../../assets/Star.png";
 import clouds from "../../assets/Experiences_Clouds.png";
 import downButton from "../../assets/Experience_ArrowDown.png";
-import clickSound from '../../assets/Experiences_Sounds.mp3';
 
 
 function art() {
-
-    const clickAudio = new Audio(clickSound);
-    const playClick = () => {
-      clickAudio.currentTime = 0;
-      clickAudio.play();
-    };
 
     return (
       <div className="art">
@@ -29,7 +22,6 @@ function art() {
             className="experience-down-button"
             alt="Scroll Down"
             onClick={() => {
-                playClick();
                 window.scrollBy({
                   top: window.innerHeight * 0.8,
                   left: 0,

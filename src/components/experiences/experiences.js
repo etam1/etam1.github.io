@@ -4,13 +4,6 @@ import leafIcon from "../../assets/leaf.png";
 import clouds from "../../assets/Experiences_Clouds.png";
 import downButton from "../../assets/Experience_ArrowDown.png";
 import React, { useEffect, useRef, useState } from 'react';
-import clickSound from '../../assets/Experiences_Sounds.mp3';
-
-const clickAudio = new Audio(clickSound);
-const playClick = () => {
-  clickAudio.currentTime = 0;
-  clickAudio.play();
-};
 
 function ExperienceCard({ company, role, date, description, opacity, innerRef }) {
   return (
@@ -137,7 +130,6 @@ function Experiences() {
         className="experience-down-button"
         alt="Scroll Down"
         onClick={() => {
-            playClick();
             const element = cardRefs.current[0]?.current;
             if (element) {
             const rect = element.getBoundingClientRect();

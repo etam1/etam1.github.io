@@ -20,6 +20,13 @@ function NavBar() {
 		}
 	};
 
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			left: 0
+		});
+	};
+
 	return (
 		<nav className="Nav">
 			<div className="NavBackground">
@@ -29,20 +36,20 @@ function NavBar() {
 						<div class="scroll-down"></div>
 					</a> */}
 
-					<ex><li><NavLink to="/csPortfolio" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+					<ex><li><NavLink to="/csPortfolio" onClick={scrollToTop} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
 						COMPUTER SCIENCE
 					</NavLink></li></ex>
-					<ex><li><NavLink to="/artPortfolio" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>ART</NavLink></li></ex>
+					<ex><li><NavLink to="/artPortfolio" onClick={scrollToTop} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>ART</NavLink></li></ex>
 					{/* <ex><li><NavLink to="/experiences" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>RESEARCH</NavLink></li></ex> */}
 
 
 					{/* <ex><li><NavLink to="/artPortfolio" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>TEACHING</NavLink></li></ex> */}
 					
-					<li><NavLink to="/"><img className="logo" src={logo} alt="chopper"></img></NavLink></li>
+					<li><NavLink to="/" onClick={scrollToTop}><img className="logo" src={logo} alt="chopper"></img></NavLink></li>
 									
 					{/* <ex><li><NavLink to="/artPortfolio" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>FILM</NavLink></li></ex> */}
-					<ex><li><NavLink to="/experiences" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>EXPERIENCES</NavLink></li></ex>
-					<ex><li><NavLink to="/contacts" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>CONTACT</NavLink></li></ex>
+					<ex><li><NavLink to="/experiences" onClick={scrollToTop} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>EXPERIENCES</NavLink></li></ex>
+					<ex><li><NavLink to="/contacts" onClick={scrollToTop} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>CONTACT</NavLink></li></ex>
 
 					{/* <div id="scroll-icon">
 						
