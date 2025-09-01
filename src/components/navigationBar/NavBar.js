@@ -6,7 +6,7 @@ import musicLogo from "../../assets/Music.png";
 import noMusicLogo from "../../assets/NoMusic.png";
 
 function NavBar() {
-	const [isMusicPlaying, setIsMusicPlaying] = useState(true);
+	const [isMusicPlaying, setIsMusicPlaying] = useState(false);
 
 	const toggleMusic = () => {
 		const audio = window.__entryAudio__;
