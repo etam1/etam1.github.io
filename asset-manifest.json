@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.443e6d22.css",
-    "main.js": "/static/js/main.fee75348.js",
+    "main.js": "/static/js/main.a08ea70b.js",
     "static/js/787.34a7745e.chunk.js": "/static/js/787.34a7745e.chunk.js",
     "static/media/Etsy.png": "/static/media/Etsy.934c602579ec2a8db7e6.png",
     "static/media/Experiences_Clouds.png": "/static/media/Experiences_Clouds.848c6e25c23ed5d46174.png",
@@ -50,11 +50,11 @@
     "static/media/Machine_Learning_Data_Compression_Project.jpeg": "/static/media/Machine_Learning_Data_Compression_Project.a15d33486174ff11a2a8.jpeg",
     "index.html": "/index.html",
     "main.443e6d22.css.map": "/static/css/main.443e6d22.css.map",
-    "main.fee75348.js.map": "/static/js/main.fee75348.js.map",
+    "main.a08ea70b.js.map": "/static/js/main.a08ea70b.js.map",
     "787.34a7745e.chunk.js.map": "/static/js/787.34a7745e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.443e6d22.css",
-    "static/js/main.fee75348.js"
+    "static/js/main.a08ea70b.js"
   ]
 }
