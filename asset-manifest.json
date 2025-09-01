@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.481187f4.css",
-    "main.js": "/static/js/main.55d02eed.js",
+    "main.css": "/static/css/main.443e6d22.css",
+    "main.js": "/static/js/main.ef17a57f.js",
     "static/js/787.34a7745e.chunk.js": "/static/js/787.34a7745e.chunk.js",
     "static/media/Etsy.png": "/static/media/Etsy.934c602579ec2a8db7e6.png",
     "static/media/Experiences_Clouds.png": "/static/media/Experiences_Clouds.848c6e25c23ed5d46174.png",
@@ -18,9 +18,12 @@
     "static/media/GithubLogo.png": "/static/media/GithubLogo.d0ad578077a1e73fe8c7.png",
     "static/media/LEAF_BACKGROUND.png": "/static/media/LEAF_BACKGROUND.75b65d91da282d0d083a.png",
     "static/media/MailLogo.png": "/static/media/MailLogo.7b9c35da2018a5118d40.png",
+    "static/media/GoogleScholarsLogo.png": "/static/media/GoogleScholarsLogo.ff68f525cdb4c69241c6.png",
     "static/media/GREEK_BACKGROUND.png": "/static/media/GREEK_BACKGROUND.3b2c7b54c506e6f97b25.png",
     "static/media/Contacts.png": "/static/media/Contacts.115cdec9a28bf147eca0.png",
     "static/media/LinkedInLogo.png": "/static/media/LinkedInLogo.e509652f71ce83abf5ae.png",
+    "static/media/NoMusic.png": "/static/media/NoMusic.8eece02156e38ffdc3e9.png",
+    "static/media/Music.png": "/static/media/Music.2dc6e4bf9bfc94f709e3.png",
     "static/media/Bubbles1.png": "/static/media/Bubbles1.2abae6afcd684b9083f1.png",
     "static/media/TEAPOT.png": "/static/media/TEAPOT.53b118ababd5692e9391.png",
     "static/media/Welcome.png": "/static/media/Welcome.438cfe11b85142ed6b24.png",
@@ -46,12 +49,12 @@
     "static/media/Chess_Endgame_Project.png": "/static/media/Chess_Endgame_Project.d8d155155fd6491083f9.png",
     "static/media/Machine_Learning_Data_Compression_Project.jpeg": "/static/media/Machine_Learning_Data_Compression_Project.a15d33486174ff11a2a8.jpeg",
     "index.html": "/index.html",
-    "main.481187f4.css.map": "/static/css/main.481187f4.css.map",
-    "main.55d02eed.js.map": "/static/js/main.55d02eed.js.map",
+    "main.443e6d22.css.map": "/static/css/main.443e6d22.css.map",
+    "main.ef17a57f.js.map": "/static/js/main.ef17a57f.js.map",
     "787.34a7745e.chunk.js.map": "/static/js/787.34a7745e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.481187f4.css",
-    "static/js/main.55d02eed.js"
+    "static/css/main.443e6d22.css",
+    "static/js/main.ef17a57f.js"
   ]
 }
