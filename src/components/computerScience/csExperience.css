@@ -1,56 +1,198 @@
 .csExperience {
-    border: 50vw;
-    padding-top: 6vw;
+    padding: 1vw;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
-.cs-Project-Description {
+/* Card view styles */
+.cs-card {
+    width: 25vw;
+    height: 25vw;
+    background: rgba(255, 255, 239, 0.8);
+    border-radius: 2vw;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(10px);
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1vw;
 }
 
-.cs-Project-Small-Description {
-    font-family: Arial, Helvetica, sans-serif;
+.cs-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cs-card-image {
+    width: 18vw;
+    height: 18vw;
+    object-fit: cover;
+    border-radius: 1vw;
+    margin-bottom: 1vw;
+}
+
+.cs-card-name {
+    font-size: 2vw;
+    font-family: 'Neucha';
+    color: rgba(82, 82, 82, 0.859);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.5vw;
+}
+
+.cs-card-time {
+    font-size: 1.5vw;
+    font-family: 'Neucha';
+    color: rgba(82, 82, 82, 0.6);
+    text-align: center;
+    font-style: italic;
+}
+
+/* Modal popup styles */
+.cs-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999999999;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.cs-modal {
+    background: rgba(255, 255, 239, 0.95);
+    border-radius: 2vw;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(10px);
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: modalSlideIn 0.3s ease-out;
+    position: relative;
+    z-index: 9999999999;
+}
+
+.cs-close-x {
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    background: rgba(82, 82, 82, 0.1);
+    border: 2px solid rgba(82, 82, 82, 0.3);
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vw;
+    font-family: 'Neucha';
+    color: rgba(82, 82, 82, 0.859);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.cs-close-x:hover {
+    background: rgba(82, 82, 82, 0.2);
+    border-color: rgba(82, 82, 82, 0.5);
+    transform: scale(1.1);
+}
+
+.cs-modal-content {
+    display: flex;
+    gap: 3vw;
+    align-items: flex-start;
+    padding: 6vw 3vw 3vw 3vw;
+}
+
+.cs-modal-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cs-modal-image {
+    flex: 0 0 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
 }
 
 .cs-Project-Name {
-    width: 40vw;
     font-size: 3vw;
     font-family: 'Neucha';
     letter-spacing: .1vw;
     color: rgba(82, 82, 82, 0.859);
+    margin-bottom: 1vw;
 }
 
 .cs-Project-Time {
-    padding-top: 1vw;
-    width: 20vw;
     font-size: 2vw;
     font-family: 'Neucha';
     font-style: italic;
     color: rgba(82, 82, 82, 0.859);
+    margin-bottom: 2vw;
 }
 
 .cs-Project-Text {
-    padding-top: 1vw;
     font-size: 1.7vw;
-    width: 40vw;
     font-family: 'Neucha';
     color: rgba(82, 82, 82, 0.859);
+    line-height: 1.6;
+    margin-bottom: 2vw;
 }
 
 .cs-Project-Link {
-    padding-top: 1vw;
-    font-size: 1.7vw;
-    width: 40vw;
-    font-family: 'Neucha';
-    color: rgba(82, 82, 82, 0.859);
+    margin-bottom: 2vw;
 }
 
+.cs-Project-Link a {
+    font-size: 1.5vw;
+    font-family: 'Neucha';
+    color: rgba(82, 82, 82, 0.859);
+    text-decoration: none;
+    background: rgba(82, 82, 82, 0.1);
+    border: 2px solid rgba(82, 82, 82, 0.3);
+    border-radius: 1vw;
+    padding: 1vw 2vw;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.cs-Project-Link a:hover {
+    background: rgba(82, 82, 82, 0.2);
+    border-color: rgba(82, 82, 82, 0.5);
+    transform: translateY(-2px);
+}
+
+
+
 .csPic {
-    padding-left: 10vw;
-    padding-top: 1vw;
-    width: 30vw;
-    height: 23vw;
-    justify-content: center;
+    width: 100%;
+    height: auto;
+    max-height: 30vw;
+    object-fit: contain;
+    border-radius: 1vw;
 }
