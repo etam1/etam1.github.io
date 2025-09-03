@@ -1,6 +1,6 @@
 .art {
     width: 100vw;
-    height: 340vw;
+    height: 177vw;
     background-repeat: no-repeat;
     background-size: 240vw;
     /* background-image: url("/Users/ethantam/Desktop/etweb/src/assets/Art_Background_Expanded.jpg"); */
@@ -8,11 +8,15 @@
 }
 
 .artHeaderDescription {
-  padding-top: 25vh;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3vw;
+  justify-items: center;
+  align-items: start;
+  padding-left: 8vw;
+  padding-right: 8vw;
+  max-width: 100vw;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .artHeaderWrap {

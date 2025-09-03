@@ -284,9 +284,14 @@ html, body {
     background-position: 146.7vw 150vw; */
 }
 
+.lastUpdated {
+    font-size: 1.4vw;
+    opacity: 0.8;
+}
+
 .heartAndStamina{
     position: absolute;
-    bottom: 2vw;
+    bottom: 4.2vw;
     left: 8.8vw;
     width: 5vw;
     height: 5vw;

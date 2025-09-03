@@ -23,7 +23,7 @@ const experienceData = [
     company: "Adobe",
     role: "Experience Design Prototyping Intern",
     date: "May 2025 - Present",
-    description: "Creating cool, creative, and impactful technologies :D"
+    description: "Built an agentic chat-based prototype for Adobe’s GenStudio with 10+ interactive components, conducted a competitive audit of leading UIs to identify UX gaps, and collaborated with researchers and designers on user studies shaping product direction. Also developed accessibility tools like a Spectrum color-picker Chrome extension while upholding Adobe’s values of innovation, quality, accountability, and authenticity."
   },
   {
     company: "UC Berkeley Electrical Engineering & Computer Sciences",
@@ -35,7 +35,7 @@ const experienceData = [
     company: "Berkeley Center of New Media",
     role: "Research Assistant",
     date: "Mar 2025 - Present",
-    description: "Designing embodied game experiences to support learning of local ecological knowledge."
+    description: "Designing embodied game experiences to support learning of local ecological knowledge. Contributed to the Acorn Gathering Exhibit by developing interactive wall and floor projections that teach sustainability and Ohlone acorn traditions through playful, embodied experiences with animals, voiceovers, and acorn collection mechanics."
   },
   {
     company: "Cubstart",
@@ -47,13 +47,13 @@ const experienceData = [
     company: "Berkeley Institute of Design (BiD)",
     role: "Human-Computer Interaction Researcher",
     date: "May 2024 - Present",
-    description: "Conducting research on human-computer interaction with Shm Almeda, developing interactive systems that amplify creative expression and enhance learning experiences."
+    description: "Conducting research on human-computer interaction with Shm Almeda, developing interactive systems that amplify creative expression and enhance learning experiences. Projects include a multimodal orchestra conducting simulator and an infinite canvas UI for exploring art history with generative AI."
   },
   {
     company: "Cinematic Arts and Production Studios",
     role: "Filmmaker",
     date: "Feb 2025 - May 2025",
-    description: "Contributed to the live action short film 'Look on the Bright Side' as part of the editing and art production team for the Spring 2025 showcase."
+    description: "Contributed to the live action short film: 'Look on the Bright Side' as part of the editing and art production team for the Spring 2025 showcase. 'Roses are Red' as part of the editing and lighting team for the Fall 2024 showcase."
   },
   {
     company: "UCBUGG (UC Berkeley Undergraduate Graphics Group)",

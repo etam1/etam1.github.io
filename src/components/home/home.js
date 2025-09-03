@@ -113,7 +113,7 @@ function Home() {
       <div className="csDescription">
         <img className={`csTitle fade-in ${csTitleVisible ? 'visible' : ''}`} src={cs} alt="Computer Science" />
         <h1 className={`fade-in ${csTitleVisible ? 'visible' : ''}`}>
-          I am a UC Berkeley student pursuing a BA in Computer Science. Since seeing how computer graphics shaped animation, I was inspired to explore other branches of computer science at a young age. My interests include machine learning, AI, computer security, computer graphics, and many more of the interdisciplinary applications of CS. Check out my projects!
+        I am a UC Berkeley student pursuing a Bachelors of Arts in Computer Science. Since engaging in technology at an early age, I was inspired to explore the branches of computer science. My interests include human computer interaction, machine learning, AI, computer graphics & animation, AR/VR, and many more of the interdisciplinary applications of CS.
         </h1>
       </div>
 
@@ -121,7 +121,7 @@ function Home() {
         <img className={`GreekBack ${greekBackVisible ? 'slide-in-left fade-in visible' : ''}`} src={GreekBack} alt="Greek Back" />
         <img className={`artTitle fade-in ${artTitleVisible ? 'visible' : ''}`} src={art} alt="Art" />
         <p className={`artDescriptionText fade-in ${artTitleVisible ? 'visible' : ''}`} >
-          Since childhood, art has both fascinated me with its diverse mediums and acted as a source of comfort. Most of my inspirations are drawn from the animated films and shows I grew up with. Today, I’m interested in exploring the intersections between Art and Computer Science. You can check out some of my art projects here!
+        Since childhood, art has both fascinated me with its diverse mediums and acted as a source of comfort. Most of my inspirations are drawn from the animated films and shows I grew up with. Today, I’m interested in exploring the intersections between Creativity and Tech.
         </p>
       </div>
 
@@ -129,7 +129,7 @@ function Home() {
         <img className={`woodBack ${woodBackVisible ? 'slide-in-right fade-in visible' : ''}`} src={WoodBack} alt="Wood Back" />
         <img className={`woodTitle fade-in ${woodTitleVisible ? 'visible' : ''}`} src={wood} alt="wood" />
         <h1 className={`fade-in ${woodTitleVisible ? 'visible' : ''}`}>
-          In my free time, I love creating art, bullet journaling, jamming out to music, watching the latest movies, and following award season. Outside of the arts, I’m a Nintendo geek who loves traveling, cooking, board games, and raising my plant succulent Frederick!
+        In my free time, I love creating art, bullet journaling, jamming out to music, going to my local theatre, and following award season. Outside of the arts, I’m a Nintendo geek who loves traveling, cooking, board games, and being a father to my plant succulent Frederick!
         </h1>
       </div>
 
@@ -145,6 +145,8 @@ function Home() {
       <p className="lastLine">
         <img className="heartAndStamina" src={heartAndStamina} alt="chopper" />
         coded with &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; by ethan tam
+        <br />
+        <span className="lastUpdated">( last updated : 9/18/2024 )</span>
       </p>
     </div>
   );

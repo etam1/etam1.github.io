@@ -1,42 +1,48 @@
+import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import './artExperience.css';
 
-function artExperience(props) {
-    return (
+function ArtExperienceVideo(props) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpanded = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  return (
+    <>
       <div className="artExperience">
-        <div className="art-Project-Description">
-          <div className="art-Project-Small-Description">
-              <div className="art-Project-Name">
-                {props.name}
-              </div>
-  
-              <div className="art-Project-Title">
-                {props.title}
-              </div>
-  
-              <div className="art-Project-Time">
-                {props.time}
-              </div>
-  
-              <div className="art-Project-Text">
-                {props.text}
-              </div>
-  
-          </div>
-  
+        <div className="art-card" onClick={toggleExpanded}>
+          <img className="art-card-image" src={props.image} alt={props.name} />
+          <div className="art-card-name">{props.name}</div>
+          <div className="art-card-time">{props.time}</div>
         </div>
-        {/* <div className="VideoMove">
-            <video src="https://www.youtube.com/watch?v=deqK3hyqebQ&t=1s" width="500" height="300" controls />
-        </div> */}
-
-        <div className="MoveVideo">
-          <iframe title="videoTitle" width="450" height="300"
-            src={props.video}>
-            {/* src="https://www.youtube.com/embed/deqK3hyqebQ"> */}
-          </iframe>
-        </div>
-
       </div>
-    );
-  }
+      
+      {isExpanded && createPortal(
+        <div className="art-modal-overlay" onClick={toggleExpanded}>
+          <div className="art-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="art-close-x" onClick={toggleExpanded}>
+              ×
+            </button>
+            <div className="art-modal-content">
+              <div className="art-modal-text">
+                <div className="art-Project-Name">{props.name}</div>
+                <div className="art-Project-Time">{props.time}</div>
+                <div className="art-Project-Text">{props.text}</div>
+              </div>
+              <div className="art-modal-video">
+                <iframe title="videoTitle" width="100%" height="400"
+                  src={props.video}>
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>,
+        document.body
+      )}
+    </>
+  );
+}
   
-  export default artExperience;
+  export default ArtExperienceVideo;

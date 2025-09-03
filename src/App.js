@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './App.css';
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from './components/navigationBar/NavBar';
@@ -8,9 +8,11 @@ import Art from './components/art/art';
 import Contacts from './components/contacts/contacts';
 import LoadingScreen from './components/loadingScreen/LoadingScreen';
 import Experiences from './components/experiences/experiences';
+import clickSound from './assets/Experiences_Sounds.mp3';
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const entryAudioRef = useRef(new Audio(clickSound));
 
   useEffect(() => {
     window.history.scrollRestoration = 'manual';
@@ -21,6 +23,34 @@ function App() {
 
     return () => clearTimeout(timeout);
   }, []);
+
+  // Attempt to play an entry sound once, after loading screen finishes.
+  useEffect(() => {
+    if (loading) return;
+
+    const alreadyPlayed = sessionStorage.getItem('entrySoundPlayed') === 'true';
+    if (alreadyPlayed) return;
+
+    const audio = entryAudioRef.current;
+    audio.currentTime = 0;
+
+    audio.play().then(() => {
+      sessionStorage.setItem('entrySoundPlayed', 'true');
+    }).catch(() => {
+      const onInteract = () => {
+        audio.currentTime = 0;
+        audio.play().finally(() => {
+          sessionStorage.setItem('entrySoundPlayed', 'true');
+          window.removeEventListener('pointerdown', onInteract);
+          window.removeEventListener('keydown', onInteract);
+          window.removeEventListener('touchstart', onInteract);
+        });
+      };
+      window.addEventListener('pointerdown', onInteract, { once: true });
+      window.addEventListener('keydown', onInteract, { once: true });
+      window.addEventListener('touchstart', onInteract, { once: true });
+    });
+  }, [loading]);
 
   if (loading) return <LoadingScreen />;
 
