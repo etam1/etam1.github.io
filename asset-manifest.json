@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.54155c57.css",
-    "main.js": "/static/js/main.0c0a647f.js",
+    "main.css": "/static/css/main.01591f77.css",
+    "main.js": "/static/js/main.6364c991.js",
     "static/js/787.34a7745e.chunk.js": "/static/js/787.34a7745e.chunk.js",
     "static/media/Etsy.png": "/static/media/Etsy.934c602579ec2a8db7e6.png",
     "static/media/Experiences_Clouds.png": "/static/media/Experiences_Clouds.848c6e25c23ed5d46174.png",
@@ -49,12 +49,12 @@
     "static/media/Chess_Endgame_Project.png": "/static/media/Chess_Endgame_Project.d8d155155fd6491083f9.png",
     "static/media/Machine_Learning_Data_Compression_Project.jpeg": "/static/media/Machine_Learning_Data_Compression_Project.a15d33486174ff11a2a8.jpeg",
     "index.html": "/index.html",
-    "main.54155c57.css.map": "/static/css/main.54155c57.css.map",
-    "main.0c0a647f.js.map": "/static/js/main.0c0a647f.js.map",
+    "main.01591f77.css.map": "/static/css/main.01591f77.css.map",
+    "main.6364c991.js.map": "/static/js/main.6364c991.js.map",
     "787.34a7745e.chunk.js.map": "/static/js/787.34a7745e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.54155c57.css",
-    "static/js/main.0c0a647f.js"
+    "static/css/main.01591f77.css",
+    "static/js/main.6364c991.js"
   ]
 }
