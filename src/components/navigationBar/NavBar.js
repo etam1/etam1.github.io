@@ -14,6 +14,7 @@ function NavBar() {
 			if (isMusicPlaying) {
 				audio.pause();
 			} else {
+				audio.muted = false; // Unmute when user clicks to play
 				audio.play();
 			}
 			setIsMusicPlaying(!isMusicPlaying);
