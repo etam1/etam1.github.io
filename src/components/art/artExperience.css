@@ -184,3 +184,26 @@ iframe {
     height: 400px;
     border-radius: 1vw;
 }
+
+.art-Project-Link {
+    margin-bottom: 2vw;
+}
+
+.art-Project-Link a {
+    font-size: 1.5vw;
+    font-family: 'Neucha';
+    color: rgba(82, 82, 82, 0.859);
+    text-decoration: none;
+    background: rgba(82, 82, 82, 0.1);
+    border: 2px solid rgba(82, 82, 82, 0.3);
+    border-radius: 1vw;
+    padding: 1vw 2vw;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.art-Project-Link a:hover {
+    background: rgba(82, 82, 82, 0.2);
+    border-color: rgba(82, 82, 82, 0.5);
+    transform: translateY(-2px);
+}
