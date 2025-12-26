@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.326d49fb.css",
-    "main.js": "/static/js/main.ae5b658e.js",
+    "main.css": "/static/css/main.5a7f543e.css",
+    "main.js": "/static/js/main.57adfe60.js",
     "static/js/787.34a7745e.chunk.js": "/static/js/787.34a7745e.chunk.js",
     "static/media/Etsy.png": "/static/media/Etsy.934c602579ec2a8db7e6.png",
     "static/media/ohloneAcornCover.png": "/static/media/ohloneAcornCover.39f22e63804c9ed646b7.png",
     "static/media/Experiences_Clouds.png": "/static/media/Experiences_Clouds.848c6e25c23ed5d46174.png",
     "static/media/shmImage.png": "/static/media/shmImage.fc72c77bb926a0473c45.png",
     "static/media/liveAtChinatownImage.png": "/static/media/liveAtChinatownImage.b448742a120074916316.png",
+    "static/media/Space_Background.svg": "/static/media/Space_Background.3c7af0f3e3eb8a83c265.svg",
     "static/media/ShootingSnailCover.png": "/static/media/ShootingSnailCover.212ba742ec53b3d12917.png",
     "static/media/BrokenHeartAlgorithmCover.png": "/static/media/BrokenHeartAlgorithmCover.515a75309f46b819e410.png",
     "static/media/BYOWPic.png": "/static/media/BYOWPic.146343c5ae70377958fa.png",
@@ -61,14 +62,20 @@
     "static/media/Art.png": "/static/media/Art.f49b8070dd916c3f6746.png",
     "static/media/BRIDGE.png": "/static/media/BRIDGE.6c237118c39813b373f9.png",
     "static/media/Chess_Endgame_Project.png": "/static/media/Chess_Endgame_Project.d8d155155fd6491083f9.png",
+    "static/media/TV.svg": "/static/media/TV.4e34d13423b9ca14d667b094fc7412a6.svg",
     "static/media/Machine_Learning_Data_Compression_Project.jpeg": "/static/media/Machine_Learning_Data_Compression_Project.a15d33486174ff11a2a8.jpeg",
+    "static/media/Hover1.svg": "/static/media/Hover1.2d1b4adf821c37647536b9e844add714.svg",
+    "static/media/Hover2.svg": "/static/media/Hover2.550606ccbd6f5c344a631a7a548e4075.svg",
+    "static/media/Hover3.svg": "/static/media/Hover3.1cd9c5447a725b3eab008c8a370ca046.svg",
     "index.html": "/index.html",
-    "main.326d49fb.css.map": "/static/css/main.326d49fb.css.map",
-    "main.ae5b658e.js.map": "/static/js/main.ae5b658e.js.map",
+    "static/media/Left_Button.svg": "/static/media/Left_Button.09acbe20bfc88da1c67d385272824e37.svg",
+    "static/media/Right_Button.svg": "/static/media/Right_Button.fdc888f6027894799458534a60e58e1a.svg",
+    "main.5a7f543e.css.map": "/static/css/main.5a7f543e.css.map",
+    "main.57adfe60.js.map": "/static/js/main.57adfe60.js.map",
     "787.34a7745e.chunk.js.map": "/static/js/787.34a7745e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.326d49fb.css",
-    "static/js/main.ae5b658e.js"
+    "static/css/main.5a7f543e.css",
+    "static/js/main.57adfe60.js"
   ]
 }
