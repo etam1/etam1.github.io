@@ -102,7 +102,7 @@
 }
 
 /* Hover effect for glowing logos */
-.mailLogo:hover, .githubLogo:hover, .linkedinLogo:hover {
+.mailLogo:hover, .githubLogo:hover, .linkedinLogo:hover, .googleScholarsLogo:hover {
     transform: scale(1.2); /* Enlarge slightly on hover */
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.8); /* Glow effect */
 }

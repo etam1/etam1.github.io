@@ -127,10 +127,23 @@ ex {
   width: 100%;
 }
 
+/* Film page styling - white nav links */
+.film-page .nav-link {
+  color: white;
+}
+
+.film-page .nav-link::after {
+  background-color: white;
+}
+
+.film-page .nav-link:hover {
+  color: white;
+}
+
 /* music button */
 .music-toggle-btn-container {
   position: absolute;
-  right: 3vw;
+  right: 10vw;
   top: 50%;
   transform: translateY(-50%);
 
@@ -159,4 +172,9 @@ ex {
     width: 3vw;
     transition: transform 0.3s ease;
   }
+}
+
+/* Film page - make music icons white */
+.film-page .music-icon {
+  filter: brightness(0) invert(1);
 }

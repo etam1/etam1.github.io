@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_group" data-name="Layer group" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2732 2048">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d7d7d7;
+      }
+
+      .cls-2 {
+        fill: #888;
+      }
+    </style>
+  </defs>
+  <g id="Vector_layer" data-name="Vector layer">
+    <path class="cls-2" d="M1313.56,994.81l502.26,895.12h-.86l.61.34-86.74,151.51-137.87-77.18,42.75-74.66h-130.53l-611.97-895.03h-.25L1503,99.81h154.27l-14.1-15.05,84.92-78.47,87.53,93.34-.18.18h.18l-502.23,895h.15Z"/>
+  </g>
+  <g id="Vector_layer-2" data-name="Vector layer">
+    <path class="cls-1" d="M1157.17,1023.95l571.15,1017.88h-355.51l-695.91-1017.79h-.31L1372.56,6.17h355.51l-571.09,1017.79h.18Z"/>
+  </g>
+</svg>

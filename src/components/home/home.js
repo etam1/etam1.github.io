@@ -14,6 +14,7 @@ import GreekBack from "../../assets/GREEK_BACKGROUND.png";
 import WoodBack from "../../assets/WOOD_BACKGROUND.png";
 import wood from "../../assets/Interest.png";
 import heartAndStamina from "../../assets/StaminaAndHeart.png";
+import lastUpdateData from "../../last-update.json";
 
 function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -146,7 +147,7 @@ function Home() {
         <img className="heartAndStamina" src={heartAndStamina} alt="chopper" />
         coded with &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; by ethan tam
         <br />
-        <span className="lastUpdated">( last updated : 9/18/2024 )</span>
+        <span className="lastUpdated">( last updated : {lastUpdateData.lastUpdated} )</span>
       </p>
     </div>
   );
