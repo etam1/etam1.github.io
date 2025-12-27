@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.b3987440.css",
+    "main.css": "/static/css/main.c10768cd.css",
     "main.js": "/static/js/main.57adfe60.js",
     "static/js/787.34a7745e.chunk.js": "/static/js/787.34a7745e.chunk.js",
     "static/media/Etsy.png": "/static/media/Etsy.934c602579ec2a8db7e6.png",
@@ -70,12 +70,12 @@
     "index.html": "/index.html",
     "static/media/Left_Button.svg": "/static/media/Left_Button.09acbe20bfc88da1c67d385272824e37.svg",
     "static/media/Right_Button.svg": "/static/media/Right_Button.fdc888f6027894799458534a60e58e1a.svg",
-    "main.b3987440.css.map": "/static/css/main.b3987440.css.map",
+    "main.c10768cd.css.map": "/static/css/main.c10768cd.css.map",
     "main.57adfe60.js.map": "/static/js/main.57adfe60.js.map",
     "787.34a7745e.chunk.js.map": "/static/js/787.34a7745e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3987440.css",
+    "static/css/main.c10768cd.css",
     "static/js/main.57adfe60.js"
   ]
 }
