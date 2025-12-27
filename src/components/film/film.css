@@ -159,45 +159,93 @@
     color: white;
     z-index: 50;
     pointer-events: none;
-    animation: floatAround 4s ease-in-out infinite;
 }
 
 .film-corner-top-left {
     top: 2vw;
     left: 2vw;
+    animation: floatF 5s ease-in-out infinite;
     animation-delay: 0s;
 }
 
 .film-corner-top-right {
     top: 2vw;
     right: 2vw;
-    animation-delay: 1s;
+    animation: floatI 4s ease-in-out infinite;
+    animation-delay: 1.2s;
 }
 
 .film-corner-bottom-left {
     bottom: 2vw;
     left: 2vw;
-    animation-delay: 2s;
+    animation: floatL 6s ease-in-out infinite;
+    animation-delay: 2.5s;
 }
 
 .film-corner-bottom-right {
     bottom: 2vw;
     right: 2vw;
-    animation-delay: 3s;
+    animation: floatM 4.5s ease-in-out infinite;
+    animation-delay: 0.8s;
 }
 
-@keyframes floatAround {
+@keyframes floatF {
     0%, 100% {
         transform: translate(0, 0) rotate(0deg);
     }
     25% {
-        transform: translate(0.5vw, -0.8vw) rotate(2deg);
+        transform: translate(0.6vw, -1vw) rotate(3deg);
     }
     50% {
-        transform: translate(-0.3vw, -1.2vw) rotate(-1deg);
+        transform: translate(-0.4vw, -1.5vw) rotate(-2deg);
     }
     75% {
-        transform: translate(0.4vw, -0.5vw) rotate(1.5deg);
+        transform: translate(0.5vw, -0.8vw) rotate(2deg);
+    }
+}
+
+@keyframes floatI {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    33% {
+        transform: translate(-0.7vw, -0.9vw) rotate(-2.5deg);
+    }
+    66% {
+        transform: translate(0.8vw, -1.2vw) rotate(2deg);
+    }
+}
+
+@keyframes floatL {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    20% {
+        transform: translate(0.4vw, -0.6vw) rotate(1.5deg);
+    }
+    40% {
+        transform: translate(-0.5vw, -1.1vw) rotate(-1.8deg);
+    }
+    60% {
+        transform: translate(0.3vw, -1.3vw) rotate(2.2deg);
+    }
+    80% {
+        transform: translate(-0.4vw, -0.7vw) rotate(-1deg);
+    }
+}
+
+@keyframes floatM {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    30% {
+        transform: translate(0.9vw, -0.7vw) rotate(2.5deg);
+    }
+    60% {
+        transform: translate(-0.6vw, -1.4vw) rotate(-3deg);
+    }
+    90% {
+        transform: translate(0.5vw, -0.5vw) rotate(1.5deg);
     }
 }
 
