@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.21537789.css",
+    "main.css": "/static/css/main.4ccda37e.css",
     "main.js": "/static/js/main.8c70e1a6.js",
     "static/js/787.34a7745e.chunk.js": "/static/js/787.34a7745e.chunk.js",
     "static/media/Etsy.png": "/static/media/Etsy.934c602579ec2a8db7e6.png",
@@ -89,12 +89,12 @@
     "static/media/Right_Button.svg": "/static/media/Right_Button.fdc888f6027894799458534a60e58e1a.svg",
     "static/media/ResearchFrontPlank.svg": "/static/media/ResearchFrontPlank.368572d6b986fe291ece5151729e1a3c.svg",
     "static/media/Research_Sun.svg": "/static/media/Research_Sun.61338bbeb0cdce499a17b851ecd2c2ae.svg",
-    "main.21537789.css.map": "/static/css/main.21537789.css.map",
+    "main.4ccda37e.css.map": "/static/css/main.4ccda37e.css.map",
     "main.8c70e1a6.js.map": "/static/js/main.8c70e1a6.js.map",
     "787.34a7745e.chunk.js.map": "/static/js/787.34a7745e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.21537789.css",
+    "static/css/main.4ccda37e.css",
     "static/js/main.8c70e1a6.js"
   ]
 }
