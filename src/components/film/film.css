@@ -62,7 +62,7 @@
 
 .video-title {
     position: absolute;
-    top: 69.3%;
+    top: 34.8vw;
     left: 50%;
     transform: translateX(-50%);
     color: black;
@@ -128,19 +128,19 @@
 .hover1 {
     margin-top: -17vw;
     z-index: 3;
-    animation-delay: 0s;
+    animation: floatUpDown 3s ease-in-out infinite;
 }
 
 .hover2 {
     margin-top: -18.5vw;
     z-index: 2;
-    animation-delay: 0.2s;
+    animation: floatUpDown 3s ease-in-out infinite;
 }
 
 .hover3 {
     margin-top: -18.5vw;
     z-index: 1;
-    animation-delay: .4s;
+    animation: floatUpDown 3s ease-in-out infinite;
 }
 
 @keyframes floatUpDown {

@@ -12,14 +12,20 @@ function Film() {
     "https://www.youtube.com/embed/bnyFYbi3RsI?si=PM6fATD8KJnki_h",
     "https://www.youtube.com/embed/0zljpSqJgHc?si=L5TI2EHVvSTTPqS9",
     "https://www.youtube.com/embed/DSgmxClFaQM?si=ozyC7RfRLgj95rLp",
-    "https://www.youtube.com/embed/deqK3hyqebQ"
+    "https://www.youtube.com/embed/deqK3hyqebQ",
+    "https://www.youtube.com/embed/c_X0GK8imc0?si=ceVp_GYypspJJN4v",
+    "https://www.youtube.com/embed/82HM8w58jcE?si=koKdGyofoIuWoE-s",
+    "https://www.youtube.com/embed/2TCr-e-rHlY?si=2NmPwKhBoxi3ySr6"
   ];
 
   const videoNames = [
     "The Replacement",
     "Broken Heart Algorithm",
     "Happy Pickle Animation Trailer",
-    "Shooting Snail Animation"
+    "Shooting Snail Animation",
+    "Outside of the Box",
+    "Look on the Bright Side",
+    "Joan Savvy's First Day on Earth"
   ];
 
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);

@@ -11,14 +11,14 @@ function CsExperienceWithLink(props) {
 
   return (
     <>
-      <div className="csExperience">
+    <div className="csExperience">
         <div className="cs-card" onClick={toggleExpanded}>
           <img className="cs-card-image" src={props.image} alt={props.name} />
           <div className="cs-card-name">{props.name}</div>
           <div className="cs-card-time">{props.time}</div>
         </div>
-      </div>
-      
+            </div>
+
       {isExpanded && createPortal(
         <div className="cs-modal-overlay" onClick={toggleExpanded}>
           <div className="cs-modal" onClick={(e) => e.stopPropagation()}>
@@ -34,13 +34,13 @@ function CsExperienceWithLink(props) {
                   <a href={props.link} target="_blank" rel="noopener noreferrer">
                     Click here to see my project in detail!
                   </a>
-                </div>
-              </div>
+            </div>
+            </div>
               <div className="cs-modal-image">
                 <img className="csPic" src={props.image} alt={props.name} />
-              </div>
             </div>
-          </div>
+            </div>
+        </div>
         </div>,
         document.body
       )}

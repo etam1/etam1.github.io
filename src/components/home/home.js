@@ -114,7 +114,7 @@ function Home() {
       <div className="csDescription">
         <img className={`csTitle fade-in ${csTitleVisible ? 'visible' : ''}`} src={cs} alt="Computer Science" />
         <h1 className={`fade-in ${csTitleVisible ? 'visible' : ''}`}>
-        I am a UC Berkeley student pursuing a Bachelors of Arts in Computer Science. Since engaging in technology at an early age, I was inspired to explore the branches of computer science. My interests include human computer interaction, machine learning, AI, computer graphics & animation, AR/VR, and many more of the interdisciplinary applications of CS.
+        I am a UC Berkeley student pursuing a Bachelors of Arts in Computer Science and a Bachelors of Arts in Film & Media. Since engaging in technology at an early age, I was inspired to explore the branches of computer science. My interests include human computer interaction, machine learning, AI, computer graphics & animation, AR/VR, and many more of the interdisciplinary applications of CS.
         </h1>
       </div>
 

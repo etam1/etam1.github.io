@@ -87,7 +87,7 @@ ex {
   border-radius: 10vw;
   margin: 1.5vw auto;
   width: fit-content;
-  max-width: 65vw;
+  max-width: 70vw;
   max-height: 6.2vw;
   display: flex;
   justify-content: center;
@@ -143,7 +143,7 @@ ex {
 /* music button */
 .music-toggle-btn-container {
   position: absolute;
-  right: 10vw;
+  right: 7vw;
   top: 50%;
   transform: translateY(-50%);
 

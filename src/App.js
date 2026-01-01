@@ -6,6 +6,7 @@ import Home from './components/home/home';
 import ComputerScience from './components/computerScience/computerScience';
 import Art from './components/art/art';
 import Film from './components/film/film';
+import Research from './components/research/Research';
 import Contacts from './components/contacts/contacts';
 import LoadingScreen from './components/loadingScreen/LoadingScreen';
 import Experiences from './components/experiences/experiences';
@@ -14,9 +15,10 @@ import clickSound from './assets/Experiences_Sounds.mp3';
 function AppContent() {
   const location = useLocation();
   const isFilmPage = location.pathname === '/film' || location.hash === '#/film';
+  const isResearchPage = location.pathname === '/research' || location.hash === '#/research';
 
   return (
-    <div className={`App ${isFilmPage ? 'film-page' : ''}`}>
+    <div className={`App ${isFilmPage ? 'film-page' : ''} ${isResearchPage ? 'research-page' : ''}`}>
       <div className="NavBar">
         <NavBar/>
       </div>
@@ -27,6 +29,7 @@ function AppContent() {
         <Route path="/csPortfolio" element={<ComputerScience />} />
         <Route path="/artPortfolio" element={<Art />} />
         <Route path="/film" element={<Film />} />
+        <Route path="/research" element={<Research />} />
         <Route path="/contacts" element={<Contacts />} />
       </Routes>
     </div>

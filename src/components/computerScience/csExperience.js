@@ -11,14 +11,14 @@ function CsExperience(props) {
 
   return (
     <>
-      <div className="csExperience">
+    <div className="csExperience">
         <div className="cs-card" onClick={toggleExpanded}>
           <img className="cs-card-image" src={props.image} alt={props.name} />
           <div className="cs-card-name">{props.name}</div>
           <div className="cs-card-time">{props.time}</div>
         </div>
       </div>
-      
+
       {isExpanded && createPortal(
         <div className="cs-modal-overlay" onClick={toggleExpanded}>
           <div className="cs-modal" onClick={(e) => e.stopPropagation()}>
@@ -35,7 +35,7 @@ function CsExperience(props) {
                 <img className="csPic" src={props.image} alt={props.name} />
               </div>
             </div>
-          </div>
+    </div>
         </div>,
         document.body
       )}

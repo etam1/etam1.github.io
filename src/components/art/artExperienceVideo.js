@@ -9,16 +9,16 @@ function ArtExperienceVideo(props) {
     setIsExpanded(!isExpanded);
   };
 
-  return (
+    return (
     <>
       <div className="artExperience">
         <div className="art-card" onClick={toggleExpanded}>
           <img className="art-card-image" src={props.image} alt={props.name} />
           <div className="art-card-name">{props.name}</div>
           <div className="art-card-time">{props.time}</div>
-        </div>
-      </div>
-      
+              </div>
+              </div>
+  
       {isExpanded && createPortal(
         <div className="art-modal-overlay" onClick={toggleExpanded}>
           <div className="art-modal" onClick={(e) => e.stopPropagation()}>
@@ -42,7 +42,7 @@ function ArtExperienceVideo(props) {
         document.body
       )}
     </>
-  );
-}
+    );
+  }
   
   export default ArtExperienceVideo;

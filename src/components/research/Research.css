@@ -1,0 +1,394 @@
+.research {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(../../assets/ResearchBackground.svg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.research-sun {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 2;
+    animation: slideUpSun 2s ease-out forwards;
+}
+
+.research-cloud,
+.research-cloud-1,
+.research-cloud-2,
+.research-cloud-3,
+.research-cloud-4,
+.research-cloud-5 {
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+}
+
+.research-cloud {
+    width: 100%;
+    height: auto;
+    z-index: 4;
+}
+
+.research-cloud-1 {
+    top: -5%;
+    left: 10%;
+}
+
+.research-cloud-2 {
+    top: -5%;
+    left: -5%;
+}
+
+.research-cloud-3 {
+    top: -5%;
+}
+
+.research-cloud-4 {
+    top: -7%;
+}
+
+.research-cloud-5 {
+    top: -5%;
+    left: 5%;
+}
+
+.research-ground {
+    position: absolute;
+    bottom: -10vh;
+    left: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    z-index: 4;
+}
+
+.researchHeader {
+    font-size: 11vw;
+    font-family: 'Neucha';
+    color: rgba(126, 119, 48, 0.859);
+    text-align: center;
+    position: absolute;
+    top: 30vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    z-index: 5;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.researchHeader.header-show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.researchHeader.header-hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.research-tree-mid-left {
+    position: absolute;
+    bottom: -11%;
+    left: -1.5%;
+    width: 100vw;
+    height: auto;
+    z-index: 5;
+}
+
+.research-tree-mid-right {
+    position: absolute;
+    bottom: -9%;
+    right: -.1%;
+    width: 96vw;
+    height: auto;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.research-bridge-left {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: -16.5%;
+    left: -6.5%;
+    pointer-events: none;
+    z-index: 6;
+    animation: slideInFromLeft 2s ease-out forwards;
+}
+
+.research-bridge-left.slide-out-left {
+    animation: slideOutToLeft 1s ease-out forwards;
+}
+
+.research-tree {
+    width: 10vw;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 8;
+    animation: slideUpTree1 2s ease-out forwards;
+}
+
+.research-tree-2 {
+    width: 10vw;
+    height: auto;
+    position: fixed;
+    bottom: -11vh;
+    left: 18vw;
+    pointer-events: none;
+    z-index: 8;
+    transform: scaleX(-1);
+    animation: slideUpTree2 2.3s ease-out forwards;
+}
+
+.research-bridge-right {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: -4%;
+    left: 6%;
+    pointer-events: none;
+    z-index: 7;
+    animation: slideInFromRight 2s ease-out forwards;
+}
+
+.research-bridge-right.slide-out-right {
+    animation: slideOutToRight 1s ease-out forwards;
+}
+
+.research-toggle-button {
+    position: fixed;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+    z-index: 100;
+    transition: transform 0.3s ease;
+    animation: buttonFloat 3s ease-in-out infinite;
+    filter: brightness(1.3);
+}
+
+.research-toggle-button:hover {
+    transform: translateX(-50%) scale(1.1);
+    animation-play-state: paused;
+}
+
+.research-toggle-button.button-flipped {
+    transform: translateX(-50%) rotateX(180deg);
+    animation: buttonFloatFlipped 3s ease-in-out infinite;
+}
+
+.research-toggle-button.button-flipped:hover {
+    transform: translateX(-50%) rotateX(180deg) scale(1.1);
+}
+
+@keyframes buttonFloat {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+@keyframes buttonFloatFlipped {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0) rotateX(180deg);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px) rotateX(180deg);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: -6.5%;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: 6%;
+    }
+}
+
+@keyframes slideOutToLeft {
+    0% {
+        left: -6.5%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+@keyframes slideOutToRight {
+    0% {
+        left: 6%;
+    }
+    100% {
+        left: 100vw;
+    }
+}
+
+@keyframes slideUpTree1 {
+    0% {
+        bottom: -50vh;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes slideUpTree2 {
+    0% {
+        bottom: -50vh;
+    }
+    100% {
+        bottom: -11vh;
+    }
+}
+
+@keyframes slideUpTreeMid2 {
+    0% {
+        bottom: -50vh;
+    }
+    100% {
+        bottom: -3%;
+    }
+}
+
+@keyframes slideUpTreeFront {
+    0% {
+        bottom: -50vh;
+    }
+    100% {
+        bottom: -10%;
+    }
+}
+
+@keyframes slideUpSun {
+    0% {
+        top: 100vh;
+    }
+    100% {
+        top: 30%;
+    }
+}
+
+.research-tree-mid-2 {
+    width: 10vw;
+    height: auto;
+    position: absolute;
+    bottom: -3%;
+    left: 53%;
+    pointer-events: none;
+    z-index: 8;
+    animation: slideUpTreeMid2 2.1s ease-out forwards;
+}
+
+.research-rock-container {
+    position: absolute;
+    bottom: -50vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 78vw;
+    z-index: 8;
+    transition: bottom 1s ease-out;
+}
+
+.research-rock-container.rock-show {
+    bottom: 0;
+}
+
+.research-rock-container.rock-hide {
+    bottom: -100vh;
+}
+
+.research-rock {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none;
+}
+
+.research-text-container {
+    position: absolute;
+    top: 45%;
+    left: 50.5%;
+    transform: translateX(-50%);
+    width: 35vw;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    user-select: text;
+    pointer-events: auto;
+}
+
+.research-text-item {
+    font-family: 'Neucha', cursive;
+    font-size: 1.6vw;
+    color: rgba(30, 30, 30, 0.9);
+    line-height: 1;
+    text-align: left;
+    padding: .5vw;
+}
+
+.research-text-item .research-link {
+    color: #8f002b;
+    text-decoration: underline;
+    font-style: italic;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.research-text-item .research-link:hover {
+    color: #d32626;
+}
+
+.research-text-item .research-text-small {
+    font-size: 1vw;
+}
+
+.research-front-plank {
+    position: absolute;
+    bottom: -10vh;
+    left: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    z-index: 8;
+}
+
+.research-tree-front {
+    width: 20vw;
+    height: auto;
+    position: absolute;
+    bottom: -10%;
+    left: 84%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 9;
+    animation: slideUpTreeFront 2.5s ease-out forwards;
+}
+
