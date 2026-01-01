@@ -99,7 +99,6 @@
     pointer-events: auto;
     position: relative;
     animation: buttonFloat 3s ease-in-out infinite;
-    animation-delay: 1.5s;
     margin-left: -10vw;
 }
 
