@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.4ccda37e.css",
-    "main.js": "/static/js/main.8c70e1a6.js",
+    "main.css": "/static/css/main.9d29053c.css",
+    "main.js": "/static/js/main.e51b0417.js",
     "static/js/787.34a7745e.chunk.js": "/static/js/787.34a7745e.chunk.js",
+    "static/media/CalhacksCover.png": "/static/media/CalhacksCover.7a9971ed93aeedab0129.png",
     "static/media/Etsy.png": "/static/media/Etsy.934c602579ec2a8db7e6.png",
     "static/media/ohloneAcornCover.png": "/static/media/ohloneAcornCover.39f22e63804c9ed646b7.png",
     "static/media/Experiences_Clouds.png": "/static/media/Experiences_Clouds.848c6e25c23ed5d46174.png",
@@ -15,10 +16,12 @@
     "static/media/BrokenHeartAlgorithmCover.png": "/static/media/BrokenHeartAlgorithmCover.515a75309f46b819e410.png",
     "static/media/BYOWPic.png": "/static/media/BYOWPic.146343c5ae70377958fa.png",
     "static/media/Experiences_Sounds.mp3": "/static/media/Experiences_Sounds.a90bb4238252586656ea.mp3",
+    "static/media/instaposts.png": "/static/media/instaposts.ff1e58eb33adef9a00e1.png",
     "static/media/Research_Cloud.svg": "/static/media/Research_Cloud.65727910c51634aeb1e742a1d6c09f0d.svg",
     "static/media/binaryButtonCover.png": "/static/media/binaryButtonCover.41c4c3a92fdb46a6fcc3.png",
     "static/media/AntBeeProject.png": "/static/media/AntBeeProject.20ca482ed788a1084792.png",
     "static/media/HappyPickleCover.png": "/static/media/HappyPickleCover.2d21a8b8b00f12635677.png",
+    "static/media/CalHacksLanyard.png": "/static/media/CalHacksLanyard.1fa3070008e107992b2b.png",
     "static/media/alienShowCover.png": "/static/media/alienShowCover.c0b84a2ec554d3280bdb.png",
     "static/media/myHouse.png": "/static/media/myHouse.9b2271fe26747b65932c.png",
     "static/media/DemoCover.png": "/static/media/DemoCover.3b379120171f3e353b07.png",
@@ -26,6 +29,7 @@
     "static/media/PathTracer.png": "/static/media/PathTracer.87fdf98b3507e1e3e0ef.png",
     "static/media/StaminaAndHeart.png": "/static/media/StaminaAndHeart.3060146385519036e2e6.png",
     "static/media/escapeRoom.png": "/static/media/escapeRoom.19cee0ebcea1ae6ab41c.png",
+    "static/media/CalhacksSticker.png": "/static/media/CalhacksSticker.977b66a2344dc86161f6.png",
     "static/media/ColorBackground.png": "/static/media/ColorBackground.ef3d9c47a9590a9cad4f.png",
     "static/media/CPU_Project.png": "/static/media/CPU_Project.bdc76d553eda6bb961f3.png",
     "static/media/ProjectionMapping.png": "/static/media/ProjectionMapping.e8ab25bd90852ae80736.png",
@@ -54,6 +58,7 @@
     "static/media/Typing_Project.png": "/static/media/Typing_Project.f03487d22e388f5c0fd3.png",
     "static/media/ClothPic.png": "/static/media/ClothPic.d4d24736e7d43ffd8847.png",
     "static/media/Contacts2.png": "/static/media/Contacts2.131b7d3a4dba5497c323.png",
+    "static/media/Layard.png": "/static/media/Layard.c9745b80cabbc1656449.png",
     "static/media/mascotimage.jpeg": "/static/media/mascotimage.a7d09e5139a6f1959733.jpeg",
     "static/media/Research_Tree.svg": "/static/media/Research_Tree.dbea92aeed887902d9c05ccb56932977.svg",
     "static/media/gitlet_Project_Image.jpeg": "/static/media/gitlet_Project_Image.b1696bec374210ab5a8f.jpeg",
@@ -89,12 +94,12 @@
     "static/media/Right_Button.svg": "/static/media/Right_Button.fdc888f6027894799458534a60e58e1a.svg",
     "static/media/ResearchFrontPlank.svg": "/static/media/ResearchFrontPlank.368572d6b986fe291ece5151729e1a3c.svg",
     "static/media/Research_Sun.svg": "/static/media/Research_Sun.61338bbeb0cdce499a17b851ecd2c2ae.svg",
-    "main.4ccda37e.css.map": "/static/css/main.4ccda37e.css.map",
-    "main.8c70e1a6.js.map": "/static/js/main.8c70e1a6.js.map",
+    "main.9d29053c.css.map": "/static/css/main.9d29053c.css.map",
+    "main.e51b0417.js.map": "/static/js/main.e51b0417.js.map",
     "787.34a7745e.chunk.js.map": "/static/js/787.34a7745e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ccda37e.css",
-    "static/js/main.8c70e1a6.js"
+    "static/css/main.9d29053c.css",
+    "static/js/main.e51b0417.js"
   ]
 }
