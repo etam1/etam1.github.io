@@ -43,6 +43,7 @@ function NavBar() {
 					<li><NavLink to="/" onClick={scrollToTop}><img className="logo" src={logo} alt="chopper"></img></NavLink></li>
 									
 					<ex><li><NavLink to="/research" onClick={scrollToTop} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>RESEARCH</NavLink></li></ex>
+					{/* <ex><li><NavLink to="/cmuPortfolio" onClick={scrollToTop} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>CMU PORTFOLIO</NavLink></li></ex> */}
 
 					<ex><li><NavLink to="/experiences" onClick={scrollToTop} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>EXPERIENCES</NavLink></li></ex>
 					<ex><li><NavLink to="/contacts" onClick={scrollToTop} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>CONTACT</NavLink></li></ex>

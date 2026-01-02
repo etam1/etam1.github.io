@@ -7,6 +7,7 @@ import ComputerScience from './components/computerScience/computerScience';
 import Art from './components/art/art';
 import Film from './components/film/film';
 import Research from './components/research/Research';
+import CmuPortfolio from './components/cmuPortfolio/cmuPortfolio';
 import Contacts from './components/contacts/contacts';
 import LoadingScreen from './components/loadingScreen/LoadingScreen';
 import Experiences from './components/experiences/experiences';
@@ -30,6 +31,7 @@ function AppContent() {
         <Route path="/artPortfolio" element={<Art />} />
         <Route path="/film" element={<Film />} />
         <Route path="/research" element={<Research />} />
+        <Route path="/cmuPortfolio" element={<CmuPortfolio />} />
         <Route path="/contacts" element={<Contacts />} />
       </Routes>
     </div>

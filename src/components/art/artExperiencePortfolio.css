@@ -1,0 +1,241 @@
+.artExperience {
+    padding: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card view styles */
+.art-card {
+    width: 25vw;
+    height: 25vw;
+    background: rgba(255, 255, 239, 0.8);
+    border-radius: 2vw;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1vw;
+}
+
+.art-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.art-card-image {
+    width: 18vw;
+    height: 18vw;
+    object-fit: cover;
+    border-radius: 1vw;
+    margin-bottom: 1vw;
+}
+
+.art-card-name {
+    font-size: 2vw;
+    font-family: 'Neucha';
+    color: rgba(82, 82, 82, 0.859);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.5vw;
+}
+
+.art-card-time {
+    font-size: 1.5vw;
+    font-family: 'Neucha';
+    color: rgba(82, 82, 82, 0.6);
+    text-align: center;
+    font-style: italic;
+}
+
+/* Modal popup styles */
+.art-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999999999;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.art-portfolio-modal {
+    background: rgba(240, 250, 240, 0.98);
+    border-radius: 2vw;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    max-width: 70vw;
+    max-height: 85vh;
+    overflow-y: auto;
+    animation: modalSlideIn 0.3s ease-out;
+    position: relative;
+    z-index: 9999999999;
+    padding: 3vw;
+}
+
+.art-close-x {
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    background: rgba(82, 82, 82, 0.1);
+    border: 2px solid rgba(82, 82, 82, 0.3);
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vw;
+    font-family: 'Neucha';
+    color: rgba(82, 82, 82, 0.859);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.art-close-x:hover {
+    background: rgba(82, 82, 82, 0.2);
+    border-color: rgba(82, 82, 82, 0.5);
+    transform: scale(1.1);
+}
+
+.art-portfolio-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    color: #000;
+}
+
+.art-portfolio-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4vw;
+}
+
+.art-portfolio-left {
+    flex: 1;
+}
+
+.art-portfolio-title {
+    font-size: 4vw;
+    font-family: 'Neucha', serif;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 0.5vw;
+}
+
+.art-portfolio-subtitle {
+    font-size: 1.5vw;
+    font-family: 'Arial', sans-serif;
+    color: #000;
+    margin-bottom: 1.5vw;
+}
+
+.art-portfolio-intro {
+    font-size: 1.2vw;
+    font-family: 'Arial', sans-serif;
+    color: #000;
+    line-height: 1.6;
+}
+
+.art-portfolio-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vw;
+    min-width: 25vw;
+}
+
+.art-portfolio-detail-item {
+    font-size: 1.1vw;
+    font-family: 'Arial', sans-serif;
+    color: #000;
+    line-height: 1.5;
+}
+
+.art-portfolio-detail-label {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 0.5vw;
+}
+
+.art-portfolio-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    margin: 1vw 0;
+}
+
+.art-portfolio-quote {
+    font-size: 2.5vw;
+    font-family: 'Neucha', serif;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    line-height: 1.4;
+    margin: 2vw 0;
+}
+
+.art-portfolio-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vw;
+    margin-top: 2vw;
+}
+
+.art-portfolio-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+
+.art-portfolio-paragraph {
+    font-size: 1.1vw;
+    font-family: 'Arial', sans-serif;
+    color: #000;
+    line-height: 1.6;
+}
+
+.art-portfolio-image-section {
+    margin-top: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+}
+
+.art-portfolio-additional-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5vw;
+}
+
+.art-portfolio-image-caption {
+    font-size: 1.2vw;
+    font-family: 'Arial', sans-serif;
+    color: #000;
+    font-style: italic;
+    text-align: center;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
