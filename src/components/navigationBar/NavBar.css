@@ -1,25 +1,29 @@
 /* General styles */
-* {
-    z-index: 9999999;
-}
-
 .Nav {
     width: 100vw;
     top: 0;
     position: fixed;
     display: flex;
     flex-direction: row;
-    justify-content: flex-between;
+    justify-content: center;
     align-items: center;
     z-index: 99999999;
 }
 
-ul {
-    width: 100vw;
+.nav-shell {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+ul.nav-links {
+    width: auto;
     display: flex;
     justify-content: center;
     list-style-type: none;
     margin: 0;
+    padding: 0;
     padding-top: 0.25vw;
 }
 
@@ -38,12 +42,24 @@ li a {
     padding-left: 0.5vw;
     padding-top: 0.5vw;
     padding-right: 0.5vw;
-    z-index: 9999999;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 ex {
     padding-top: 2vw;
+}
+
+.nav-item-desktop {
+    padding-top: 2vw;
+}
+
+.nav-item-home {
+    padding-top: 0;
+}
+
+.nav-item-home a {
+    margin: 0;
+    padding: 0;
 }
 
 .logo {
@@ -83,6 +99,7 @@ ex {
 }
 
 .NavBackground {
+  position: relative;
   background-color: rgba(255, 255, 239, 0.5);
   border-radius: 10vw;
   margin: 1.5vw auto;
@@ -95,6 +112,80 @@ ex {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-dropdown-container {
+  display: none;
+  position: relative;
+}
+
+.nav-dropdown-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.45vw;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1vw;
+  border-radius: 50px;
+  transition: transform 0.3s ease;
+}
+
+.nav-dropdown-toggle:hover {
+  transform: scale(1.05);
+}
+
+.nav-dropdown-bar {
+  display: block;
+  width: 2.2vw;
+  height: 0.25vw;
+  background-color: #7a7a7a;
+  border-radius: 2px;
+}
+
+.nav-dropdown-menu-wrapper {
+  position: fixed;
+  top: calc(1.5vw + 12vw);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100000;
+}
+
+.nav-dropdown-menu {
+  min-width: 52vw;
+  margin: 0;
+  padding: 1vw 0;
+  list-style-type: none;
+  background-color: rgba(255, 255, 239, 0.5);
+  border-radius: 2vw;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+}
+
+.nav-dropdown-menu .nav-link {
+  display: block;
+  padding: 1.2vw 2vw;
+  font-size: 3.2vw;
+  text-align: center;
+}
+
+.nav-dropdown-menu .nav-link::after {
+  bottom: 0.8vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+}
+
+.nav-dropdown-menu .nav-link:hover::after,
+.nav-dropdown-menu .nav-link.active::after {
+  width: 60%;
+}
+
+.nav-dropdown-menu li {
+  padding: 0;
 }
 
 /* Base styling for nav links */
@@ -140,14 +231,30 @@ ex {
   color: white;
 }
 
+.film-page .nav-dropdown-bar {
+  background-color: white;
+}
+
+.film-page .nav-dropdown-menu {
+  background-color: rgba(255, 255, 239, 0.5);
+}
+
+.film-page .nav-dropdown-menu .nav-link {
+  color: white;
+}
+
+.film-page .nav-dropdown-menu .nav-link::after {
+  background-color: white;
+}
+
 /* music button */
 .music-toggle-btn-container {
   position: absolute;
   right: 7vw;
   top: 50%;
   transform: translateY(-50%);
-
-  .music-toggle-btn {
+}
+.music-toggle-btn-container .music-toggle-btn {
     background: none;
     border: none;
     cursor: pointer;
@@ -163,18 +270,106 @@ ex {
     padding: 1.70vw;
   }
   
-  .music-toggle-btn:hover {
+.music-toggle-btn-container .music-toggle-btn:hover {
     transform: scale(1.1);
   }
   
-  .music-icon {
+.music-toggle-btn-container .music-icon {
     height: 3vw;
     width: 3vw;
     transition: transform 0.3s ease;
   }
-}
 
 /* Film page - make music icons white */
 .film-page .music-icon {
   filter: brightness(0) invert(1);
+}
+
+@media (max-width: 900px) {
+  .nav-shell {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    width: fit-content;
+    gap: 1.5vw;
+    padding: 0.75vw 2vw;
+    margin: 1.5vw auto;
+    background-color: rgba(255, 255, 239, 0.5);
+    border-radius: 10vw;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .NavBackground {
+    display: contents;
+    background: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    max-height: none;
+  }
+
+  .nav-dropdown-container {
+    display: block;
+  }
+
+  .nav-links {
+    display: contents;
+  }
+
+  .nav-item-desktop {
+    display: none;
+  }
+
+  .nav-item-home {
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-item-home a {
+    margin: 0;
+    padding: 0;
+    display: block;
+    line-height: 0;
+  }
+
+  .nav-item-home .logo {
+    height: 10vw;
+    width: 10vw;
+  }
+
+  .nav-dropdown-bar {
+    width: 5vw;
+    height: 0.6vw;
+  }
+
+  .nav-dropdown-menu-wrapper {
+    top: calc(1.5vw + 14vw);
+  }
+
+  .nav-dropdown-menu {
+    min-width: 62vw;
+  }
+
+  .music-toggle-btn-container {
+    position: static;
+    transform: none;
+  }
+
+  .music-toggle-btn-container .music-toggle-btn {
+    padding: 0;
+    box-shadow: none;
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .music-toggle-btn-container .music-icon {
+    height: 6vw;
+    width: 6vw;
+  }
 }
