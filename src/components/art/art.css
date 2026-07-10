@@ -1,45 +1,221 @@
 .art {
-    width: 100vw;
-    height: 223vw;
-    background-repeat: no-repeat;
-    background-size: 240vw;
-    /* background-image: url("/Users/ethantam/Desktop/etweb/src/assets/Art_Background_Expanded.jpg"); */
-    background-image: url(../../assets/ColorBackground.png);
-}
-
-.artHeaderDescription {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3vw;
-  justify-items: center;
-  align-items: start;
-  padding-left: 8vw;
-  padding-right: 8vw;
-  max-width: 100vw;
-  justify-content: center;
+  width: 100vw;
+  height: 200vh;
+  overflow: hidden;
+  background-color: rgba(253, 236, 232, 1);
+  --art-nav-offset: 5vw;
 }
 
 .artHeaderWrap {
+  position: relative;
   display: flex;
-  justify-content: center; 
-  align-items: center;      
-  padding-top: 20vw;         
-  padding-bottom: 30vw;     
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 0;
+}
 
-  .artHeader {
-    font-size: 11vw;
-    font-family: 'Neucha';
-    color: rgba(82, 82, 82, 0.859);
-    text-align: center;
-   }
+.artHeaderContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 2;
+}
 
-   .clouds-img {
-        position: absolute;
-        top: -13vw; /* Adjust vertically as needed */
-        left: 0;
-        width: 100vw;
-        pointer-events: none;
-        z-index: 3;
-        filter: brightness(1.3);
-    }
+.artHeaderLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  height: 100%;
+  width: 100%;
+  transform: translateY(5vw);
+}
+
+.artHeaderWrap .artHeader {
+  font-size: 7vw;
+  font-family: 'Neucha';
+  color: rgba(82, 82, 82, 0.859);
+  text-align: center;
+  line-height: 1;
+  width: 100%;
+}
+
+.art-down-button {
+  width: 4vw;
+  height: auto;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.art-down-button:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+.art-museum-slot {
+  width: 90%;
+  max-height: 40.5vw;
+  min-height: 30vw;
+  justify-self: end;
+}
+
+.art-museum-img {
+  position: fixed;
+  top: calc(50% + var(--art-nav-offset) / 2);
+  right: 6vw;
+  width: calc((100vw - 12vw) / 2 * 0.9);
+  height: auto;
+  max-height: 40.5vw;
+  object-fit: cover;
+  border-radius: 2vw;
+  transform: translateY(-50%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.artProjectsSection {
+  height: 100vh;
+  width: 50vw;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5vw;
+  padding: var(--art-nav-offset) 3vw 0;
+  padding-left: 8vw;
+  z-index: 3;
+}
+
+.art-projects-arrow {
+  width: 4vw;
+  height: auto;
+  cursor: pointer;
+  opacity: 0.6;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.art-projects-arrow-left {
+  transform: rotate(90deg);
+}
+
+.art-projects-arrow-right {
+  transform: rotate(-90deg);
+}
+
+.art-projects-arrow-left:hover {
+  transform: rotate(90deg) scale(1.1);
+  opacity: 0.85;
+}
+
+.art-projects-arrow-right:hover {
+  transform: rotate(-90deg) scale(1.1);
+  opacity: 0.85;
+}
+
+.artProjectsContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw;
+  flex-shrink: 0;
+  padding-top: 2vw;
+}
+
+.art-page-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+}
+
+.art-page-dot {
+  width: 0.75vw;
+  height: 0.75vw;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(82, 82, 82, 0.25);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.art-page-dot:hover {
+  background-color: rgba(82, 82, 82, 0.45);
+  transform: scale(1.15);
+}
+
+.art-page-dot-active {
+  background-color: rgba(82, 82, 82, 0.75);
+  transform: scale(1.2);
+}
+
+.art-page-dot-active:hover {
+  background-color: rgba(82, 82, 82, 0.75);
+}
+
+.artHeaderDescription {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, 17vw);
+  grid-template-rows: repeat(2, 17vw);
+  gap: 3vw;
+  justify-content: center;
+  align-content: start;
+  flex-shrink: 0;
+}
+
+.artHeaderDescription .artExperience {
+  width: 17vw;
+  height: 17vw;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artHeaderDescription .art-card {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.artHeaderDescription .art-card-image {
+  width: 100%;
+  height: 70%;
+  min-height: 50%;
+  object-fit: cover;
+  margin: 0;
+  border-radius: 0;
+}
+
+.artHeaderDescription .art-card-name {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35vw;
+  margin: 0;
+  padding: 0.25vw 0.5vw;
+  line-height: 1.05;
+}
+
+.artHeaderDescription .art-card-time {
+  font-size: 1.05vw;
+  margin: 0;
+  padding: 0 0.5vw 0.4vw;
 }

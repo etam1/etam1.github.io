@@ -40,7 +40,7 @@
 .tv-image {
     width: 75vw;
     height: auto;
-    right: 5vw;
+    right: 20vw;
     z-index: 4;
     position: relative;
     display: block;
@@ -50,7 +50,7 @@
 .tv-video {
     position: absolute;
     top: 30vw;
-    left: 32.85vw;
+    left: 17.85vw;
     transform: translate(-50%, -50%);
     width: 28.3vw;
     height: 19vw;
@@ -63,7 +63,7 @@
 .video-title {
     position: absolute;
     top: 40.8vw;
-    left: 32.64vw;
+    left: 17.64vw;
     transform: translateX(-50%);
     color: black;
     font-family: 'Neucha', cursive;
@@ -78,7 +78,7 @@
     width: 20vw;
     height: auto;
     z-index: 100;
-    right: -21vw;
+    right: -1vw;
     transition: filter 0.3s ease;
     pointer-events: auto;
     position: relative;
@@ -99,7 +99,7 @@
     pointer-events: auto;
     position: relative;
     animation: buttonFloat 3s ease-in-out infinite;
-    margin-left: -10vw;
+    margin-left: -40vw;
 }
 
 .right-button:hover {
