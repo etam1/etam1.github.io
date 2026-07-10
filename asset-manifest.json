@@ -1,9 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.c5994353.css",
-    "main.js": "/static/js/main.69d13609.js",
+    "main.css": "/static/css/main.5262268e.css",
+    "main.js": "/static/js/main.e024b4e8.js",
     "static/js/787.34a7745e.chunk.js": "/static/js/787.34a7745e.chunk.js",
+    "static/media/csBasement.png": "/static/media/csBasement.170805ae4d070c92cbd4.png",
     "static/media/calhacks12.png": "/static/media/calhacks12.cd36d953eaefbcf4d011.png",
+    "static/media/artMuseum.png": "/static/media/artMuseum.679ad7b2fa61fd1c4593.png",
     "static/media/acorn2.png": "/static/media/acorn2.9d419e3c41f0599f61f5.png",
     "static/media/acorn3.png": "/static/media/acorn3.273733480227aec49c98.png",
     "static/media/vr-fig-01.png": "/static/media/vr-fig-01.2224ddb8b83dba051068.png",
@@ -12,12 +14,10 @@
     "static/media/ohloneAcornCover.png": "/static/media/ohloneAcornCover.39f22e63804c9ed646b7.png",
     "static/media/Experiences_Clouds.png": "/static/media/Experiences_Clouds.848c6e25c23ed5d46174.png",
     "static/media/shmImage.png": "/static/media/shmImage.fc72c77bb926a0473c45.png",
-    "static/media/liveAtChinatownImage.png": "/static/media/liveAtChinatownImage.b448742a120074916316.png",
     "static/media/archwindow.png": "/static/media/archwindow.057621aa892ec390859a.png",
     "static/media/Research_Ground.svg": "/static/media/Research_Ground.43f0ebc69fdf32aa79fa88e78e53bbe3.svg",
     "static/media/Space_Background.svg": "/static/media/Space_Background.3c7af0f3e3eb8a83c265.svg",
     "static/media/ShootingSnailCover.png": "/static/media/ShootingSnailCover.212ba742ec53b3d12917.png",
-    "static/media/BrokenHeartAlgorithmCover.png": "/static/media/BrokenHeartAlgorithmCover.515a75309f46b819e410.png",
     "static/media/BYOWPic.png": "/static/media/BYOWPic.146343c5ae70377958fa.png",
     "static/media/Experiences_Sounds.mp3": "/static/media/Experiences_Sounds.a90bb4238252586656ea.mp3",
     "static/media/instaposts.png": "/static/media/instaposts.ff1e58eb33adef9a00e1.png",
@@ -25,7 +25,6 @@
     "static/media/binaryButtonCover.png": "/static/media/binaryButtonCover.41c4c3a92fdb46a6fcc3.png",
     "static/media/vr-fig-02.png": "/static/media/vr-fig-02.bb5a0d899d92c82d9d2d.png",
     "static/media/AntBeeProject.png": "/static/media/AntBeeProject.20ca482ed788a1084792.png",
-    "static/media/HappyPickleCover.png": "/static/media/HappyPickleCover.2d21a8b8b00f12635677.png",
     "static/media/CalHacksLanyard.png": "/static/media/CalHacksLanyard.1fa3070008e107992b2b.png",
     "static/media/alienShowCover.png": "/static/media/alienShowCover.c0b84a2ec554d3280bdb.png",
     "static/media/myHouse.png": "/static/media/myHouse.9b2271fe26747b65932c.png",
@@ -72,7 +71,6 @@
     "static/media/WOOD_BACKGROUND.png": "/static/media/WOOD_BACKGROUND.7d928bab1106d4d4023a.png",
     "static/media/FALL_BACKGROUND.png": "/static/media/FALL_BACKGROUND.f5ea24046d3083134e48.png",
     "static/media/Star.png": "/static/media/Star.38da9c97906513b06916.png",
-    "static/media/theReplacementCover.png": "/static/media/theReplacementCover.d53b0b290597bcb08068.png",
     "static/media/Typing_Project.png": "/static/media/Typing_Project.f03487d22e388f5c0fd3.png",
     "static/media/ClothPic.png": "/static/media/ClothPic.d4d24736e7d43ffd8847.png",
     "static/media/Contacts2.png": "/static/media/Contacts2.131b7d3a4dba5497c323.png",
@@ -113,12 +111,12 @@
     "static/media/Left_Button.svg": "/static/media/Left_Button.09acbe20bfc88da1c67d385272824e37.svg",
     "static/media/Right_Button.svg": "/static/media/Right_Button.fdc888f6027894799458534a60e58e1a.svg",
     "static/media/Research_Sun.svg": "/static/media/Research_Sun.61338bbeb0cdce499a17b851ecd2c2ae.svg",
-    "main.c5994353.css.map": "/static/css/main.c5994353.css.map",
-    "main.69d13609.js.map": "/static/js/main.69d13609.js.map",
+    "main.5262268e.css.map": "/static/css/main.5262268e.css.map",
+    "main.e024b4e8.js.map": "/static/js/main.e024b4e8.js.map",
     "787.34a7745e.chunk.js.map": "/static/js/787.34a7745e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5994353.css",
-    "static/js/main.69d13609.js"
+    "static/css/main.5262268e.css",
+    "static/js/main.e024b4e8.js"
   ]
 }
