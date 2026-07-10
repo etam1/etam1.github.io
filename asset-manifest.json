@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.5262268e.css",
-    "main.js": "/static/js/main.e024b4e8.js",
+    "main.css": "/static/css/main.d4cc5a62.css",
+    "main.js": "/static/js/main.d6ea2727.js",
     "static/js/787.34a7745e.chunk.js": "/static/js/787.34a7745e.chunk.js",
     "static/media/csBasement.png": "/static/media/csBasement.170805ae4d070c92cbd4.png",
     "static/media/calhacks12.png": "/static/media/calhacks12.cd36d953eaefbcf4d011.png",
@@ -111,12 +111,12 @@
     "static/media/Left_Button.svg": "/static/media/Left_Button.09acbe20bfc88da1c67d385272824e37.svg",
     "static/media/Right_Button.svg": "/static/media/Right_Button.fdc888f6027894799458534a60e58e1a.svg",
     "static/media/Research_Sun.svg": "/static/media/Research_Sun.61338bbeb0cdce499a17b851ecd2c2ae.svg",
-    "main.5262268e.css.map": "/static/css/main.5262268e.css.map",
-    "main.e024b4e8.js.map": "/static/js/main.e024b4e8.js.map",
+    "main.d4cc5a62.css.map": "/static/css/main.d4cc5a62.css.map",
+    "main.d6ea2727.js.map": "/static/js/main.d6ea2727.js.map",
     "787.34a7745e.chunk.js.map": "/static/js/787.34a7745e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5262268e.css",
-    "static/js/main.e024b4e8.js"
+    "static/css/main.d4cc5a62.css",
+    "static/js/main.d6ea2727.js"
   ]
 }
