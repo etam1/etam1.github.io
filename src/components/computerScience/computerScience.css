@@ -221,4 +221,116 @@
   padding: 0 0.5vw 0.4vw;
 }
 
+.csContentSection {
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .computerScience {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  .csHeaderWrap {
+    height: 100vh;
+    min-height: 100vh;
+  }
+
+  .csHeaderContent {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .csHeaderLeft {
+    transform: none;
+    padding: 0 6vw;
+    box-sizing: border-box;
+  }
+
+  .csHeaderWrap .csHeader {
+    font-size: 11vw;
+  }
+
+  .cs-down-button {
+    width: 8vw;
+    min-width: 28px;
+  }
+
+  .cs-basement-slot {
+    display: none;
+  }
+
+  .csContentSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6vw;
+    padding: 4vw 4vw 10vw;
+    box-sizing: border-box;
+    scroll-margin-top: 12vw;
+  }
+
+  .cs-basement-img {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 88vw;
+    max-width: 88vw;
+    max-height: none;
+    height: auto;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .csProjectsSection {
+    height: auto;
+    width: 100%;
+    padding: 0;
+    gap: 3vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cs-projects-arrow {
+    width: 7vw;
+    min-width: 24px;
+  }
+
+  .csProjectsContent {
+    gap: 4vw;
+    padding-top: 0;
+  }
+
+  .cs-page-dot {
+    width: 2vw;
+    height: 2vw;
+    min-width: 8px;
+    min-height: 8px;
+  }
+
+  .cs-page-dots {
+    gap: 2.5vw;
+  }
+
+  .csHeaderDescription {
+    grid-template-columns: repeat(2, 38vw);
+    grid-template-rows: repeat(2, 38vw);
+    gap: 4vw;
+  }
+
+  .csHeaderDescription .csExperience {
+    width: 38vw;
+    height: 38vw;
+  }
+
+  .csHeaderDescription .cs-card-name {
+    font-size: 3.2vw;
+  }
+
+  .csHeaderDescription .cs-card-time {
+    font-size: 2.6vw;
+  }
+}
 

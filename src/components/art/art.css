@@ -219,3 +219,117 @@
   margin: 0;
   padding: 0 0.5vw 0.4vw;
 }
+
+.artContentSection {
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .art {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  .artHeaderWrap {
+    height: 100vh;
+    min-height: 100vh;
+  }
+
+  .artHeaderContent {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .artHeaderLeft {
+    transform: none;
+    padding: 0 6vw;
+    box-sizing: border-box;
+  }
+
+  .artHeaderWrap .artHeader {
+    font-size: 11vw;
+  }
+
+  .art-down-button {
+    width: 8vw;
+    min-width: 28px;
+  }
+
+  .art-museum-slot {
+    display: none;
+  }
+
+  .artContentSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6vw;
+    padding: 4vw 4vw 10vw;
+    box-sizing: border-box;
+    scroll-margin-top: 12vw;
+  }
+
+  .art-museum-img {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 88vw;
+    max-width: 88vw;
+    max-height: none;
+    height: auto;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .artProjectsSection {
+    height: auto;
+    width: 100%;
+    padding: 0;
+    gap: 3vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .art-projects-arrow {
+    width: 7vw;
+    min-width: 24px;
+  }
+
+  .artProjectsContent {
+    gap: 4vw;
+    padding-top: 0;
+  }
+
+  .art-page-dot {
+    width: 2vw;
+    height: 2vw;
+    min-width: 8px;
+    min-height: 8px;
+  }
+
+  .art-page-dots {
+    gap: 2.5vw;
+  }
+
+  .artHeaderDescription {
+    grid-template-columns: repeat(2, 38vw);
+    grid-template-rows: repeat(2, 38vw);
+    gap: 4vw;
+  }
+
+  .artHeaderDescription .artExperience {
+    width: 38vw;
+    height: 38vw;
+  }
+
+  .artHeaderDescription .art-card-name {
+    font-size: 3.2vw;
+  }
+
+  .artHeaderDescription .art-card-time {
+    font-size: 2.6vw;
+  }
+}
+

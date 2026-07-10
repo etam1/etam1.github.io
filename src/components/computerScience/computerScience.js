@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './computerScience.css';
 import CsExperience from './csExperience.js';
 import CsExperienceWithLink from './csExperienceWithLink.js';
@@ -131,6 +131,7 @@ const projects = [
 function ComputerScience() {
   const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
   const [page, setPage] = useState(0);
+  const contentRef = useRef(null);
 
   const visibleProjects = projects.slice(
     page * PROJECTS_PER_PAGE,
@@ -145,6 +146,19 @@ function ComputerScience() {
     setPage((currentPage) => (currentPage === totalPages - 1 ? 0 : currentPage + 1));
   };
 
+  const scrollDown = () => {
+    if (window.matchMedia('(max-width: 900px)').matches) {
+      contentRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+
+    window.scrollBy({
+      top: window.innerHeight,
+      left: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div className="computerScience">
       <div className="csHeaderWrap">
@@ -155,69 +169,66 @@ function ComputerScience() {
               src={downButton}
               className="cs-down-button"
               alt="Scroll Down"
-              onClick={() => {
-                window.scrollBy({
-                  top: window.innerHeight,
-                  left: 0,
-                  behavior: 'smooth',
-                });
-              }}
+              onClick={scrollDown}
             />
           </div>
           <div className="cs-basement-slot" aria-hidden="true" />
         </div>
       </div>
-      <img src={csBasement} alt="Computer science basement" className="cs-basement-img" />
 
-      <div className="csProjectsSection">
-        <img
-          src={downButton}
-          className="cs-projects-arrow cs-projects-arrow-left"
-          alt="Previous projects"
-          onClick={goToPreviousPage}
-        />
-        <div className="csProjectsContent">
-          <div className="csHeaderDescription" key={page}>
-            {visibleProjects.map((project) =>
-              project.link ? (
-                <CsExperienceWithLink
-                  key={project.name}
-                  name={project.name}
-                  time={project.time}
-                  image={project.image}
-                  text={project.text}
-                  link={project.link}
+      <div className="csContentSection" ref={contentRef}>
+        <img src={csBasement} alt="Computer science basement" className="cs-basement-img" />
+
+        <div className="csProjectsSection">
+          <img
+            src={downButton}
+            className="cs-projects-arrow cs-projects-arrow-left"
+            alt="Previous projects"
+            onClick={goToPreviousPage}
+          />
+          <div className="csProjectsContent">
+            <div className="csHeaderDescription" key={page}>
+              {visibleProjects.map((project) =>
+                project.link ? (
+                  <CsExperienceWithLink
+                    key={project.name}
+                    name={project.name}
+                    time={project.time}
+                    image={project.image}
+                    text={project.text}
+                    link={project.link}
+                  />
+                ) : (
+                  <CsExperience
+                    key={project.name}
+                    name={project.name}
+                    time={project.time}
+                    image={project.image}
+                    text={project.text}
+                  />
+                )
+              )}
+            </div>
+            <div className="cs-page-dots">
+              {Array.from({ length: totalPages }, (_, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  className={`cs-page-dot${index === page ? ' cs-page-dot-active' : ''}`}
+                  aria-label={`Go to project page ${index + 1}`}
+                  aria-current={index === page ? 'true' : undefined}
+                  onClick={() => setPage(index)}
                 />
-              ) : (
-                <CsExperience
-                  key={project.name}
-                  name={project.name}
-                  time={project.time}
-                  image={project.image}
-                  text={project.text}
-                />
-              )
-            )}
+              ))}
+            </div>
           </div>
-          <div className="cs-page-dots">
-            {Array.from({ length: totalPages }, (_, index) => (
-              <button
-                key={index}
-                type="button"
-                className={`cs-page-dot${index === page ? ' cs-page-dot-active' : ''}`}
-                aria-label={`Go to project page ${index + 1}`}
-                aria-current={index === page ? 'true' : undefined}
-                onClick={() => setPage(index)}
-              />
-            ))}
-          </div>
+          <img
+            src={downButton}
+            className="cs-projects-arrow cs-projects-arrow-right"
+            alt="Next projects"
+            onClick={goToNextPage}
+          />
         </div>
-        <img
-          src={downButton}
-          className="cs-projects-arrow cs-projects-arrow-right"
-          alt="Next projects"
-          onClick={goToNextPage}
-        />
       </div>
     </div>
   );

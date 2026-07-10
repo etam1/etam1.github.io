@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './art.css';
 import ArtExperience from './artExperience.js';
 import ArtExperienceVideo from './artExperienceVideo.js';
@@ -158,6 +158,7 @@ function renderProject(project) {
 function Art() {
   const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
   const [page, setPage] = useState(0);
+  const contentRef = useRef(null);
 
   const visibleProjects = projects.slice(
     page * PROJECTS_PER_PAGE,
@@ -172,6 +173,19 @@ function Art() {
     setPage((currentPage) => (currentPage === totalPages - 1 ? 0 : currentPage + 1));
   };
 
+  const scrollDown = () => {
+    if (window.matchMedia('(max-width: 900px)').matches) {
+      contentRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+
+    window.scrollBy({
+      top: window.innerHeight,
+      left: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div className="art">
       <div className="artHeaderWrap">
@@ -182,50 +196,47 @@ function Art() {
               src={downButton}
               className="art-down-button"
               alt="Scroll Down"
-              onClick={() => {
-                window.scrollBy({
-                  top: window.innerHeight,
-                  left: 0,
-                  behavior: 'smooth',
-                });
-              }}
+              onClick={scrollDown}
             />
           </div>
           <div className="art-museum-slot" aria-hidden="true" />
         </div>
       </div>
-      <img src={artMuseum} alt="Art museum" className="art-museum-img" />
 
-      <div className="artProjectsSection">
-        <img
-          src={downButton}
-          className="art-projects-arrow art-projects-arrow-left"
-          alt="Previous projects"
-          onClick={goToPreviousPage}
-        />
-        <div className="artProjectsContent">
-          <div className="artHeaderDescription" key={page}>
-            {visibleProjects.map((project) => renderProject(project))}
+      <div className="artContentSection" ref={contentRef}>
+        <img src={artMuseum} alt="Art museum" className="art-museum-img" />
+
+        <div className="artProjectsSection">
+          <img
+            src={downButton}
+            className="art-projects-arrow art-projects-arrow-left"
+            alt="Previous projects"
+            onClick={goToPreviousPage}
+          />
+          <div className="artProjectsContent">
+            <div className="artHeaderDescription" key={page}>
+              {visibleProjects.map((project) => renderProject(project))}
+            </div>
+            <div className="art-page-dots">
+              {Array.from({ length: totalPages }, (_, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  className={`art-page-dot${index === page ? ' art-page-dot-active' : ''}`}
+                  aria-label={`Go to project page ${index + 1}`}
+                  aria-current={index === page ? 'true' : undefined}
+                  onClick={() => setPage(index)}
+                />
+              ))}
+            </div>
           </div>
-          <div className="art-page-dots">
-            {Array.from({ length: totalPages }, (_, index) => (
-              <button
-                key={index}
-                type="button"
-                className={`art-page-dot${index === page ? ' art-page-dot-active' : ''}`}
-                aria-label={`Go to project page ${index + 1}`}
-                aria-current={index === page ? 'true' : undefined}
-                onClick={() => setPage(index)}
-              />
-            ))}
-          </div>
+          <img
+            src={downButton}
+            className="art-projects-arrow art-projects-arrow-right"
+            alt="Next projects"
+            onClick={goToNextPage}
+          />
         </div>
-        <img
-          src={downButton}
-          className="art-projects-arrow art-projects-arrow-right"
-          alt="Next projects"
-          onClick={goToNextPage}
-        />
       </div>
     </div>
   );
