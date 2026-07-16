@@ -3,7 +3,9 @@
   height: 200vh;
   overflow: hidden;
   background-color: rgba(253, 236, 232, 1);
-  --cs-nav-offset: 5vw;
+  --cs-nav-offset: 4vh;
+  --cs-card-size: min(14.8vw, 33vh);
+  --cs-card-gap: min(2.1vw, 2.5vh);
 }
 
 
@@ -64,45 +66,63 @@
 }
 
 .cs-basement-slot {
-  width: 90%;
-  max-height: 40.5vw;
-  min-height: 30vw;
+  width: 70%;
+  max-height: 32vw;
+  min-height: 22vw;
   justify-self: end;
 }
 
-.cs-basement-img {
+.cs-basement-stack {
   position: fixed;
   top: calc(50% + var(--cs-nav-offset) / 2);
-  right: 6vw;
-  width: calc((100vw - 12vw) / 2 * 0.9);
-  height: auto;
-  max-height: 40.5vw;
-  object-fit: cover;
-  border-radius: 2vw;
+  right: 4vw;
+  width: min(37vw, 70vh);
+  max-height: min(37vw, 70vh);
   transform: translateY(-50%);
   z-index: 2;
   pointer-events: none;
 }
 
+.cs-basement-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: min(37vw, 70vh);
+  object-fit: contain;
+  border-radius: 1.5vw;
+}
+
+.cs-basement-filter-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 1.5vw;
+  pointer-events: none;
+  opacity: 0.24;
+}
+
 .csProjectsSection {
   height: 100vh;
-  width: 50vw;
+  width: 55vw;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5vw;
-  padding: var(--cs-nav-offset) 3vw 0;
+  gap: 1vw;
+  padding: calc(var(--cs-nav-offset) + 5vh) 1vw 0 5vw;
   z-index: 3;
-  padding-left: 8vw;
+  overflow: visible;
 }
 
 .cs-projects-arrow {
-  width: 4vw;
+  width: 3.2vw;
   height: auto;
   cursor: pointer;
   opacity: 0.6;
   flex-shrink: 0;
+  margin-top: 0;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
@@ -127,10 +147,125 @@
 .csProjectsContent {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2vw;
-  padding-top: 2vw;
+  align-items: stretch;
+  gap: 2.2vh;
+  padding-top: 0;
   flex-shrink: 0;
+  width: calc(3 * var(--cs-card-size) + 2 * var(--cs-card-gap));
+}
+
+.cs-filter-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.7vw;
+  width: 100%;
+  z-index: 5;
+}
+
+.cs-filter-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.45vw;
+  flex-shrink: 0;
+}
+
+.cs-filter-button {
+  background: #b19388;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0.35vw;
+  color: #1a1a1a;
+  font-family: 'Iosevka Charon Mono', monospace;
+  font-size: 1.15vw;
+  font-weight: 700;
+  padding: 0.55vw 1.2vw;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.cs-filter-button:hover,
+.cs-filter-button:focus,
+.cs-filter-button:focus-visible,
+.cs-filter-button:active,
+.cs-filter-button-open,
+.cs-filter-button-active {
+  background: #9f8177;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+.cs-filter-reset {
+  background: rgba(177, 147, 136, 0.45);
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0.3vw;
+  color: #1a1a1a;
+  font-family: 'Iosevka Charon Mono', monospace;
+  font-size: 0.75vw;
+  font-weight: 700;
+  padding: 0.28vw 0.85vw;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.cs-filter-reset:hover:not(:disabled),
+.cs-filter-reset:focus-visible:not(:disabled) {
+  background: rgba(177, 147, 136, 0.65);
+}
+
+.cs-filter-reset:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.cs-filter-options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5vw;
+  flex: 1;
+  min-width: 0;
+}
+
+.cs-filter-option {
+  background: rgba(177, 147, 136, 0.35);
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0.3vw;
+  color: #1a1a1a;
+  font-family: 'Iosevka Charon Mono', monospace;
+  font-size: 0.88vw;
+  font-weight: 600;
+  padding: 0.45vw 0.85vw;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.cs-filter-option:hover {
+  background: rgba(177, 147, 136, 0.55);
+  transform: translateY(-1px);
+}
+
+.cs-filter-option-active {
+  background: #b19388;
 }
 
 .cs-page-dots {
@@ -138,6 +273,8 @@
   align-items: center;
   justify-content: center;
   gap: 1vw;
+  margin-top: 0.8vh;
+  align-self: center;
 }
 
 .cs-page-dot {
@@ -168,21 +305,34 @@
 .csHeaderDescription {
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: repeat(2, 17vw);
-  grid-template-rows: repeat(2, 17vw);
-  gap: 3vw;
+  grid-template-columns: repeat(3, var(--cs-card-size));
+  grid-template-rows: repeat(2, var(--cs-card-size));
+  gap: var(--cs-card-gap);
   justify-content: center;
   align-content: start;
   flex-shrink: 0;
+  width: max-content;
 }
 
 .csHeaderDescription .csExperience {
-  width: 17vw;
-  height: 17vw;
+  width: var(--cs-card-size);
+  height: var(--cs-card-size);
+  min-width: var(--cs-card-size);
+  min-height: var(--cs-card-size);
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.csHeaderDescription .newCsExperience {
+  width: var(--cs-card-size);
+  height: var(--cs-card-size);
+  min-width: var(--cs-card-size);
+  min-height: var(--cs-card-size);
+  padding: 0;
+  display: block;
+  flex-shrink: 0;
 }
 
 .csHeaderDescription .cs-card {
@@ -271,7 +421,7 @@
     scroll-margin-top: 12vw;
   }
 
-  .cs-basement-img {
+  .cs-basement-stack {
     position: relative;
     top: auto;
     right: auto;
@@ -279,9 +429,48 @@
     width: 88vw;
     max-width: 88vw;
     max-height: none;
-    height: auto;
-    pointer-events: none;
     z-index: 1;
+  }
+
+  .cs-basement-img {
+    width: 88vw;
+    max-width: 88vw;
+    max-height: none;
+    height: auto;
+  }
+
+  .cs-basement-filter-overlay {
+    border-radius: inherit;
+  }
+
+  .cs-filter-row {
+    margin-bottom: 1vw;
+  }
+
+  .cs-filter-button {
+    font-size: 3.2vw;
+    padding: 1.4vw 3vw;
+    border-radius: 1vw;
+  }
+
+  .cs-filter-reset {
+    font-size: 2.2vw;
+    padding: 0.9vw 2.2vw;
+    border-radius: 0.8vw;
+  }
+
+  .cs-filter-controls {
+    gap: 1.5vw;
+  }
+
+  .cs-filter-options {
+    gap: 1.5vw;
+  }
+
+  .cs-filter-option {
+    font-size: 2.5vw;
+    padding: 1.2vw 2.2vw;
+    border-radius: 0.8vw;
   }
 
   .csProjectsSection {
@@ -296,11 +485,13 @@
   .cs-projects-arrow {
     width: 7vw;
     min-width: 24px;
+    margin-top: 0;
   }
 
   .csProjectsContent {
     gap: 4vw;
     padding-top: 0;
+    width: calc(2 * var(--cs-card-size) + var(--cs-card-gap));
   }
 
   .cs-page-dot {
@@ -314,23 +505,23 @@
     gap: 2.5vw;
   }
 
+  .computerScience {
+    --cs-card-size: 28vw;
+    --cs-card-gap: 2.5vw;
+  }
+
   .csHeaderDescription {
-    grid-template-columns: repeat(2, 38vw);
-    grid-template-rows: repeat(2, 38vw);
-    gap: 4vw;
+    grid-template-columns: repeat(2, var(--cs-card-size));
+    grid-template-rows: repeat(3, var(--cs-card-size));
+    gap: var(--cs-card-gap);
   }
 
-  .csHeaderDescription .csExperience {
-    width: 38vw;
-    height: 38vw;
-  }
-
-  .csHeaderDescription .cs-card-name {
-    font-size: 3.2vw;
-  }
-
-  .csHeaderDescription .cs-card-time {
-    font-size: 2.6vw;
+  .csHeaderDescription .csExperience,
+  .csHeaderDescription .newCsExperience {
+    width: var(--cs-card-size);
+    height: var(--cs-card-size);
+    min-width: var(--cs-card-size);
+    min-height: var(--cs-card-size);
   }
 }
 

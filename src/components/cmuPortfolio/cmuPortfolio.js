@@ -1,4 +1,5 @@
 import './cmuPortfolio.css';
+import ArtExperience from '../art/artExperience.js';
 import ArtExperiencePortfolio from '../art/artExperiencePortfolio.js';
 import ShootingSnailCover from "../../assets/ShootingSnailCover.png";
 import alienShowCover from "../../assets/alienShowCover.png";
@@ -13,6 +14,7 @@ import amoeba from "../../assets/amoeba.png";
 import calendar from "../../assets/calendar.png";
 import mural from "../../assets/mural.png";
 import SmokePic from "../../assets/SmokePic.png";
+import DemoCover from "../../assets/DemoCover.png";
 import calhacks12 from "../../assets/calhacks12.png";
 import CalHacksLanyard from "../../assets/CalHacksLanyard.png";
 import Layard from "../../assets/Layard.png";
@@ -27,12 +29,6 @@ import Pin from "../../assets/Pin.png";
 import Website from "../../assets/Website.png";
 import clouds from "../../assets/Experiences_Clouds.png";
 import downButton from "../../assets/Experience_ArrowDown.png";
-import outsideofthebox from "../../assets/outsideofthebox.png";
-import vrArtBody from "../../assets/vr-art-body.png";
-import vrFig01 from "../../assets/vr-fig-01.png";
-import vrFig02 from "../../assets/vr-fig-02.png";
-import vrScenes from "../../assets/vr-scenes.png";
-import systemDiagram from "../../assets/System-1.png";
 
 function CmuPortfolio() {
   return (
@@ -144,22 +140,7 @@ function CmuPortfolio() {
           video="https://www.youtube.com/embed/2TCr-e-rHlY?si=2NmPwKhBoxi3ySr6"
           videoCaption="Joan Saavy's First Day on Earth Film"
         />
-        <ArtExperiencePortfolio 
-          name="Outside of the Box"
-          time="2025"
-          image={outsideofthebox}
-          subtitle="24 Hour Animation Challenge"
-          introText="Created an animated short film as part of the 24 hour animation challenge with the theme 'Flip Your Perspective!'. The project tells the life of a bunny and how her use of 'the' box ages with her perspective. Our team placed in the top 50."
-          duration="October 3-4, 2025"
-          role="Director, 2D and 3D Animator"
-          tools="Procreate, Autodesk Maya, Premiere Pro, Media Encoder, After Effects"
-          team="Stacey Lei, Elaine Shu, Khylie Aviles"
-          quote="the life of a bunny and how her use of 'the' box ages with with her perspective"
-          leftParagraph1="As Director and 2D/3D Animator, I led my team through the ideation process, helping to develop the concept that would explore the theme 'Flip Your Perspective!' through the story of a bunny and her relationship with a box that changes meaning as she ages."
-          leftParagraph2="I was responsible for modeling, rigging, and animating the rabbit character in Autodesk Maya, bringing the 3D character to life. Additionally, I created the 2D animation on top of the 3D model, specifically animating the eyes to add expressive detail and emotional depth to the character."
-          video="https://www.youtube.com/embed/c_X0GK8imc0?si=ceVp_GYypspJJN4v"
-          videoCaption="Outside of the Box"
-        />
+        <ArtExperience name="AI Art History" time="2025" image={DemoCover} text="Exploring the intersection of artificial intelligence and art history through interactive digital experiences." />
         <ArtExperiencePortfolio 
           name="Shooting Snail"
           time="2023"
@@ -207,30 +188,7 @@ function CmuPortfolio() {
           quote="A tool used to create smoke in a 3D environment"
           documentationLink="https://elpescadoperezoso1291.github.io/CS184-Final-Project-Website/final_website/index.html"
         />
-        <ArtExperiencePortfolio 
-          name="Breathing Flowers: VR + Art + Body Awareness"
-          time="2025"
-          image={vrArtBody}
-          subtitle="Virtual Reality, Biosignal Visualization"
-          introText="A biosignal-driven VR system that captures users' heart rate, breathing, and skin conductivity and visualizes these signals through dynamic, real-time scenes. The system helps users gain awareness of their body's involuntary signals through immersive environmental metaphors."
-          duration="August 2025 - December 2025"
-          role="Developer, Co-Author"
-          tools="Unity HDRP, EmotiBit Sensor, C#"
-          team="Vivian Chan, Xin Zhou, Stacey Lei"
-          quote="Body awareness—the ability to perceive and understand one's own physiological state—has been shown to offer significant benefits for mental health and emotional regulation."
-          leftParagraph1="Developed a real-time biosignal-to-environment mapping system in Unity HDRP that translates physiological signals into visual and atmospheric changes in a virtual environment. The system receives data from an EmotiBit wearable sensor, processes and normalizes the signals, and drives three distinct environmental mappings designed to build user awareness of involuntary bodily processes."
-          leftParagraph2="Implemented three biosignal mappings: skin conductance controls sunlight and time of day (higher stress corresponds to nighttime), heart rate adjusts cloud coverage (lower heart rate produces clear skies), and breathing rate drives flower blooming (slow breathing maintains buds, deeper breaths result in blooming flowers and butterflies)."
-          rightParagraph1="The system features a modular three-stage pipeline architecture: data acquisition (supporting both simulated and real biosignal input), data processing (with automatic calibration and personalized normalization), and environmental mapping. This separation enables independent development and testing while maintaining flexibility."
-          rightParagraph2="The work explores how immersive VR environments can support body awareness and mental well-being. The dynamic scenery tied to physiological signals helps users notice and reflect on subtle changes in their body, creating a responsive environment that mirrors the user's physiological state."
-          additionalImage={vrFig01}
-          additionalImageCaption="Overview of biosignal mapped to the Virtual Reality environment. Heart rate controls sunlight and time of day, skin conductance adjusts cloud coverage, and breathing rate drives flower blooming. The resulting scene reflects the user's state, shown here for (A) active, (B) calm, and (C) stressed conditions."
-          secondImage={vrFig02}
-          secondImageCaption="Bio-physiological State to Scene Mapping"
-          thirdImage={vrScenes}
-          thirdImageCaption="(A)Calm state. (B)Rest state. (C)Active state. (D)Stress state."
-          fourthImage={systemDiagram}
-          fourthImageCaption="System architecture showing the data flow from EmotiBit wearable sensor through the Oscilloscope PC application to Unity's environmental mapping system."
-        />
+        <ArtExperience name="VR + Art + Body Awareness" time="2024" image={DemoCover} text="An immersive virtual reality experience exploring the relationship between art, body awareness, and spatial perception through interactive digital environments." />
       </div>
     </div>
   );

@@ -1,139 +1,543 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useMemo, useEffect } from 'react';
 import './computerScience.css';
-import CsExperience from './csExperience.js';
-import CsExperienceWithLink from './csExperienceWithLink.js';
+import NewCsExperience from './newCsExperience.js';
 import BYOWPic from "../../assets/BYOWPic.png";
-import PersonalWebsitePic from "../../assets/PersonalWebsitePic.png";
 import GitletPic from "../../assets/gitlet_Project_Image.jpeg";
-import MLDCPic from "../../assets/Machine_Learning_Data_Compression_Project.jpeg";
-import Chess_Endgame_Pic from "../../assets/Chess_Endgame_Project.png";
+import NGordnetPic from "../../assets/NGordnet.png";
+import HogPic from "../../assets/Hog.png";
+import SnekPic from "../../assets/Snek.png";
+import KachowPic from "../../assets/Kachow.png";
+import HyperspectralPic from "../../assets/Hyperspectral.png";
+import PintosPic from "../../assets/Pintos.png";
+import RecommenderPic from "../../assets/Recommender.png";
+import FirefoxPic from "../../assets/Firefox.png";
+import WeatherPic from "../../assets/Weather.png";
+import DonorLoopPic from "../../assets/DonorLoop.png";
+import SnapChestPic from "../../assets/SnapChest.png";
+import ArtifactorPic from "../../assets/Artifactor.png";
+import SympatheticOrchestraPic from "../../assets/SympatheticOrchestra.png";
 import CPU_Pic from "../../assets/CPU_Project.png";
-import Scheme_Interpreter_Pic from "../../assets/Scheme_Interpreter_Pic.png";
 import Typing_Pic from "../../assets/Typing_Project.png";
 import AntVsBee_Pic from "../../assets/AntBeeProject.png";
-import Mesh_Pic from "../../assets/TEAPOT.png";
-import Rasterizer_Pic from "../../assets/mascotimage.jpeg";
 import PathTracer_Pic from "../../assets/PathTracer.png";
 import Cloth_Pic from "../../assets/ClothPic.png";
+import Mesh_Pic from "../../assets/TEAPOT.png";
 import Smoke_Pic from "../../assets/SmokePic.png";
+import Rasterizer_Pic from "../../assets/mascotimage.jpeg";
 import MS1_Pic from "../../assets/MayaScript1.png";
 import MS2_Pic from "../../assets/MayaScript2.png";
+import MLDCPic from "../../assets/Machine_Learning_Data_Compression_Project.jpeg";
+import Chess_Endgame_Pic from "../../assets/Chess_Endgame_Project.png";
+import ohloneAcornCover from "../../assets/ohloneAcornCover.png";
+import myHouseCover from "../../assets/myHouse.png";
+import binaryButtonCover from "../../assets/binaryButtonCover.png";
+import smileCover from "../../assets/smileCover.png";
+import escapeRoom from "../../assets/escapeRoom.png";
+import Kodama from "../../assets/ProjectionMapping.png";
+import AlienShowCover from "../../assets/alienShowCover.png";
+import Bubbles from "../../assets/Bubbles1.png";
+import ConstellationDrawer from "../../assets/ConstellationDrawer.jpg";
+import breathingFlowersPic from "../../assets/vr-art-body.png";
 import downButton from "../../assets/Experience_ArrowDown.png";
 import csBasement from "../../assets/csBasement.png";
+import creativeCodingFilter from "../../assets/creativeCodingFilter.png";
+import aiMlFilter from "../../assets/aiMlFilter.png";
+import webProductEngineeringFilter from "../../assets/webProductEngineeringFilter.png";
+import graphicsFilter from "../../assets/graphicsFilter.png";
+import languagesAlgorithmsFilter from "../../assets/languagesAlgorithmsFilter.png";
+import arVrGamingFilter from "../../assets/arVrGamingFilter.png";
+import hciFilter from "../../assets/hciFilter.png";
+import systemsInfrastructureFilter from "../../assets/systemsInfrastructureFilter.png";
 
-const PROJECTS_PER_PAGE = 4;
+const PROJECTS_PER_PAGE = 6;
+
+const FILTER_OVERLAY_IMAGES = {
+  'creative-coding': creativeCodingFilter,
+  graphics: graphicsFilter,
+  systems: systemsInfrastructureFilter,
+  hci: hciFilter,
+  algorithms: languagesAlgorithmsFilter,
+  web: webProductEngineeringFilter,
+  'arvr-gaming': arVrGamingFilter,
+  'ai-ml': aiMlFilter,
+};
+
+const FILTER_OPTIONS = [
+  {
+    id: 'creative-coding',
+    label: 'Creative Coding',
+    matches: ['Creative Coding'],
+  },
+  {
+    id: 'graphics',
+    label: 'Graphics',
+    matches: ['Graphics'],
+  },
+  {
+    id: 'systems',
+    label: 'Systems + Infrastructure',
+    matches: ['Systems', 'Systems + Infrastructure'],
+  },
+  {
+    id: 'hci',
+    label: 'Human Computer Interaction',
+    matches: ['Human Computer Interaction'],
+  },
+  {
+    id: 'algorithms',
+    label: 'Languages + Algorithms',
+    matches: ['Algorithms'],
+  },
+  {
+    id: 'web',
+    label: 'Web + Product Engineering',
+    matches: ['Web Engineering', 'Web + Product Engineering'],
+  },
+  {
+    id: 'arvr-gaming',
+    label: 'AR/VR + Gaming',
+    matches: ['AR', 'VR', 'Gaming'],
+  },
+  {
+    id: 'ai-ml',
+    label: 'AI + ML',
+    matches: ['AI', 'ML'],
+  },
+];
+
+function projectMatchesFilters(project, filters) {
+  if (!filters.length) return true;
+  const tags = [project.tag1, project.tag2, project.tag3].filter(Boolean);
+  return filters.some((filter) => tags.some((tag) => filter.matches.includes(tag)));
+}
+
+function getOverlayIdsForTags(tags) {
+  return FILTER_OPTIONS
+    .filter((option) => FILTER_OVERLAY_IMAGES[option.id] && tags.some((tag) => option.matches.includes(tag)))
+    .map((option) => option.id);
+}
 
 const projects = [
   {
-    name: "Randomize Duplicator Maya Script",
-    time: "2024",
-    image: MS2_Pic,
-    text: "Created a Maya tool that duplicates a selected object in a radius with six surrounding copies. The tool allows for flexible placement with options for equal or random distances, unique rotations, and variable heights. A simple UI gives users control over distance and scale, making it easy to add varied, balanced arrangements around the original object, ideal for creating grass and dynamic scene with a lot of repeated background objects.",
+    title: "Breathing Flowers: VR + Art + Body Awareness",
+    image: breathingFlowersPic,
+    tag1: "VR",
+    tag2: "Creative Coding",
+    tag3: "Human Computer Interaction",
+    role: "Research Developer, VR Developer, Creative Technologist",
+    timeline: "August 2025 – December 2025",
+    organization: "FHL Vive Center for Enhanced Reality",
+    team: "Vivian Chan, Stacey Lei, Xin Zhou",
+    toolsSkills: "Unity, C#, EmotiBit, VR, HDRP",
+    shortDescription: "A bio-responsive VR experience where physiological signals transform a virtual flower environment in real time.",
   },
   {
-    name: "Mirror Maya Script",
-    time: "2024",
-    image: MS1_Pic,
-    text: "Developed a Python-based modeling tool with a straightforward UI to duplicate and mirror selected objects across the x, y, and z axes, in world space. This tool streamlined my character modeling workflow, particularly for mirroring separate objects like eyes along the x-axis. It also supports mirroring multiple selections at once.",
-  },
-  {
-    name: "Smoke Simulator",
-    time: "2024",
-    image: Smoke_Pic,
-    text: "We built a 3D smoke simulator using an Eulerian grid-based approach to model realistic fluid dynamics, following the Navier-Stokes equations. The project involves steps for diffusion, advection, and projection to conserve mass and simulate fluid motion, with OpenMP used to enhance speed. We expanded a cloth simulation framework to 3D, which presented unique challenges but taught us valuable skills in adapting physics-based systems to complex dimensions. The project was implemented in C++.",
-    link: "https://elpescadoperezoso1291.github.io/CS184-Final-Project-Website/final_website/index.html",
-  },
-  {
-    name: "Cloth Simulator",
-    time: "2024",
-    image: Cloth_Pic,
-    text: "Developed a cloth simulator using point masses and springs, incorporating self-collision, object collisions, and the effects of gravity and wind fields. Additionally, implemented various GLSL shaders, including Lambert, Blinn-Phong, texture mapping, bump mapping, displacement mapping, toon shading, and environment reflection maps. The project was implemented in C++.",
-    link: "https://cal-cs184-student.github.io/hw-webpages-sp24-etam1/hw4/index.html",
-  },
-  {
-    name: "Path Tracer",
-    time: "2024",
-    image: PathTracer_Pic,
-    text: "Developed a physics-based pathtracer capable of rendering realistic interactions with diffuse and conductive materials. The pathtracer incorporates advanced techniques like ray-primitive intersections, performance-enhancing bounding volume hierarchies, and Monte Carlo estimators for precise light calculations. Direct and global illumination methods were implemented to capture realistic light behavior, while adaptive sampling was used to minimize noise in the final render. The project was implemented using C++.",
-    link: "https://cal-cs184-student.github.io/hw-webpages-sp24-etam1/hw3/index.html",
-  },
-  {
-    name: "Mesh Editor",
-    time: "2024",
-    image: Mesh_Pic,
-    text: "Developed a .dae file viewer leveraging advanced techniques for mesh manipulation, including edge flipping, edge splitting, Loop subdivision, surface smoothing, as well as modeling Bezier curves and surfaces. The project was implemented in C++.",
-    link: "https://cal-cs184-student.github.io/hw-webpages-sp24-etam1/hw2/index.html",
-  },
-  {
-    name: "SVG Rasterizer",
-    time: "2024",
-    image: Rasterizer_Pic,
-    text: "I developed a software application for rasterizing SVG files, employing a range of sampling techniques including supersampling, pixel sampling, and mipmapping to accurately render SVG classes and textures. The project was implemented in C++.",
-    link: "https://cal-cs184-student.github.io/hw-webpages-sp24-oligonagon/hw1/index.html",
-  },
-  {
-    name: "Chess Endgame Solver",
-    time: "2023",
-    image: Chess_Endgame_Pic,
-    text: "In a team of 3, we generated an original 6-man chess endgame database using C, addressing significant deficiencies present in online chess endgame databases. This was achieved by conceptualizing and implementing an algorithm that facilitated swift traversal of the database, significantly enhancing storage and retrieval processes. Presently, our focus lies in enhancing project interactivity through animation refinement, while concurrently optimizing the algorithm via parallelization techniques. Additionally, we are expanding the project scope to encompass 7-man endgames by addressing edge cases, debugging intricacies, and strategically reducing our solver's storage requirements by a substantial tenfold.",
-    link: "https://nyc.cs.berkeley.edu/uni/games/chess/variants/endgame1",
-  },
-  {
-    name: "Personal Website",
-    time: "2023",
-    image: PersonalWebsitePic,
-    text: "My personal website serves as a dynamic showcase of my passions, accomplishments, and creativity. It functions as a professional portfolio, showcasing my skills and contributions to various fields. I self-taught myself HTML, CSS, JavaScript, and React to build my personal website, where I also designed every image and visual feature.",
-  },
-  {
-    name: "Machine Learning Database Compression",
-    time: "2023",
-    image: MLDCPic,
-    text: "With a team of 7, we created a game database compression by using PyTorch to combine a model and an exceptions table. We trained neural networks to categorize game positions into value-remoteness categories, ensuring vital game data preservation. One model employed regression techniques and delta calculations for exceptions, while another assessed primitive values and remoteness, using a temporary exceptions table. Trained initially on a small tic-tac-toe dataset, our third model trained on the larger Dao game dataset, has shown promising results in advancing compression techniques.",
-  },
-  {
-    name: "Build Your Own World",
-    time: "2023",
-    image: BYOWPic,
-    text: "In my Build Your Own World project, I created a game from scratch using Java. I took on the challenge of designing and developing all aspects, including graphics, interaction controls, and world-building. This game offers the unique ability to generate different worlds using various seeds, ensuring a fresh experience with every playthrough. Exploring the expansive map, players will encounter trap rooms that add an element of danger and excitement. To enhance usability, I implemented save, load, new, and quit options, allowing players to conveniently manage their progress.",
-  },
-  {
-    name: "Central Processing Unit Simulation (CPU)",
-    time: "2023",
-    image: CPU_Pic,
-    text: "In this Logisim project, I developed fundamental components of a pipelined processor. I constructed an ALU handling arithmetic, logical, and bitwise operations, a 32-register Register File, and an Immediate Generator for addi instructions. Additionally, I created a CPU Datapath featuring a pipelined architecture with five stages to execute addi instructions. This involved fetching, decoding, utilizing the ALU, and writing back results to designated registers. I conducted thorough testing and debugging using provided test benches and the test.sh script to ensure circuit accuracy.",
-  },
-  {
-    name: "Gitlet (Simplified Control System)",
-    time: "2023",
+    title: "Gitlet",
     image: GitletPic,
-    text: "I created a custom version control system based on Github using Java. This system provides a range of functionalities such as init, add, remove, restore, reset, status, log, branch, and merge. Additionally, it enables users to locate commits based on commit messages, enhancing accessibility and usability.",
+    tag1: "Algorithms",
+    tag2: "Systems + Infrastructure",
+    timeline: "2024",
+    toolsSkills: "Java, Git, JUnit",
+    shortDescription: "A fully functional version-control system modeled after Git that tracks file history, branching, and repository state.",
   },
   {
-    name: "Typing Speed Test",
-    time: "2022",
+    title: "NGordnet",
+    image: NGordnetPic,
+    tag1: "Algorithms",
+    timeline: "2023",
+    toolsSkills: "Java, Princeton Libraries, WordNet, NGram Datasets",
+    shortDescription: "An interactive platform for exploring historical word usage, semantic relationships, and language evolution over time.",
+  },
+  {
+    title: "BYOW",
+    image: BYOWPic,
+    tag1: "Gaming",
+    timeline: "2023",
+    team: "Spencer Chang",
+    toolsSkills: "Java, Princeton Tile Engine, Randomized Algorithms",
+    shortDescription: "A procedurally generated tile-based exploration game where every seed creates a unique playable world.",
+  },
+  {
+    title: "Cats",
     image: Typing_Pic,
-    text: "I created a Python program for typing speed measurement and spelling error correction using code written in the 'cats.py' file. Implemented within UC Berkeley's CS61A course framework, the project involved text samples for typing exercises and a web server for a graphical user interface. My responsibilities revolved around file handling, string manipulation, debugging, and rigorous code testing using the 'ok' autograder to ensure accurate functionality and track progress throughout the development process.",
+    tag1: "Algorithms",
+    timeline: "2022",
+    toolsSkills: "Python",
+    shortDescription: "A typing-speed and autocorrect application that measures accuracy, speed, and multiplayer progress.",
   },
   {
-    name: "Scheme Interpreter",
-    time: "2022",
-    image: Scheme_Interpreter_Pic,
-    text: "I developed an interpreter for a subset of the Scheme programming language using Python. My responsibilities included implementing Scheme expression evaluation, managing special forms, and defining Scheme expression classes. I gained insights into language design issues impacting interpreter implementation and quirks in languages due to interpreter decisions.",
+    title: "Hog",
+    image: HogPic,
+    tag1: "Gaming",
+    timeline: "2022",
+    toolsSkills: "Python",
+    shortDescription: "A strategy-based dice game that explores probability, decision-making, and automated gameplay strategies.",
   },
   {
-    name: "Ants vs. Bees",
-    time: "2022",
+    title: "Ants",
     image: AntVsBee_Pic,
-    text: "I crafted 'Ants vs. Bees,' a strategic computer game centered on defending a colony against bee invasions, utilizing an object-oriented programming methodology. This involved implementing diverse ant types, each possessing unique abilities. Additionally, I devised a systematic approach enabling bees to navigate through tunnels and strategically engage ants. By integrating essential concepts like health, food costs, and turn order, I ensured the game's functionality and captivating gameplay experience.",
+    tag1: "Gaming",
+    timeline: "2022",
+    toolsSkills: "Python",
+    shortDescription: "A tower-defense game inspired by Plants vs. Zombies featuring diverse defenders, enemies, and combat mechanics.",
+  },
+  {
+    title: "Snek",
+    image: SnekPic,
+    tag1: "Systems",
+    timeline: "2023",
+    team: "Henry Cen",
+    toolsSkills: "C",
+    shortDescription: "A fully playable Snake game developed in C with real-time gameplay and memory-safe systems.",
+  },
+  // {
+  //   title: "Classify",
+  //   tag1: "Systems",
+  //   timeline: "2023",
+  //   team: "Henry Cen",
+  //   toolsSkills: "RISC-V Assembly",
+  //   shortDescription: "A neural-network inference engine written in RISC-V assembly that classifies handwritten digits.",
+  // },
+  {
+    title: "CPU",
+    image: CPU_Pic,
+    tag1: "Systems",
+    timeline: "2023",
+    team: "Henry Cen",
+    toolsSkills: "Logisim, Digital Logic, RISC-V Architecture",
+    shortDescription: "A custom processor capable of executing a subset of the RISC-V instruction set.",
+  },
+  {
+    title: "kaChow",
+    image: KachowPic,
+    tag1: "Systems",
+    timeline: "2023",
+    team: "Henry Cen",
+    toolsSkills: "C, OpenMP, AVX Intrinsics, SIMD",
+    shortDescription: "A high-performance computing project focused on accelerating computational workloads through parallel processing.",
+  },
+  {
+    title: "Path Tracer",
+    image: PathTracer_Pic,
+    tag1: "Graphics",
+    timeline: "2024",
+    toolsSkills: "C++, OpenGL, GLSL",
+    shortDescription: "A physically based renderer that simulates the behavior of light to generate photorealistic images.",
+  },
+  {
+    title: "Cloth Simulator",
+    image: Cloth_Pic,
+    tag1: "Graphics",
+    timeline: "2024",
+    toolsSkills: "C++, OpenGL, GLSL",
+    shortDescription: "A real-time cloth simulation that models fabric movement, collisions, and material behavior.",
+  },
+  {
+    title: "Mesh Editor",
+    image: Mesh_Pic,
+    tag1: "Graphics",
+    tag2: "Algorithms",
+    timeline: "2024",
+    toolsSkills: "C++, OpenGL, Half-Edge Mesh",
+    shortDescription: "A 3D geometry editor for constructing and manipulating curves, surfaces, and polygonal meshes.",
+  },
+  {
+    title: "Smoke Simulator",
+    image: Smoke_Pic,
+    tag1: "Graphics",
+    tag2: "Systems",
+    role: "Graphics Developer",
+    timeline: "January 2024 – May 2024",
+    team: "Michael Huang, Geovanni Mojica, Kyle Wong",
+    toolsSkills: "C++, OpenGL, OpenMP",
+    shortDescription: "A real-time smoke simulation that models fluid dynamics using an Eulerian grid.",
+  },
+  {
+    title: "SVG Rasterizer",
+    image: Rasterizer_Pic,
+    tag1: "Graphics",
+    timeline: "2024",
+    team: "Olivia Xie",
+    toolsSkills: "C++, OpenGL",
+    shortDescription: "A software renderer that converts scalable vector graphics into rasterized images.",
+  },
+  {
+    title: "Hyperspectral Imaging Process Tool",
+    image: HyperspectralPic,
+    tag1: "Web Engineering",
+    tag2: "Graphics",
+    role: "Graphics Developer, Full-Stack Developer",
+    timeline: "August 2024 – December 2024",
+    organization: "Berkeley AI Research",
+    team: "Cody Zanoria Garcia, Shujing Hu",
+    toolsSkills: "React, Flask, Python, Astropy, NumPy, OpenCV, FITS",
+    shortDescription: "A web-based platform for processing and visualizing NASA hyperspectral FITS imagery.",
+  },
+  {
+    title: "Operating Systems Development with Pintos",
+    image: PintosPic,
+    tag1: "Systems",
+    timeline: "2024",
+    team: "Jiajun Liu, Rohin Juneja, Brian Sui",
+    toolsSkills: "C, Pintos, GDB",
+    shortDescription: "An educational operating system extended with multithreading, scheduling, synchronization, and filesystem functionality.",
+  },
+  {
+    title: "Recommender",
+    image: RecommenderPic,
+    tag1: "AI",
+    tag2: "Algorithms",
+    tag3: "Web Engineering",
+    timeline: "2025",
+    toolsSkills: "Python, NumPy, Pandas",
+    shortDescription: "A recommendation engine that ranks relevant content using behavioral and similarity-based signals.",
+  },
+  {
+    title: "Weather Interface",
+    image: WeatherPic,
+    tag1: "Web + Product Engineering",
+    timeline: "2025",
+    toolsSkills: "HTML, CSS, JavaScript, Weather API",
+    shortDescription: "A responsive web application for viewing current weather conditions and forecasts.",
+  },
+  {
+    title: "Donor Loop",
+    image: DonorLoopPic,
+    tag1: "Web + Product Engineering",
+    tag2: "Human Computer Interaction",
+    timeline: "January 2025 – May 2025",
+    team: "Shi Bo Jiang, Maria Fernanda Romano Silva, Daniela Fajardo, Ethan Tam, Rachel Hong",
+    toolsSkills: "Figma, User Research, Wireframing, Prototyping",
+    shortDescription: "A product concept that helps donors discover opportunities, understand their impact, and stay engaged after contributing.",
+  },
+  {
+    title: "Script 1",
+    image: MS2_Pic,
+    tag1: "Graphics",
+    tag2: "Creative Coding",
+    timeline: "2024",
+    toolsSkills: "Python, Autodesk Maya",
+    shortDescription: "A Maya automation tool for streamlining repetitive 3D production workflows.",
+  },
+  {
+    title: "Script 2",
+    image: MS1_Pic,
+    tag1: "Graphics",
+    tag2: "Creative Coding",
+    timeline: "2024",
+    toolsSkills: "Python, Autodesk Maya",
+    shortDescription: "A Maya production tool for accelerating repetitive modeling and animation tasks.",
+  },
+  {
+    title: "FireFox Adaptive Performance Extension",
+    image: FirefoxPic,
+    tag1: "Web + Product Engineering",
+    tag2: "Human Computer Interaction",
+    tag3: "Systems",
+    role: "Full-Stack Product Designer, Development Lead",
+    timeline: "September 2025 – February 2026",
+    organization: "Mozilla",
+    team: "Daniel Lee, Connor McSeveney, Junho Choi, Paco Lau, Erin Pan, Kalyani Puthenpurayil, Sam Hudson, Tommy Nguyen, Seeun An",
+    toolsSkills: "React, Node.js, JavaScript, SQL, R, Browser APIs",
+    shortDescription: "A Firefox extension that helps users monitor browser performance and manage resource-intensive tabs.",
+  },
+  {
+    title: "Machine Learning Database",
+    image: MLDCPic,
+    tag1: "ML",
+    tag2: "Algorithms",
+    tag3: "Systems + Infrastructure",
+    role: "Machine Learning Engineer Researcher",
+    timeline: "August 2023 – December 2023",
+    organization: "GamesCrafters",
+    team: "Kaelyn Huang",
+    toolsSkills: "Python, PyTorch, Machine Learning",
+    shortDescription: "A machine-learning system for compressing large combinatorial game databases through predictive modeling.",
+  },
+  {
+    title: "Chess Endgame",
+    image: Chess_Endgame_Pic,
+    tag1: "AI",
+    tag2: "Algorithms",
+    tag3: "Systems + Infrastructure",
+    role: "Game Theory Researcher, Full-Stack Engineer",
+    timeline: "August 2023 – December 2023",
+    organization: "GamesCrafters",
+    team: "Amy Chakladar",
+    toolsSkills: "C++, OpenMP, Game Theory, Chess",
+    shortDescription: "A six-piece chess endgame database that computes and retrieves optimal play for complex board positions.",
+  },
+  {
+    title: "Ohlone Exhibit",
+    image: ohloneAcornCover,
+    tag1: "Human Computer Interaction",
+    tag2: "Creative Coding",
+    role: "Creative Technologist Assistant, Frontend Developer, Designer",
+    timeline: "March 2025 – October 2025",
+    organization: "Berkeley Center for New Media",
+    team: "Yangyang Yang",
+    toolsSkills: "p5.js, HTML, CSS, Projection Mapping",
+    shortDescription: "An interactive museum exhibit that teaches visitors about sustainability and Ohlone acorn-gathering traditions.",
+  },
+  {
+    title: "Snap Chat Treasure",
+    image: SnapChestPic,
+    tag1: "AR",
+    tag2: "Graphics",
+    tag3: "Creative Coding",
+    role: "3D Modeler, Technical Artist, AR Developer",
+    timeline: "January 2025 – August 2025",
+    organization: "Snap Inc.",
+    team: "James Hu, Daniel He, Mia Wu, Josh Jang, Iris Qin",
+    toolsSkills: "Lens Studio, JavaScript, Blender, AR",
+    shortDescription: "An augmented reality treasure-hunt experience that blends interactive clues and virtual objects into the real world.",
+  },
+  {
+    title: "Artifactor",
+    image: ArtifactorPic,
+    tag1: "Human Computer Interaction",
+    tag2: "Web Engineering",
+    tag3: "AI",
+    role: "HCI Researcher, Full-Stack Developer",
+    timeline: "January 2025 – December 2025",
+    organization: "Berkeley Institute of Design",
+    team: "Shm Almeda, Sophia Liu, Elaine Shu",
+    toolsSkills: "React, Node.js, Python, RAG, Vector Embeddings, Semantic Search, LLM APIs",
+    shortDescription: "An AI-powered infinite canvas for exploring, organizing, and interpreting art-history materials.",
+  },
+  {
+    title: "Sympathetic Orchestra",
+    image: SympatheticOrchestraPic,
+    tag1: "Human Computer Interaction",
+    tag2: "Web Engineering",
+    role: "HCI Researcher, Full-Stack Developer",
+    timeline: "June 2024 – December 2024",
+    organization: "Berkeley Institute of Design",
+    team: "Shm Almeda, Bob Wei",
+    toolsSkills: "p5.js, MediaPipe, Web Audio API, JavaScript",
+    shortDescription: "An interactive conducting experience that transforms hand gestures into control of a virtual orchestra.",
+  },
+  {
+    title: "My House",
+    image: myHouseCover,
+    tag1: "Creative Coding",
+    tag2: "Human Computer Interaction",
+    role: "Creative Technologist, Interactive Experience Designer, Fabricator",
+    timeline: "2025",
+    toolsSkills: "Woodworking, Laser Cutting, Projection Mapping, Fabrication",
+    shortDescription: "A handcrafted interactive installation that combines physical fabrication, projection mapping, and digital media.",
+  },
+  {
+    title: "Binary Button",
+    image: binaryButtonCover,
+    tag1: "Creative Coding",
+    tag2: "Human Computer Interaction",
+    role: "Creative Technologist, Interactive Experience Designer",
+    timeline: "2025",
+    toolsSkills: "Arduino, Electronics, Soldering, Physical Computing",
+    shortDescription: "A physical-computing installation centered around a custom interactive button.",
+  },
+  {
+    title: ":)",
+    image: smileCover,
+    tag1: "Creative Coding",
+    role: "Creative Technologist, Interactive Experience Designer, Fabricator",
+    timeline: "2025",
+    toolsSkills: "Fabrication, Projection Mapping, Creative Coding",
+    shortDescription: "A playful interactive installation centered on audience participation and expressive digital interaction.",
+  },
+  {
+    title: "Escape Room",
+    image: escapeRoom,
+    tag1: "Gaming",
+    tag2: "Creative Coding",
+    role: "Game Developer",
+    timeline: "2024",
+    toolsSkills: "Unity, C#, Game Design",
+    shortDescription: "A themed escape-room experience where players solve interconnected puzzles to progress.",
+  },
+  {
+    title: "Pikachu Face Mapping",
+    image: Kodama,
+    tag1: "Creative Coding",
+    tag2: "AI",
+    role: "Creative Technologist, Interaction Designer",
+    timeline: "2024",
+    toolsSkills: "MediaPipe, Computer Vision, p5.js",
+    shortDescription: "A real-time face-tracking experience that transforms users into an animated Pikachu.",
+  },
+  {
+    title: "Constellation Drawer",
+    image: ConstellationDrawer,
+    tag1: "Creative Coding",
+    tag2: "Graphics",
+    role: "Creative Technologist, Interaction Designer",
+    timeline: "2024",
+    toolsSkills: "p5.js, JavaScript",
+    shortDescription: "An interactive drawing experience that transforms user gestures into constellation-inspired artwork.",
+  },
+  {
+    title: "Alien Show",
+    image: AlienShowCover,
+    tag1: "Creative Coding",
+    role: "Creative Technologist, Interactive Experience Designer, Fabricator, Animator",
+    timeline: "2024",
+    toolsSkills: "Projection Mapping, Animation, Fabrication",
+    shortDescription: "An animated interactive installation centered around an alien character and immersive digital storytelling.",
+  },
+  {
+    title: "Bubbles",
+    image: Bubbles,
+    tag1: "Creative Coding",
+    role: "Creative Technologist, Interactive Experience Designer",
+    timeline: "2024",
+    toolsSkills: "p5.js, JavaScript",
+    shortDescription: "An interactive visual simulation where animated bubbles dynamically respond to user interaction.",
   },
 ];
 
 function ComputerScience() {
-  const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
   const [page, setPage] = useState(0);
+  const [filterOpen, setFilterOpen] = useState(false);
+  const [activeFilterIds, setActiveFilterIds] = useState([]);
+  const [hoveredOverlayIds, setHoveredOverlayIds] = useState([]);
   const contentRef = useRef(null);
 
-  const visibleProjects = projects.slice(
+  const activeFilters = useMemo(
+    () => FILTER_OPTIONS.filter((option) => activeFilterIds.includes(option.id)),
+    [activeFilterIds]
+  );
+
+  const filteredProjects = useMemo(
+    () => projects.filter((project) => projectMatchesFilters(project, activeFilters)),
+    [activeFilters]
+  );
+
+  const totalPages = Math.max(1, Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE));
+  const filterKey = activeFilterIds.length ? activeFilterIds.join('+') : 'all';
+  const visibleOverlayIds = FILTER_OPTIONS
+    .map((option) => option.id)
+    .filter(
+      (id) =>
+        FILTER_OVERLAY_IMAGES[id] &&
+        (activeFilterIds.includes(id) || hoveredOverlayIds.includes(id))
+    );
+
+  useEffect(() => {
+    setPage(0);
+  }, [filterKey]);
+
+  useEffect(() => {
+    setHoveredOverlayIds([]);
+  }, [page, filterKey]);
+
+  useEffect(() => {
+    if (page > totalPages - 1) {
+      setPage(Math.max(0, totalPages - 1));
+    }
+  }, [page, totalPages]);
+
+  const visibleProjects = filteredProjects.slice(
     page * PROJECTS_PER_PAGE,
     page * PROJECTS_PER_PAGE + PROJECTS_PER_PAGE
   );
@@ -159,6 +563,14 @@ function ComputerScience() {
     });
   };
 
+  const selectFilter = (filterId) => {
+    setActiveFilterIds((current) =>
+      current.includes(filterId)
+        ? current.filter((id) => id !== filterId)
+        : [...current, filterId]
+    );
+  };
+
   return (
     <div className="computerScience">
       <div className="csHeaderWrap">
@@ -177,7 +589,17 @@ function ComputerScience() {
       </div>
 
       <div className="csContentSection" ref={contentRef}>
-        <img src={csBasement} alt="Computer science basement" className="cs-basement-img" />
+        <div className="cs-basement-stack" aria-hidden="true">
+          <img src={csBasement} alt="Computer science basement" className="cs-basement-img" />
+          {visibleOverlayIds.map((id) => (
+            <img
+              key={id}
+              src={FILTER_OVERLAY_IMAGES[id]}
+              alt=""
+              className="cs-basement-filter-overlay"
+            />
+          ))}
+        </div>
 
         <div className="csProjectsSection">
           <img
@@ -187,27 +609,59 @@ function ComputerScience() {
             onClick={goToPreviousPage}
           />
           <div className="csProjectsContent">
-            <div className="csHeaderDescription" key={page}>
-              {visibleProjects.map((project) =>
-                project.link ? (
-                  <CsExperienceWithLink
-                    key={project.name}
-                    name={project.name}
-                    time={project.time}
-                    image={project.image}
-                    text={project.text}
-                    link={project.link}
-                  />
-                ) : (
-                  <CsExperience
-                    key={project.name}
-                    name={project.name}
-                    time={project.time}
-                    image={project.image}
-                    text={project.text}
-                  />
-                )
+            <div className="cs-filter-row">
+              <div className="cs-filter-controls">
+                <button
+                  type="button"
+                  className={`cs-filter-button${filterOpen ? ' cs-filter-button-open' : ''}${
+                    activeFilterIds.length ? ' cs-filter-button-active' : ''
+                  }`}
+                  onClick={() => setFilterOpen((open) => !open)}
+                  aria-expanded={filterOpen}
+                >
+                  Filter
+                </button>
+                {filterOpen && (
+                  <button
+                    type="button"
+                    className="cs-filter-reset"
+                    onClick={() => setActiveFilterIds([])}
+                    disabled={!activeFilterIds.length}
+                  >
+                    Reset
+                  </button>
+                )}
+              </div>
+              {filterOpen && (
+                <div className="cs-filter-options">
+                  {FILTER_OPTIONS.map((option) => (
+                    <button
+                      key={option.id}
+                      type="button"
+                      className={`cs-filter-option${
+                        activeFilterIds.includes(option.id) ? ' cs-filter-option-active' : ''
+                      }`}
+                      onClick={() => selectFilter(option.id)}
+                      aria-pressed={activeFilterIds.includes(option.id)}
+                    >
+                      {option.label}
+                    </button>
+                  ))}
+                </div>
               )}
+            </div>
+
+            <div className="csHeaderDescription" key={`${page}-${filterKey}`}>
+              {visibleProjects.map((project) => (
+                <NewCsExperience
+                  key={project.title}
+                  {...project}
+                  overlayIds={getOverlayIdsForTags(
+                    [project.tag1, project.tag2, project.tag3].filter(Boolean)
+                  )}
+                  onOverlayHover={setHoveredOverlayIds}
+                />
+              ))}
             </div>
             <div className="cs-page-dots">
               {Array.from({ length: totalPages }, (_, index) => (
